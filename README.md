@@ -1,13 +1,33 @@
-2. Definir la temática del Market Place
 
-¿Qué productos o servicios brindará nuestro sitio?
+     <title>Temática Market Place TuBirraEnCasa</title>
 
-¿Quién será nuestra audiencia objetivo?
+<ul>
+<li>¿Qué productos o servicios brindará nuestro sitio? (Alcohólicas. 
+- Cerveza (Artesanal y común). 
+- Espumantes.
+- Vinos.
+)
+</li>
+<li>¿Quién será nuestra audiencia objetivo? (Personas mayores de 18 años.)</li>
+<li>¿Cómo ajustaremos nuestra oferta a ese público? (Promociones de acuerdo a la segmentación etaria, marketing digital, publicidad orgánica y paga.)</li>
+</ul>
 
-¿Cómo ajustaremos nuestra oferta a ese público?
+ 
+ <h1>Referentes del mercado</h1>
+ 
+  <ul>
+<li>https://www.craftsociety.com.ar/</li>
+<li>https://www.appbar.com.ar</li>
+<li>https://tienda.bierhaus.co/</li>
+<li>https://www.beercoffee.com.ar/</li>
+<li>https://tienda.bierful.com/</li>
+</ul>
 
-Entregable: Crear archivo README.md en el repositiorio con:
-● Una breve descripción de la oferta de productos y / o servicios ofrecidos por su
-sitio. También agregar una breve descripción del público al que apunta el sitio.
-● Una breve descripción de los integrantes del equipo.
-  
+  <h2>Integrantes</h2>
+
+  <ul>
+<li>Andre - Psicologa, venezolana y recruiter IT, deseosa por construir un software de gestión de candidatos y competir con avature y grandes ATS)</li>
+<li>Edu</li>
+<li>Juani</li>
+<li>Tobi</li>
+</ul>
