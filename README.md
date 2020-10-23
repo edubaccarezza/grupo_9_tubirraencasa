@@ -16,19 +16,23 @@
  
  <h2>Referentes del mercado</h2>
  
-  <ul>
-<li>https://www.craftsociety.com.ar/</li>
-<li>https://www.appbar.com.ar</li>
-<li>https://tienda.bierhaus.co/</li>
-<li>https://www.beercoffee.com.ar/</li>
-<li>https://tienda.bierful.com/</li>
+<ul>
+  <li>https://www.craftsociety.com.ar/</li>
+  <li>https://www.appbar.com.ar</li>
+  <li>https://tienda.bierhaus.co/</li>
+  <li>https://www.beercoffee.com.ar/</li>
+  <li>https://tienda.bierful.com/</li>
+  <li>https://vinotecaligier.com/</li>
+  <li>https://www.vinosyspirits.com/</li>
+  <li>https://www.craftmoments.com.ar/</li>
+  <li>https://www.mercadolibre.com.ar/</li>
 </ul>
 
   <h3>Integrantes</h3>
 
   <ul>
 <li>Andre - Psicologa, venezolana y recruiter IT, deseosa por construir un software de gestión de candidatos y competir con avature y grandes ATS)</li>
-<li>Edu</li>
+<li>Edu - Ingeniero industrial, entusiasmado y con muchas ganas de llevar adelante este nuevo desafío.</li>
 <li>Juani - Estudiante de Técnicatura en Programación,con ganas de aprender a crear proyectos y entrar en el mundo del desarrollo web.</li>
 <li>Tobi</li>
 </ul>
