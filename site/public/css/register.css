@@ -1,0 +1,226 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+header {
+    background-color: #E4BF5A;
+    padding: 0px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuIzq {
+    display: flex;
+    align-items: center;
+}
+
+.menuIzq>a{
+    width: 100px;
+    height: 100px;
+}
+
+.menuIzq a img {
+    width: 100%;
+}
+
+.menuIzq nav ul {
+    padding-left: 30px;
+}
+
+.menuIzq nav ul li {
+    display: inline-block;
+}
+
+.menuIzq nav ul li a{
+    text-decoration: none;
+    padding: 10px;
+    margin-left: 5px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 25px;
+}
+
+.menuIzq nav ul li a:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+.menuDer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100px;
+    text-align: end;
+}
+
+.menuDer form input {
+    border: none;
+    padding: 7px;
+    border-radius: 25px;
+}
+
+.menuDer form button {
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+}
+
+.menuDer nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menuDer nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+.menuDer nav ul li a:hover{
+    opacity: 0.5;
+    
+}
+
+.menuDer nav ul li a i{
+    margin-left: 3px;
+}
+
+/*---------------------------------------------------*/
+/*-------------------------MAIN------------------------*/
+/*---------------------------------------------------*/
+
+main .caja {
+    width: 37%;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+main .caja .boton{
+    width: 100%;
+
+}
+
+main .caja .boton a {
+    width: 49.5%;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+main .caja .boton .crear{
+    border-bottom: 5px solid rgb(44, 44, 44);
+    opacity: 0.5;
+    border-top-left-radius: 10px;
+    background-color: gray;
+}
+
+main .caja .boton .crear:hover{
+    opacity: 1;
+    border-bottom: 5px solid red;
+    background-color: #fff;
+}
+
+
+main .caja .boton .ingresar{
+    border-bottom: 5px solid red;
+}
+
+main .caja .redes {
+    margin-top: 15px;
+    border-bottom: 3px solid grey;
+}
+
+main .caja .redes .botones-redes{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+main .caja .redes .botones-redes a{
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    margin:10px 5px;
+    width: 85px;
+
+}
+
+main .caja .redes .botones-redes .mail{
+    background-color:#DB4437 ;
+}
+
+main .caja .redes .botones-redes .facebook{
+    background-color:#4267B2 ;
+}
+
+main .caja .redes .botones-redes .instagram{
+    background-color:#3f729b ;
+}
+
+main .caja .redes .botones-redes .twitter{
+    background-color:#1DA1F2 ;
+}
+
+main .caja .redes .botones-redes a:hover{
+    opacity: 0.5;
+}
+
+main .caja .formulario {
+    margin: 15px 0;
+}
+
+main .caja .formulario h3 {
+    margin: 15px 0;
+}
+
+main .caja .formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+main .caja .formulario form input {
+    width:90%;
+    margin-bottom: 10px;
+    padding: 15px 7px;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+
+main .caja .formulario form button {
+    background-color: rgba(0, 8, 247, 0.64);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 90%;
+    font-size: 20px;
+    border: none;
+}
+
+main .caja .formulario form button:hover {
+    background-color: rgba(0, 8, 247, 0.40);
+}
+
+main .caja p {
+    font-size: 16px;
+}
+
+main .caja p a{
+    text-decoration: none;
+}
