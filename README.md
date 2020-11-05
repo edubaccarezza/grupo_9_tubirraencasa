@@ -36,3 +36,7 @@
 <li>Juani - Estudiante de Técnicatura en Programación,con ganas de aprender a crear proyectos y entrar en el mundo del desarrollo web.</li>
 <li>Tobi</li>
 </ul>
+
+ <h3>Trello</h3>
+
+  https://trello.com/invite/b/sZGDke3j/d04944eff2bed6c11975a63a06485c1c/proyecto-integrador-dh
