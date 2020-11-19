@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('partials/head', {title: "Carrito"}) %>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <main>
+        <p class="titulo">Tu Birra En Casa > Carrito <span style="color:gray">> Detalle del pago > Pedido Completado</span></p>
+        <div class="caja">   
+            <div class="productos">
+                <div class="tituloCarrito">
+                    <p class="a">PRODUCTO</p>
+                    <P class="b">PRECIO</P>
+                    <P class="c">CANTIDAD</P>
+                    <P class="d">SUBTOTAL</P>
+                </div>
+                <div class="producto">
+                    <div class="producto1">
+                        <i class="fas fa-trash-alt"></i>
+                        <img src="images/products/heineken.jpg" alt="">
+                        <p class="p1">Lata Heineken 473cc</p>
+                    </div>
+                    <p class="e">AR$ 73,99</p>
+                    <input class="cantidad" type="number" min="1">
+                    <p class="f">AR$ 73,99</p>
+                    <div class="producto1">
+                        <i class="fas fa-trash-alt"></i>
+                        <img src="images/products/Pack Grolsch.jpg" alt="">
+                        <p class="p1">Lata Grolsch 473cc x 24u.</p>
+                    </div>
+                    <p class="e">AR$ 1369,99</p>
+                    <input class="cantidad" type="number" min="1">
+                    <p class="f">AR$ 1369,99</p>
+                </div>
+                <div class="botones">
+                    <button class="botonesCarrito">SEGUIR COMPRANDO</button>
+                    <button class="botonesCarrito">ACTUALIZAR CARRITO</button></div>
+            </div>      
+            <div class="resumen">
+                <p class="tituloCarrito2">TOTAL DEL CARRITO</p>
+                <div class="subtotal">
+                    <p class="resumen1">Subtotal</p>
+                    <p class="resumen2">AR$ 1369,99</p>
+                </div>
+                <div class="envio">
+                    <p class="resumen1">Envío</p>
+                    <a class="resumen2">Calcular Costo</a>
+                </div>
+                <div class="total">
+                    <p class="resumen1">Total</p>
+                    <p class="resumen2">AR$ 1369,99</p>
+                </div>
+                <div class="compra"><button class="botonCompra">FINALIZAR COMPRA</button></div>
+                <div class="cupon"><i class="fas fa-tags"></i><p>CUPÓN</p></div>
+                <input class="cupon1" type="text">
+                <button class="botonCupon">APLICAR CUPÓN</button>
+            </div>
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma</p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

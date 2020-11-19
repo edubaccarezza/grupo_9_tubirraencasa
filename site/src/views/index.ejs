@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head', {title: "Home"}) %>
+
+<body>
+
+    <%- include('partials/header') %>
+
+    <hr>
+    <main>
+        <div class="promo"> 
+            <ul class="slider">
+                <li id="slide1">
+                    <img src="images/slider/DJI_0014.JPG">
+                </li>
+                <li id="slide2">
+                    <img src="images/slider/DJI_0016.JPG"/>
+                </li>
+                <li id="slide3">
+                    <img src="images/slider/DJI_0017.JPG"/>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li><a href="#slide1">1</a></li>
+                <li><a href="#slide2">2</a></li>
+                <li><a href="#slide3">3</a></li>
+            </ul>
+        </div>
+
+    <div class="container">
+        <section class="titulo">
+            <h2>Lo Más Vendido</h2>
+        </section>
+        <section>
+            <article>
+                <img src="images/products/heineken.jpg" alt="HEINEKEN">
+                <h2>Lata Heineken 473cc </h2>
+                <p>AR$ 73,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/brahma.jpg" alt="BRAHMA">
+                <h2>Lata Brahma 473cc </h2>
+                <p>AR$ 59,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/Quilmes.jpg" alt="QUILMES">
+                <h2>Lata Quilmes 473cc </h2>
+                <p>AR$ 55,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
+                <h2>Lata Grolsch 473cc x 24u.</h2>
+                <p>AR$ 1369,99</p>
+                <button>Más info</button>
+            </article>
+        </section>
+   
+        <section class="titulo">
+            <h2>Lo Nuevo</h2>
+        </section>
+        <section>
+            <article>
+                <img src="images/products/heineken.jpg" alt="HEINEKEN">
+                <h2>Lata Heineken 473cc </h2>
+                <p>AR$ 73,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/brahma.jpg" alt="BRAHMA">
+                <h2>Lata Brahma 473cc</h2>
+                <p>AR$ 59,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/Quilmes.jpg" alt="QUILMES">
+                <h2>Lata Quilmes 473cc </h2>
+                <p>AR$ 55,99</p>
+                <button>Más info</button>
+            </article>
+            <article>
+                <img src="images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
+                <h2>Lata Grolsch 473cc x 24u.</h2>
+                <p>AR$ 1369,99</p>
+                <button>Más info</button>
+            </article>
+            </section>
+        </div>
+
+        <div class="categoria"> 
+            <section class="titulo">
+                <h2>Categorías</h2>
+            </section>
+            <nav class="categorias">
+                <ul>
+                    <li><button class="categorias1">Categoría 1</button></li>
+                    <li><button class="categorias1">Categoría 2</button></li>
+                    <li><button class="categorias1">Categoría 3</button></li>
+                    <li><button class="categorias1">Categoría 4</button></li>
+                    <li><button class="categorias1">Categoría 5</button></li>
+                    <li><button class="categorias1">Categoría 6</button></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma  </p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

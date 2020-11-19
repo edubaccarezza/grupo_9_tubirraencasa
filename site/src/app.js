@@ -2,28 +2,23 @@ const express = require ('express');
 const app = express();
 const path = require ('path');
 
-app.use(express.static('../public'))
+const mainRouter = require('./routes/main');
+const usersRouter = require('./routes/users');
+const productsRouter = require('./routes/products');
 
-app.get ('/', function (req,res) {
-    res.sendFile(path.join(__dirname, './views/index.html'));
-})
+//Cuchame, Express... Vas a usar de motor de vista EJS...
+app.set('view engine', 'ejs');
+//Cuchame, Express.. Hay una carpeta que tiene todas las vistas. Es esta...
+app.set('views', path.join(__dirname, 'views'));
 
-app.get ('/producto', function (req,res) {
-    res.sendFile(path.join(__dirname, './views/productDetail.html'));
-})
+app.use(express.static(path.join(__dirname, '../public')))
 
-app.get ('/carrito', function (req,res) {
-    res.sendFile(path.join(__dirname, './views/productCart.html'));
-})
+app.use('/', mainRouter)
+app.use('/users', usersRouter);
+app.use('/products', productsRouter);
 
-app.get ('/login', function (req,res) {
-    res.sendFile(path.join(__dirname, './views/login.html'));
-})
-
-app.get ('/register', function (req,res) {
-    res.sendFile(path.join(__dirname, './views/register.html'));
-})
-
-app.listen (3000, function() {
-    console.log ("El servidor esta corriendo en el puerto 3000");
+app.listen(process.env.PORT || 3000, function() {
+    console.log("El servidor está corriendo en el puerto 3000");
+    console.log("-------------------");
+    console.log("http://localhost:3000");
 })
