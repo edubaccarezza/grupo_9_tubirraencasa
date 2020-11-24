@@ -7,6 +7,6 @@ module.exports = {
         let products = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf8');
         let arrayProducts = JSON.parse(products)
         return res.render('productos', {productosEnLaVista: arrayProducts})
-        
+       
     }
 }

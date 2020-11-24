@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head', {title: "Home"}) %>
+    <link rel="stylesheet" href="/css/style3.css">
+<body>
+
+    <%- include('partials/header') %>
+
+    <hr>
+    <main>
+        <br>
+        <section class="hero" style="justify-content: center;">
+            <h1>Registro</h1>
+        </section>
+
+        <section class="form">
+            <form action="" method="post" enctype="multipart/form-data">
+                <div>
+                    <label for="codigo">Código</label>
+                    <input id="codigo" name="codigo" type="number">
+                </div>
+                <div>
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" type="text">
+                </div>
+                <div>
+                    <label for="foto">Foto</label>
+                    <input id="foto" name="foto" type="file">
+                </div>
+                <div>
+                    <label for="precio">Precio</label>
+                    <input id="precio" name="precio" type="number">
+                </div>
+                <div>
+                    <label for="descripcion">Descripción</label>
+                    <input id="descripcion" name="descripcion" type="text">
+                </div>
+                <button type="submit">Actualizar o Cargar</button>
+            </form>
+            <br>
+        </section>
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma  </p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

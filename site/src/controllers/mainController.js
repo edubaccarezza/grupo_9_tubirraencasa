@@ -18,6 +18,9 @@ let mainController = {
     productos: function (req,res) {
         return res.render('productos');
     },
+    actualizar: function(req,res) {
+        return res.render('actualizar')
+    }
 }
 
 module.exports = mainController
