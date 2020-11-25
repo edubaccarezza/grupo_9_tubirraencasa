@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -1014,3 +1015,81 @@ main (productCart) - Media
     }
 }
 
+/* =============
+- PAGINA ACTUALIZAR
+============= */
+
+section.hero {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.formact article {
+    width: 31%;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease-in-out;
+}
+
+section.formact article:hover {
+    box-shadow:
+        0 10px 20px rgba(0,0,0,0.19),
+        0 6px 6px rgba(0,0,0,0.23);
+}
+
+section.formact article h2 {}
+section.formact article p {}
+section.formact article button {
+    padding: 9px 18px;
+    border: none;
+    background-color: #06f;
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+/* =============
+- FORMS
+============= */
+
+section.formact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+section.formact form {
+    width: 100%;
+    max-width: 600px;
+}
+
+section.formact form div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+form div > * {
+    width: 100%;
+}
+
+form div > label {
+    margin-bottom: 5px;
+}
+
+form div > input {
+    font-size: 16px;
+    padding: 5px;
+}
+
+form button[type="submit"] {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(0, 98, 255);
+    color: white;
+}

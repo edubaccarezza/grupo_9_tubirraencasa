@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('partials/head', {title: "Home"}) %>
-    <link rel="stylesheet" href="/css/style3.css">
+    <%- include('../partials/head', {title: "Home"}) %>
 <body>
 
-    <%- include('partials/header') %>
+    <%- include('../partials/header') %>
 
     <hr>
     <main>
@@ -15,7 +14,7 @@
         </section>
         <br>
 
-        <section class="form">
+        <section class="formact">
             <form action="" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="codigo">Código</label>
@@ -26,16 +25,20 @@
                     <input id="name" name="name" type="text">
                 </div>
                 <div>
-                    <label for="foto">Foto</label>
-                    <input id="foto" name="foto" type="file">
+                    <label for="category">Categoría</label>
+                    <input id="category" name="category" type="text">
                 </div>
                 <div>
-                    <label for="precio">Precio</label>
-                    <input id="precio" name="precio" type="number">
+                    <label for="image">Foto</label>
+                    <input id="image" name="image" type="file">
                 </div>
                 <div>
-                    <label for="descripcion">Descripción</label>
-                    <input id="descripcion" name="descripcion" type="text">
+                    <label for="price">Precio</label>
+                    <input id="price" name="price" type="number">
+                </div>
+                <div>
+                    <label for="description">Descripción</label>
+                    <input id="description" name="description" type="text">
                 </div>
                 <button type="submit">Actualizar o Cargar</button>
             </form>
@@ -51,7 +54,7 @@
         </select>
     </div>
 
-    <%- include('partials/footer') %>
+    <%- include('../partials/footer') %>
 
 </body>
 </html>
