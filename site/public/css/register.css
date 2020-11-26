@@ -1,95 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body{
     background-color: #f2f2f2;
     text-align: center;
+    font-family: ubuntu;
+    font-weight: 400;
 }
 
+/*************************************************/
+/************************HEADER*************************/
+/*************************************************/
+
+
 header {
-    background-color: #E4BF5A;
-    padding: 0px 60px;
+    background: #adfceb;
+    padding: 25px 130px 25px 130px;
+}
+
+header .brand {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-.menuIzq {
-    display: flex;
-    align-items: center;
+header div.brand i#class1 {
+    font-size: 80px;
 }
 
-.menuIzq>a{
+header .logo {
+    height: 100px;
     width: 100px;
-    height: 100px;
+    background-color: black;
 }
 
-.menuIzq a img {
+header nav button.burguer{
+    display: none;
+}
+
+header .barra {
+    width: 500px;
+}
+header .barra ul{
     width: 100%;
-}
-
-.menuIzq nav ul {
-    padding-left: 30px;
-}
-
-.menuIzq nav ul li {
-    display: inline-block;
-}
-
-.menuIzq nav ul li a{
-    text-decoration: none;
-    padding: 10px;
-    margin-left: 5px;
-    color: #fff;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 25px;
-}
-
-.menuIzq nav ul li a:hover {
-    background-color: rgba(0,0,0,1);
-}
-
-.menuDer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 100px;
-    text-align: end;
+    justify-content: space-between;
+    padding: 0;
 }
-
-.menuDer form input {
-    border: none;
-    padding: 7px;
-    border-radius: 25px;
+header .barra ul li{
+    width: 120px;
+    height: 40px;
+    display: inline;
+    vertical-align: middle;
+    margin-right: 5px;
+    background-color: #6d6875;
+    border-radius: 5px;
+    text-align: center;
 }
-
-.menuDer form button {
-    padding: 5px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-}
-
-.menuDer nav ul li {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.menuDer nav ul li a{
+header .barra ul li a{
     text-decoration: none;
-    color: #000;
+    color:#fff;
+    text-align: right;
+    vertical-align: middle;
 }
 
-.menuDer nav ul li a:hover{
-    opacity: 0.5;
+/* ================
+- Header - buscador
+================ */
+header div.busca {
+    width: 400px;
+    height: 100px;
+}
+
+header .brand div form {
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+header .brand div form input[type="text"] {
+    width: 90%;
+    border: none;
+    font-size: 18px;
+}
+
+header .brand form button[type="submit"] {
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #686868;
+    border-left: 1px solid #EAEDE6;
+    padding: 0;
+    text-align: right
+}
+
+header .brand form button[type="submit"] i.fa-search {
+    margin-right: 0px;
+    font-size: 20px;
+}
+
+/* ================
+- Header - Nav debajo del buscador
+================ */
+
+.login {
+    width: 80%;
+    margin-left: 10%;
+}
+.login ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.login ul li {
+    width: 150px;
+    height: 20px;
+    display: inline;
+    vertical-align: middle;
+    border-radius: 5px;
+    text-align: center;
+}
+.login ul li a {
+    text-decoration: none;
+    color:#6d6875;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+/* ================
+Header - Media
+================ */
+
+@media (max-width: 480px) {
+    header {
+        background: #adfceb;
+        padding: 5px 30px 5px 30px;
+    }
+    header div.brand {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header div.brand i#class1 {
+        font-size: 50px;
+    }
+    header nav button.burguer{
+        display: inline-block;
+        align-items: center;
+        background-color: #023047;
+        color: white;
+        border: none;
+        padding: 5px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 30px;
+    }
+    nav.burguer li i#class2 {
+        font-size: 20px;
+    }
+    header .barra {
+        width: auto;
+    }
+    header .barra ul{
+        display: none;
+    }
+    header div.busca {
+        width: 100%;
+        height: 100%;
+    }
     
-}
+    header .brand div form {
+        width: 100%;
+        height: 30px;
+        display: inline-block;
+        background-color: #fff;
+        padding: 4px;
+        border-radius: 6px;
+    }
+        header .brand div form input[type="text"] {
+        width: 90%;
+        border: none;
+    }
+        header .brand form button[type="submit"] {
+        width: 10%;
+        background: none;
+        border: none;
+        font-size: 10px;
+        color: #686868;
+        border-left: 1px solid #EAEDE6;
+        padding: 0;
+        text-align: right
+    }
+    
+    header .brand form button[type="submit"] i.fa-search {
 
-.menuDer nav ul li a i{
-    margin-left: 3px;
+    }
+
+
 }
 
 /*---------------------------------------------------*/
@@ -97,11 +218,12 @@ header {
 /*---------------------------------------------------*/
 
 main .caja {
-    width: 37%;
+    width: 450px;
     display: inline-block;
     text-align: center;
     background-color: #fff;
     margin-top: 100px;
+    margin-bottom:50px;
     border-radius: 10px;
 }
 
@@ -211,6 +333,7 @@ main .caja .formulario form button {
     width: 90%;
     font-size: 20px;
     border: none;
+    margin-top: 15px;
 }
 
 main .caja .formulario form button:hover {
@@ -219,8 +342,169 @@ main .caja .formulario form button:hover {
 
 main .caja p {
     font-size: 16px;
+    padding-bottom: 15px;
 }
 
 main .caja p a{
     text-decoration: none;
+}
+
+
+/******************************************************************/
+/*****************************FOOTER*************************************/
+/******************************************************************/
+
+footer {
+    background-color: #023047;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+footer .newsletter {
+    margin: 20px;
+    height: 150px;
+    width: 300px;
+    /*align-items: center;
+    justify-content: space-between;*/
+}
+footer .zona41 {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer .zona42 {
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.busca2 {
+    width: 300px;
+    height: 100px;
+}
+
+.zona43 {
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.zona43 [type="email"] {
+    width: 80%;
+    border: none;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.zona43 [type="submit"] {
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #686868;
+    border-left: 1px solid #EAEDE6;
+    padding: 0;
+    margin-top: 3px;
+    text-align: right
+}
+
+.zona43 [type="submit"] i.fa-search {
+    margin-right: 0px;
+}
+/*footer .zona43 {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+}
+footer .zona43 form input[type="email"] {
+    width: 90%;
+    border: none;
+    font-size: 18px;
+}
+footer .zona43 form button[type="submit"] {
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #686868;
+    border-left: 1px solid #EAEDE6;
+    padding: 0;
+    text-align: right
+}
+footer .zona43 form button[type="submit"] i.fa-search {
+    margin-right: 6px;
+}*/
+
+.caja2 {
+    margin: 20px;
+    height: 150px;
+    width: 300px;
+}
+
+.caja21 {}
+.caja21 li {
+    text-decoration: none;
+    list-style:none;
+}
+.caja21 li a{
+    text-decoration: none;
+    list-style:none;
+    color: white;
+}
+
+.caja3 {
+    text-align: center;
+    margin: 20px;
+    height: 150px;
+    width: 300px;
+}
+
+.contacto {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+.caja31 {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style:none;
+    font-size: 40px;
+
+}
+.caja31 li {}
+.caja31 li i {
+    margin: 5px;
+}
+
+/**********************************************************************/
+/**********************************************************************/
+/**********************************************************************/
+
+@media (max-width: 870px){
+
+    main .caja {
+        width: 450px;
+    }
+
+}
+
+@media (max-width: 450px){
+    
+    main .caja {
+        width: 90%;
+    }
+
 }

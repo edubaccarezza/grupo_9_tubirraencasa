@@ -5,35 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2491779775.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/register.css">
-    <title>PÁGINA DE REGISTRO</title>
+    <title>Document</title>
 </head>
 <body>
 
     <header>
-        <div class="menuIzq">
-            <a href="#">
-                <img src="logo.png" alt="">
-            </a>
-            <nav>
+        <div class="brand">
+            <!--<img class="logo" src="" alt="Logo">-->
+            <i id="class1" class="fas fa-beer"></i>
+            <nav class="barra">
+                <button class="burguer"><i id="class2" class="fas fa-bars"></i></button>
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">PRODUCTOS</a></li>
-                    <li><a href="">CATEGORIAS</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
                 </ul>
             </nav>
-        </div>
-        <div class="menuDer">
-            <form action="">
-                <input type="text" placeholder="Qué estás buscando?">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-            <nav>
-                <ul>
-                    <li><a href="">Ingresar<i class="fas fa-user"></i></a></li>
-                    <li><a href="">Cuenta<i class="far fa-user"></i></a></li>
-                    <li><a href="">Carrito<i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </nav>
+            <div class="busca">
+                <form action="">
+                    <input type="text" placeholder="Encuentra lo que buscas aqui..."><button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <nav class="login">
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Registro</a></li>
+                        <li><a href="#">Carrito</a></li>
+                    </ul>
+                </nav>    
+            </div>
         </div>
     </header>
 
@@ -57,8 +57,12 @@
                     <input type="text" placeholder="Nombre y Apellido">
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Contraseña">
-                    <input type="checkbox">Recibir prociones
-                    <input type="checkbox">Acepto terminos y condiciones
+                    <div>
+                        <input type="checkbox">Recibir prociones
+                    </div>
+                    <div>    
+                        <input type="checkbox">Acepto terminos y condiciones
+                    </div>
                     <button type="submit">Registrarse</button>
                 </form>
             </div>
@@ -66,5 +70,34 @@
         </div>
     </main>
 
+    <footer>
+        <div class="newsletter">
+            <p class="zona41">NEWSLETTER</p>
+            <p class="zona42">Suscribete al newsletter CERVECERO</p>
+            <div class="busca2">
+                <form class="zona43" action="">
+                    <input type="email" placeholder="Suscribirse">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            </form>
+        </div>
+        <div class="caja2">
+            <ul class="caja21">
+                <li><a href="#">TÉRMINOS DE USO</a></li>
+                <li><a href="#">PÓLITICA DE PRIVACIDAD</a></li>
+                <li><a href="#">NOTIFICACIONES</a></li>
+                <li><a href="#">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+        </div>
+        <div class="caja3">
+            <p class="contacto">CONTACTÁNOS</p>
+            <ul class="caja31">
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
+            </ul>
+        </div>
+    </footer>
+    
 </body>
 </html>
