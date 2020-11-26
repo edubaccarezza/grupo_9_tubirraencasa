@@ -26,4 +26,5 @@ Nos ayudamos entre todos para definir que hacia falta, como encarar las cosas nu
 Llegar al ultimo momento haciendo cargas. 
 
 <h2>¿Qué vamos a hacer distinto la próximo vez para mejorar?</h2>
-Estudiar mas y reunirnos mas
+Estudiar mas y reunirnos mas.
+
