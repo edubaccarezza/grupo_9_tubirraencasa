@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include('../partials/head', {title: "Producto"}) %>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="/css/styleProducts.css">
+    <script src="https://kit.fontawesome.com/55a152fff0.js" crossorigin="anonymous"></script>
+</head>
 <body>
-
-        
-        <%- include('../partials/header') %>
-
-
-<div class="small-container single-product">
-<div class="row">
+    <header>
+        <div class="brand">
+            <!--<img class="logo" src="" alt="Logo">-->
+            <i class="fas fa-beer" style="font-size: 80px;"></i>
+            <nav class="barra">
+                <ul>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+            </nav>
+            <div class="busca">
+                <form action="">
+                    <input type="text" placeholder="Encuentra lo que buscas aqui..."><button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <nav class="login">
+                    <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Registro</a></li>
+                        <li><a href="./productCart.html">Carrito</a></li>
+                    </ul>
+                </nav>    
+            </div>
+        </div>
+    </header>
 <div class="col-2">
-<img src="images/products/heineken.jpg" width="40%">
-<div class="col-2">
+    <img src="images/products/heineken.jpg" width="40%">
 <p>Marca | Heineken </p>
 <h1>Heineken Lata 473 cm3</h1>
     <h4>$124.00</h4>
@@ -66,8 +88,33 @@
             <option value="value1">Portugues</option>
         </select>
     </div>
-      
-    <%- include('../partials/footer') %>
-    
+    <footer>
+        <div class="newsletter">
+            <p class="zona41">NEWSLETTER</p>
+            <p class="zona42">Suscribete al newsletter CERVECERO</p>
+            <div class="busca2">
+                <form class="zona43" action="">
+                    <input type="email" placeholder="Suscribirse">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            </form>
+        </div>
+        <div class="caja2">
+            <ul class="caja21">
+                <li><a href="#">TÉRMINOS DE USO</a></li>
+                <li><a href="#">PÓLITICA DE PRIVACIDAD</a></li>
+                <li><a href="#">NOTIFICACIONES</a></li>
+                <li><a href="#">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+        </div>
+        <div class="caja3">
+            <p class="contacto">CONTACTÁNOS</p>
+            <ul class="caja31">
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
