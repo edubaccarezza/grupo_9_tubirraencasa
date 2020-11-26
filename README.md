@@ -34,7 +34,6 @@
 <li>Andre - Psicologa, venezolana y recruiter IT, deseosa por construir un software de gestión de candidatos y competir con avature y grandes ATS)</li>
 <li>Edu - Ingeniero industrial, entusiasmado y con muchas ganas de llevar adelante este nuevo desafío.</li>
 <li>Juani - Estudiante de Técnicatura en Programación,con ganas de aprender a crear proyectos y entrar en el mundo del desarrollo web.</li>
-<li>Tobi</li>
 </ul>
 
  <h3>Trello</h3>
