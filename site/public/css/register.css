@@ -20,15 +20,19 @@ body{
 /*************************************************/
 /************************HEADER*************************/
 /*************************************************/
-
+/* ================
+- Header
+================ */
 
 header {
-    background: #adfceb;
-    padding: 30px 100px 30px 100px;
+    background: #f0efeb;
+    padding: 30px 100px 0px 100px;
+    color: #023047;
 }
 
 header div.brand {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -48,27 +52,30 @@ header nav button.burguer{
 }
 
 header .barra {
-    width: 500px;
+    /* justify-content: center; */
+    width: 100%;
+    margin-top: 20px;
 }
 header .barra ul{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0;
 }
 header .barra ul li{
-    width: 120px;
+    width: 180px;
     height: 40px;
     display: inline;
     vertical-align: middle;
     margin-right: 5px;
-    background-color: #6d6875;
+    background-color: none;
     border-radius: 5px;
     text-align: center;
 }
 header .barra ul li a{
     text-decoration: none;
-    color:#fff;
+    font-size: 20px;
+    color:#023047;
     text-align: right;
     vertical-align: middle;
 }
@@ -145,19 +152,23 @@ header .brand form button[type="submit"] i.fa-search {
 Header - Media
 ================ */
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     header {
-        background: #adfceb;
         padding: 5px 30px 5px 30px;
+        background: #f0efeb;
+        color: #023047;
     }
     header div.brand {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items: center;
     }
     header div.brand i#class1 {
-        font-size: 50px;
+        font-size: 80px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
     }
     header nav button.burguer{
         display: inline-block;
@@ -169,12 +180,15 @@ Header - Media
         border-radius: 6px;
         cursor: pointer;
         font-size: 30px;
+        /* width: 20%; */
     }
     nav.burguer li i#class2 {
         font-size: 20px;
     }
     header .barra {
-        width: auto;
+        width: 100%;
+        text-align: center;
+
     }
     header .barra ul{
         display: none;
@@ -208,10 +222,7 @@ Header - Media
     }
     
     header .brand form button[type="submit"] i.fa-search {
-
     }
-
-
 }
 
 /*---------------------------------------------------*/
@@ -351,6 +362,31 @@ main .caja p a{
 }
 
 
+/* ================
+- Main - Idioma
+================ */
+
+.idioma {
+    background-color: #370617;
+    display: flex;
+    width: 100%;
+}
+
+p.idioma1 {
+    color: white;
+    text-align: right;
+}
+select.idioma2 {
+}
+
+@media (max-width: 768px) {
+    .idioma1 {
+        /* width: 100%;
+        margin-left: 55%; */
+    }
+}
+
+
 /******************************************************************/
 /*****************************FOOTER*************************************/
 /******************************************************************/
@@ -359,18 +395,16 @@ footer {
     background-color: #023047;
     display: flex;
     flex-wrap: wrap;
-    height: 200px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     align-items: center;
     justify-content: space-between;
     color: white;
 }
 
 footer .newsletter {
-    margin: 20px;
     height: 150px;
-    width: 300px;
+    width: 30%;
     /*align-items: center;
     justify-content: space-between;*/
 }
@@ -423,29 +457,6 @@ footer .zona42 {
 .zona43 [type="submit"] i.fa-search {
     margin-right: 0px;
 }
-/*footer .zona43 {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 6px;
-}
-footer .zona43 form input[type="email"] {
-    width: 90%;
-    border: none;
-    font-size: 18px;
-}
-footer .zona43 form button[type="submit"] {
-    width: 10%;
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: #686868;
-    border-left: 1px solid #EAEDE6;
-    padding: 0;
-    text-align: right
-}
-footer .zona43 form button[type="submit"] i.fa-search {
-    margin-right: 6px;
-}*/
 
 .caja2 {
     margin: 20px;
@@ -488,6 +499,70 @@ footer .zona43 form button[type="submit"] i.fa-search {
 .caja31 li {}
 .caja31 li i {
     margin: 5px;
+}
+/* ================
+footer - Media
+================ */
+
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+    }
+    
+    footer .newsletter {
+        height: auto;
+        width: 100%;
+    }
+    footer .zona41 {
+    }
+    footer .zona42 {
+    }
+    .busca2 {
+        width: 100%;
+        height: auto;
+    }
+    .zona43 {
+    }
+
+    .caja2 {
+        margin-top: 10px;
+        height: auto;
+        width: 100%;
+    }
+    
+    .caja21 {
+        text-align: center;
+    }
+    .caja21 li {
+    }
+    .caja21 li a{
+    }
+    
+    .caja3 {
+        text-align: center;
+        height: auto;
+        width: 100%;
+        margin: 0px;
+    }
+    
+    .contacto {
+        color: white;
+        text-align: center;
+        font-size: 20px;
+    }
+    .caja31 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        list-style:none;
+        font-size: 40px;
+    
+    }
+    .caja31 li {}
+    .caja31 li i {
+        margin: 5px;
+    }
 }
 
 /**********************************************************************/

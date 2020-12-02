@@ -1,120 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-    <link rel="stylesheet" href="/css/styleProducts.css">
-    <script src="https://kit.fontawesome.com/55a152fff0.js" crossorigin="anonymous"></script>
-</head>
+
+    <%- include('../partials/head', {title: "Productos"}) %>
+
 <body>
-    <header>
-        <div class="brand">
-            
-            <i class="fas fa-beer" style="font-size: 80px;"></i>
-            <nav class="barra">
-                <ul>
-                    <li><a href="#">Ofertas</a></li>
-                    <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Vender</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-            </nav>
-            <div class="busca">
-                <form action="">
-                    <input type="text" placeholder="Encuentra lo que buscas aqui..."><button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                <nav class="login">
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Registro</a></li>
-                        <li><a href="./productCart.html">Carrito</a></li>
+    
+    <%- include('../partials/header') %>
+
+        <main>  
+        <section class="principal">
+            <div class="col-1">
+                <div class="imagenesPequenias">
+                    <ul class="pequenias">
+                        <li><a href=""><img src="images/products/heineken.jpg"></a></li>
+                        <li><a href=""><img src="images/products/heineken.jpg"></a></li>
+                        <li><a href=""><img src="images/products/heineken.jpg"></a></li>
+                        <li><a href=""><img src="images/products/heineken.jpg"></a></li>
                     </ul>
-                </nav>    
+                </div>
+                <div class="imagenesGrandes">
+                    <ul class="grande">
+                        <li><a href=""><img src="images/products/heineken.jpg"></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </header>
-<div class="col-2">
-    <img src="images/products/heineken.jpg" width="40%">
-<p>Marca | Heineken </p>
-<h1>Heineken Lata 473 cm3</h1>
-    <h4>$124.00</h4>
-    <select>
-        <option>Elegí la presentación que querés comprar
-        </option>
-        <option>Cerveza Heineken</option>
-        <option>Pack 6 unidades</option>
-        <option>Pack 12 unidades</option>
-        <option>Pack 24 unidades</option>
-    </select>
-    <input type="number" value="1">
-    <button> Añadir al carrito</button>
-    <h3>Detalles del producto</h3>
-    <p>El éxito de Heineken radica en los ingredientes puros y naturales: la cebada malteada, el agua, el lúpulo y un pequeño pero importante detalle llamado levadura tipo A. La singular levadura tipo A de Heineken es la responsable del rico sabor equilibrado y las sutiles notas afrutadas que han distinguido a cada Heineken desde el siglo XIX. A lo largo de los años nuestros maestros cerveceros continuaron perfeccionando su artesanía. Sabemos que la fermentación de la cerveza en tanques horizontales en lugar de verticales estándar crea la presión perfecta para nuestra levadura tipo A. Eso es lo que da a cada Heineken su característico sabor intenso y equilibrado. También hemos aprendido que se tardan 28 días en preparar cerveza de hermoso color dorado. Sin duda es mucho más tiempo que la media, pero preferimos la paciencia y no sacrificar la calidad.</p>
-</div>
-</div>
-</div>
-</div>
-<hr color="#6d6875" size=15>
-<section class="titulo">
-    <h2>Clientes que compraron este producto también compraron:</h2>
-</section>
-<section>
-    <article>
-        <img src="./images/products/brahma.jpg" alt="BRAHMA">
-        <h2>Lata Brahma 473cc</h2>
-        <p>AR$ 59,99</p>
-        <button>Más info</button>
-    </article>
-    <article>
-        <img src="./images/products/Quilmes.jpg" alt="QUILMES">
-        <h2>Lata Quilmes 473cc </h2>
-        <p>AR$ 55,99</p>
-        <button>Más info</button>
-    </article>
-    <article>
-        <img src="./images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
-        <h2>Lata Grolsch 473cc x 24u.</h2>
-        <p>AR$ 1369,99</p>
-        <button>Más info</button>
-    </article>
-    </section>
-</div>
-<div class="idioma">
-        <p class="idioma1">Idioma  </p> 
-         <select class="idioma2" name="Idioma" id="">
-            <option value="value1">Español</option>
-            <option value="value1">Ingles</option>
-            <option value="value1">Portugues</option>
-        </select>
-    </div>
-    <footer>
-        <div class="newsletter">
-            <p class="zona41">NEWSLETTER</p>
-            <p class="zona42">Suscribete al newsletter CERVECERO</p>
-            <div class="busca2">
-                <form class="zona43" action="">
-                    <input type="email" placeholder="Suscribirse">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+            <div class="col-2">
+                <p class="product-title">Marca | Heineken </p>
+                <h1 class="product-detail">Heineken Lata 473 cm3</h1>
+                <h4 class="product-price">$124.00</h4>
+                <select>
+                    <option>Elegí la presentación que querés comprar</option>
+                    <option>Cerveza Heineken</option>
+                    <option>Pack 6 unidades</option>
+                    <option>Pack 12 unidades</option>                        
+                    <option>Pack 24 unidades</option>
+                </select>
+                <div class="cantybot">
+                    <input class="cantidad2" type="number" value="1" min="1">
+                    <button class="productButton"> Añadir al carrito</button>
+                </div>
+                <h3>Detalles del producto</h3>
+                <p class="detail">El éxito de Heineken radica en los ingredientes puros y naturales: la cebada malteada, el agua, el lúpulo y un pequeño pero importante detalle llamado levadura tipo A. La singular levadura tipo A de Heineken es la responsable del rico sabor equilibrado y las sutiles notas afrutadas que han distinguido a cada Heineken desde el siglo XIX. A lo largo de los años nuestros maestros cerveceros continuaron perfeccionando su artesanía. Sabemos que la fermentación de la cerveza en tanques horizontales en lugar de verticales estándar crea la presión perfecta para nuestra levadura tipo A. Eso es lo que da a cada Heineken su característico sabor intenso y equilibrado. También hemos aprendido que se tardan 28 días en preparar cerveza de hermoso color dorado. Sin duda es mucho más tiempo que la media, pero preferimos la paciencia y no sacrificar la calidad.</p>
             </div>
-            </form>
+        </section>
+
+            <section class="titulo">
+                <h2>Clientes que compraron este producto también compraron:</h2>
+            </section>
+            <section>
+                <article class="product-image">
+                    <img src="images/products/heineken.jpg" alt="HEINEKEN">
+                    <h2>Lata Heineken 473cc </h2>
+                    <p>AR$ 73,99</p>
+                    <button>Más info</button>
+                </article>
+                <article class="product-image">
+                    <img src="images/products/brahma.jpg" alt="BRAHMA">
+                    <h2>Lata Brahma 473cc</h2>
+                    <p>AR$ 59,99</p>
+                    <button>Más info</button>
+                </article>
+                <article class="product-image">
+                    <img src="images/products/Quilmes.jpg" alt="QUILMES">
+                    <h2>Lata Quilmes 473cc </h2>
+                    <p>AR$ 55,99</p>
+                    <button>Más info</button>
+                </article>
+                <article class="product-image">
+                    <img src="images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
+                    <h2>Lata Grolsch 473cc x 24u.</h2>
+                    <p>AR$ 1369,99</p>
+                    <button>Más info</button>
+                </article>
+            </section>
+                             
+        </main>  
+
+        <div class="idioma">
+            <p class="idioma1">Idioma  </p> 
+            <select class="idioma2" name="Idioma" id="">
+                <option value="value1">Español</option>
+                <option value="value1">Ingles</option>
+                <option value="value1">Portugues</option>
+            </select>
         </div>
-        <div class="caja2">
-            <ul class="caja21">
-                <li><a href="#">TÉRMINOS DE USO</a></li>
-                <li><a href="#">PÓLITICA DE PRIVACIDAD</a></li>
-                <li><a href="#">NOTIFICACIONES</a></li>
-                <li><a href="#">PREGUNTAS FRECUENTES</a></li>
-            </ul>
-        </div>
-        <div class="caja3">
-            <p class="contacto">CONTACTÁNOS</p>
-            <ul class="caja31">
-                <li><i class="fab fa-facebook-square"></i></li>
-                <li><i class="fab fa-twitter-square"></i></li>
-                <li><i class="fab fa-instagram-square"></i></li>
-            </ul>
-        </div>
-    </footer>
+
+        <%- include('../partials/footer') %>
+
 </body>
 </html>
