@@ -1,7 +1,7 @@
 const express = require ('express');
 const app = express();
 const path = require ('path');
-const methodOverride = require ('method-override')
+const methodOverride = require ('method-override');
 
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
