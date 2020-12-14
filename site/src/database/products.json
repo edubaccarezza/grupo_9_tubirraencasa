@@ -1,22 +1,38 @@
 [
     {
         "id": 1,
-        "nombre": "Lata Heineken 473cc",
-        "precio": "AR$ 73,99"
+        "code": "318128",
+        "name": "Heinekken",
+        "category": "Cerveza Rubia",
+        "image": "Heinekken.jpg",
+        "price": "169",
+        "description": "La mejor"
     },
     {
         "id": 2,
-        "nombre": "Lata Brahma 473cc",
-        "precio": "AR$ 59,99"
+        "code": "318128",
+        "name": "Heinekken",
+        "category": "Cerveza Rubia",
+        "image": "Heinekken.jpg",
+        "price": "169",
+        "description": "La mejor"
     },
     {
         "id": 3,
-        "nombre": "Lata Quilmes 473cc",
-        "precio": "AR$ 55,99"
+        "code": "318128",
+        "name": "Heinekken",
+        "category": "Cerveza Rubia",
+        "image": "Heinekken.jpg",
+        "price": "169",
+        "description": "La mejor"
     },
     {
-        "id": 4,
-        "nombre": "Lata Grolsch 473cc x 24u.",
-        "precio": "AR$ 1369,99"
+        "id": 3,
+        "code": "318128",
+        "name": "Heinekken",
+        "category": "Cerveza Rubia",
+        "image": "Heinekken.jpg",
+        "price": "169",
+        "description": "La mejor"
     }
 ]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {title: "Home"}) %>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <hr>
+    <main>
+
+        <section class="titulo">
+            <h2>PRODUCTOS</h2>
+        </section>
+        <section>
+
+            <% productos.forEach(producto => { %>
+                <article>
+                    <img src="/img/products/<%= producto.image %>" alt="">
+                    <h2><%= producto.name %></h2>
+                    <p><%= producto.description %></p>
+                    <a href="/products/<%= producto.id %>">Ir a la info</a>
+                </article>
+            <% }) %>
+
+        </section>
+
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma  </p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

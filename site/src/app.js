@@ -6,6 +6,7 @@ const methodOverride = require ('method-override');
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const adminRouter = require('./routes/admin');
 
 //EJS
 app.set('view engine', 'ejs');
@@ -25,6 +26,7 @@ app.use(express.json())
 app.use('/', mainRouter)
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/admin', adminRouter);
 
 //PUERTOS
 app.listen(process.env.PORT || 3000, function() {

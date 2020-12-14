@@ -3,14 +3,15 @@
 // RUTA ------> CONTROLADOR -------> VISTA
 
 // const path = require('path');
-const productsController = require('../controllers/productsController');
 
 const express = require('express');
 const router = express.Router()
+const controller = require('../controllers/productsController');
 
-router.get('/', productsController.all);
-router.get('/carrito', productsController.productCart)
-router.get('/productos', productsController.productos)
-router.get('/crear', productsController.crear)
+
+router.get('/', controller.root);
+router.get('/:id', controller.detail);
+
+
 
 module.exports = router;

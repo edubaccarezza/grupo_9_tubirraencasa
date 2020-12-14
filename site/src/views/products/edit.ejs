@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {title: "Productos"}) %>
+
+<body>
+    
+    <%- include('../partials/header') %>
+
+        <main>  
+        <section class="principal">
+            <section class="hero">
+                <h1><%= producto.name %></h1>
+            </section>
+    
+            <section class="detail">
+                <div class="img-product">
+                    <img src="/img/products/<%= producto.image %>" alt="producto">
+                </div>
+                <p><%= producto.description %></p>
+                <strong><%= producto.price %></strong>
+
+            </section>
+            <section class="buttons">
+                <a href="/admin/products/<%= producto.name %>">EDITAR</a>
+                
+                <form action="/admin/products/<%= producto.id %>?_method=DELETE" method="POST">
+                    <input type="hidden" value="<%= producto.id %>">
+                    <button type="submit">ELIMINAR</button>
+        </section>
+              
+        </main>  
+
+        <div class="idioma">
+            <p class="idioma1">Idioma  </p> 
+            <select class="idioma2" name="Idioma" id="">
+                <option value="value1">Español</option>
+                <option value="value1">Ingles</option>
+                <option value="value1">Portugues</option>
+            </select>
+        </div>
+
+        <%- include('../partials/footer') %>
+
+</body>
+</html>
