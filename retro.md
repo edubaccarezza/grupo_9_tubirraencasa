@@ -32,15 +32,18 @@ Estudiar mas y reunirnos mas.
 
 ## Sprint 3
 
-### START DOING
-
+### 1. Comenzar a hacer
 - Dividir cada punto desde el inicio del sprint y pedir ayuda si existen trabas. Trabajar el repo en paralelo.
 
-### KEEP DOING
+### 2. Hacer más
+- Trabajar más y con mayor comunicación. 
 
+### 3. Continuar haciendo
 - Mantener las reuniones luego de la clase de DH.
 
-### MORE OF
+### 4. Hacer menos
+- No comunicarnos en que lugar estamos y donde necesitamos ayuda. 
 
+### 5. Dejar de hacer
 -   Esperar al dia previo de la entrega para analizar que falta, y con que no estamos llegando. 
 
