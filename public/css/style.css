@@ -1285,3 +1285,62 @@ button.productButton {
         display: none;
     }
 }
+
+
+
+/* ================
+- Pagina EDIT - 
+================ */
+
+section.edit {
+    padding: 5% 0% 5% 0%;
+    background-color: #fff;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section.name {
+    padding: 0px;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+section.name h1{
+    font-size: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+
+section.detail {
+    padding: 5% 0% 5% 0%;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 0px;
+}
+
+.img-product {
+    width: 30%;
+}
+
+.priceanddescription {
+    width: 60%;
+}
+
+.data {
+    font-size: 25px;
+}
+
+.price {
+    font-size: 35px;
+    margin-top: 25px;
+}
+
+.buttons {
+    width: 40%;
+}
