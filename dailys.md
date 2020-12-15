@@ -21,6 +21,6 @@ Puntos pendientes del sprint 4
 
 <h2>14/12/20</h2>
 
-Seguimiento de puntos realizados.
+Seguimiento de puntos realizados y pendientes.
 
 

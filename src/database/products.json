@@ -54,12 +54,21 @@
         "description": "Es lo que hay"
     },
     {
-        "id": 6,
+        "id": 7,
         "code": "123123",
         "name": "Brahma",
         "category": "Cerveza Rubia",
         "image": "Brahma.jpg",
         "price": "133",
         "description": "Es lo que hay"
+    },
+    {
+        "id": 8,
+        "code": "318128",
+        "name": "Grolsh",
+        "category": "Cerveza Rubia",
+        "image": "Grolsh.jpg",
+        "price": "1199",
+        "description": "Cerveza Europea de Alta GAMA que se consigue en cualquier ferretería pero no se consigue en supermercados porque es muy top!"
     }
 ]
