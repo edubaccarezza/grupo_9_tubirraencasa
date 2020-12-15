@@ -30,7 +30,7 @@ module.exports = {
         let errors = validationResult(req);
         if (errors.isEmpty()) {
             let product = {
-                id: ultimoId,
+                id: ultimoId + 1,
                 code: req.body.code,
                 name: req.body.name,
                 category: req.body.category,
