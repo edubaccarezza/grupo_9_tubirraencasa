@@ -38,5 +38,5 @@
 
  <h3>Trello!!</h3>
 
-  https://trello.com/invite/b/sZGDke3j/d04944eff2bed6c11975a63a06485c1c/proyecto-integrador-dh
+ https://trello.com/b/sZGDke3j/proyecto-integrador-dh
 
