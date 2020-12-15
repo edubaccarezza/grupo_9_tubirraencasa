@@ -8,18 +8,21 @@
     <%- include('../partials/header') %>
 
         <main>  
-        <section class="principal">
-            <section class="hero">
+        <section class="edit">
+            <section class="name    ">
                 <h1><%= producto.name %></h1>
             </section>
     
             <section class="detail">
                 <div class="img-product">
-                    <img src="/img/products/<%= producto.image %>" alt="producto">
+                    <img src="/img/products/<%= producto.image %>" alt="producto" width="100%">
                 </div>
-                <p><%= producto.description %></p>
-                <strong><%= producto.price %></strong>
-
+                <div class="priceanddescription">
+                    <p class="data"><%= producto.description %></p>
+                    <p class="data"><%= producto.category %></p>
+                    <p class="data"><%= producto.code %></p>
+                    <strong class="price"><%= producto.price %></strong>
+                </div>
             </section>
             <section class="buttons">
                 <a href="/admin/products/<%= producto.name %>">EDITAR</a>

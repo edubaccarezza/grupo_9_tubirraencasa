@@ -27,12 +27,39 @@
         "description": "La mejor"
     },
     {
-        "id": 3,
+        "id": 4,
         "code": "318128",
         "name": "Heinekken",
         "category": "Cerveza Rubia",
         "image": "Heinekken.jpg",
         "price": "169",
         "description": "La mejor"
+    },
+    {
+        "id": 5,
+        "code": "123123",
+        "name": "Brahma",
+        "category": "Cerveza Rubia",
+        "image": "Brahma.jpg",
+        "price": "133",
+        "description": "Es lo que hay"
+    },
+    {
+        "id": 6,
+        "code": "123123",
+        "name": "Brahma",
+        "category": "Cerveza Rubia",
+        "image": "Brahma.jpg",
+        "price": "133",
+        "description": "Es lo que hay"
+    },
+    {
+        "id": 6,
+        "code": "123123",
+        "name": "Brahma",
+        "category": "Cerveza Rubia",
+        "image": "Brahma.jpg",
+        "price": "133",
+        "description": "Es lo que hay"
     }
 ]
