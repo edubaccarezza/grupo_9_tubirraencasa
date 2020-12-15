@@ -28,3 +28,19 @@ Llegar al ultimo momento haciendo cargas.
 <h2>¿Qué vamos a hacer distinto la próximo vez para mejorar?</h2>
 Estudiar mas y reunirnos mas.
 
+# Retrospectiva del equipo
+
+## Sprint 3
+
+### START DOING
+
+- Dividir cada punto desde el inicio del sprint y pedir ayuda si existen trabas. Trabajar el repo en paralelo.
+
+### KEEP DOING
+
+- Mantener las reuniones luego de la clase de DH.
+
+### MORE OF
+
+-   Esperar al dia previo de la entrega para analizar que falta, y con que no estamos llegando. 
+
