@@ -12,7 +12,7 @@ var storage = multer.diskStorage({
       cb(null, path.join(__dirname, '../../public/img/users'))
     },
     filename: function (req, file, cb) {
-      cb(null, req.body.name + path.extname(file.originalname))
+      cb(null, req.body.email + path.extname(file.originalname))
     }
 })
    
