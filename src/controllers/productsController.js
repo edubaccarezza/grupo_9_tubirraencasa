@@ -48,5 +48,8 @@ module.exports = {
             return producto.id == req.params.id;
         })
         return res.render('products/edit', {producto});
+    },
+    cart: function(req,res) {
+        return res.render('products/productCart')
     }  
 }

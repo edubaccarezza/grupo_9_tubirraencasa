@@ -11,6 +11,7 @@ const controller = require('../controllers/productsController');
 
 router.get('/', controller.root);
 router.get('/:id', controller.detail);
+router.get('/carrito', controller.cart)
 
 
 

@@ -22,5 +22,8 @@ Puntos pendientes del sprint 4
 <h2>14/12/20</h2>
 
 Seguimiento de puntos realizados y pendientes.
+1) css login/register (botones) --> Corregir
+2) Los links del sitio deben ser clikeables y direccionar a donde corresponda --> A mejorar
+3) Hay que meterle mucha pata a los estilos del sitio --> A mejorar
 
 
