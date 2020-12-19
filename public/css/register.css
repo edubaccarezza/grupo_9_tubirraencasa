@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 
 *{
@@ -23,6 +24,11 @@ body{
 /* ================
 - Header
 ================ */
+
+#class1 {
+    color: #00ebb9;
+    text-decoration: none;
+}
 
 header {
     background: #f0efeb;
@@ -239,9 +245,10 @@ main .caja {
     border-radius: 10px;
 }
 
+/*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
+
 main .caja .boton{
     width: 100%;
-
 }
 
 main .caja .boton a {
@@ -258,6 +265,7 @@ main .caja .boton .crear{
     border-bottom: 5px solid rgb(44, 44, 44);
     opacity: 0.5;
     border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     background-color: gray;
 }
 
@@ -267,10 +275,11 @@ main .caja .boton .crear:hover{
     background-color: #fff;
 }
 
-
 main .caja .boton .ingresar{
     border-bottom: 5px solid red;
 }
+
+/*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
 
 main .caja .redes {
     margin-top: 15px;
@@ -354,13 +363,41 @@ main .caja .formulario form button:hover {
 
 main .caja p {
     font-size: 16px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; 
 }
 
 main .caja p a{
     text-decoration: none;
 }
 
+main .caja .formulario .categoria {
+    width: 90%;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 15px 7px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    display: flex;
+}
+main .caja .formulario .categoria p {
+    font-size: 13px;
+    font-family: PT Sans;
+    color: #555;
+    margin-right: 10px;
+}
+main .caja .formulario .categoria select {
+    font-size: 13px;
+    font-family: PT Sans;
+    color: #555;
+    margin-left: 10px;
+    height: 23px;
+    width: 60%;
+}
+
+.recordame #cbox{
+    display: flex;
+    width: 90%;
+}
 
 /* ================
 - Main - Idioma

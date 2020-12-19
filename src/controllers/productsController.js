@@ -41,7 +41,7 @@ module.exports = {
             productos.push(product);
             fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
         }
-        return res.send("products/index");
+        return res.redirect("/products/index");
     },
     adminDetail: (req, res) => {
         let producto = productos.find((producto) => {
@@ -50,6 +50,6 @@ module.exports = {
         return res.render('products/edit', {producto});
     },
     cart: function(req,res) {
-        return res.render('products/productCart')
+        return res.redirect('/products/productCart')
     }  
-}
+} 

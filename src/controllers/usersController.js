@@ -15,12 +15,13 @@ for (let i = 0; i < users.length; i++) {
 module.exports = {
     register: function(req, res) {
         res.render('users/register')
-    },
+    }, 
 
     create: function(req,res){
         let nuevoUsuario = {
             id:ultimoId + 1,
-            name:req.body.name,
+            firstName:req.body.firstName,
+            lastName:req.body.lastName,
             email:req.body.email,
             password:bcrypt.hashSync(req.body.password,12),
             image:req.file.filename

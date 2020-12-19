@@ -11,7 +11,7 @@
     <header>
         <div class="brand">
             <!--<img class="logo" src="" alt="Logo">-->
-            <i id="class1" class="fas fa-beer"></i>
+            <a href="../"><i id="class1" class="fas fa-beer" ></i></a>
     
             <div class="busca">
                 <form action="">
@@ -21,7 +21,7 @@
                     <ul>
                         <li><a href="/users/login">Login</a></li>
                         <li><a href="/users/register">Registro</a></li>
-                        <li><a href="/products/carrito">Carrito</a></li>
+                        <li><a href="/products/productCart">Carrito</a></li>
                     </ul>
                 </nav>    
             </div>
@@ -53,9 +53,22 @@
             <div class="formulario">
                 <h3>Registrate con tu mail</h3>
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <input type="text" placeholder="Nombre y Apellido" name="name">
+                    <!-- <input type="number" placeholder="Identificador" name="id"> -->
+                    <input type="text" placeholder="Nombre" name="firstName">
+                    <input type="text" placeholder="Apellido" name="lastName">
                     <input type="email" placeholder="Email" name="email">
                     <input type="password" placeholder="Contraseña" name="password">
+                    <!-- <input type="password" placeholder="Confirmar Contraseña" name="password"> -->
+                    <!-- <input type="text" placeholder="Categoría" name="category">
+                    <div class="categoria">
+                        <p>Elige tu Categoría</p>
+                        <Select name="category">
+                            <option value="Categoría"></option>
+                            <option value="Categoría">Categoría 1</option>
+                            <option value="Categoría">Categoría 2</option>
+                            <option value="Categoría">Categoría 3</option>
+                        </Select>
+                    </div> -->
                     <input type="file" name="image">
                     <button type="submit">Registrarse</button>
                 </form>

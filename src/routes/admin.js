@@ -28,5 +28,5 @@ router.post('/products/create',upload.any('image'), productsController.store);
 router.get('/products/:id', productsController.adminDetail);
 router.delete('/products/:id', (req, res) => res.send('borraste un producto'))
 
-module.exports = router;
+module.exports = router; 
 
