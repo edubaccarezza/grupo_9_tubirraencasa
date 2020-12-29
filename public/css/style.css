@@ -1273,7 +1273,7 @@ button.productButton {
 
 
 /* ================
-- Pagina EDIT - 
+- Pagina DETAIL - 
 ================ */
 
 section.edit {
@@ -1283,6 +1283,7 @@ section.edit {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 section.name {
@@ -1310,10 +1311,21 @@ section.detail {
 
 .img-product {
     width: 30%;
+    transition: 1s;
+
+}
+.img-product:hover {
+    transform: scale(1.2);
 }
 
 .priceanddescription {
     width: 60%;
+    border-left: gray 2px solid;
+    padding-left: 2%;
+}
+p.titledescrpition {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
 .data {
@@ -1327,4 +1339,36 @@ section.detail {
 
 .buttons {
     width: 40%;
+}
+
+.editar {
+    background-color: rgba(0, 8, 247, 0.64);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 40%;
+    font-size: 20px;
+    border: none;
+    margin-top: 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.editar:hover{
+    background-color: rgba(0, 8, 247, 0.34);
+}
+.eliminar1 {
+    width: 40%;
+}
+.eliminar {
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    margin-top: 15px;
+}
+.eliminar:hover {
+    background-color: rgba(0, 0, 0, 0.34);
 }

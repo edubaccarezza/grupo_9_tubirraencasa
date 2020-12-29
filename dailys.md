@@ -44,3 +44,9 @@ Revision SPRINT 5 y division de tareas
     b) Checkbox Términos y condiciones
 6) Formulario carga de producto, se dan estilos como los de login/register
 
+29/12 Cambios realizados --> (EDU)
+1) Se arregla problema con vista carrito
+2) se mejora css de vistas detalle de producto para user/admin
+3) Se crea formulario de actualizacion de producto (Ruta por GET)
+4) PENDIENTE-->Se agrega funcion para actualizar producto (Ruta por POST)
+

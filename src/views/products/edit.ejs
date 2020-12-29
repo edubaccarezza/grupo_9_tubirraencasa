@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head', {title: "Productos"}) %>
-
+    <%- include('../partials/head', {title: "Home"}) %>
 <body>
-    
+
     <%- include('../partials/header') %>
 
-        <main>  
-        <section class="edit">
-            <section class="name">
-                <h1><%= producto.name %></h1>
-            </section>
-    
-            <section class="detail">
-                <div class="img-product">
-                    <img src="/img/products/<%= producto.image %>" alt="producto" width="100%">
-                </div>
-                <div class="priceanddescription">
-                    <p class="data"><%= producto.description %></p>
-                    <p class="data"><%= producto.category %></p>
-                    <p class="data"><%= producto.code %></p>
-                    <strong class="price"><%= producto.price %></strong>
-                </div>
-            </section>
-            <section class="buttons">
-                <a href="/admin/products/<%= producto.name %>">EDITAR</a>
-                
-                <form action="/admin/products/<%= producto.id %>?_method=DELETE" method="POST">
-                    <input type="hidden" value="<%= producto.id %>">
-                    <button type="submit">ELIMINAR</button>
+    <hr>
+    <main>
+        <br>
+        <section class="hero" style="justify-content: center;">
+            <h1>Actualiza Aquí tus Productos</h1>
         </section>
-              
-        </main>  
+        <br>
+        <section class="formact">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input id="code" name="code" type="number" placeholder="Código" value="<%= producto.code %>">
+                <input id="name" name="name" type="text" placeholder="Nombre" value="<%= producto.name %>">
+                <input id="category" name="category" type="text" placeholder="Categoría" value="<%= producto.category %>">
+                <input id="image" name="image" type="file" placeholder="Imagen" value="<%= producto.image %>">
+                <input id="price" name="price" type="number" placeholder="Precio" value="<%= producto.price %>">
+                <input id="description" name="description" type="text" placeholder="Categoría" value="<%= producto.description %>">
+                <button type="submit">Actualizar</button>
+            </form>
+            <br>
+        </section>
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma  </p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
 
-        <div class="idioma">
-            <p class="idioma1">Idioma  </p> 
-            <select class="idioma2" name="Idioma" id="">
-                <option value="value1">Español</option>
-                <option value="value1">Ingles</option>
-                <option value="value1">Portugues</option>
-            </select>
-        </div>
-
-        <%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
 
 </body>
 </html>

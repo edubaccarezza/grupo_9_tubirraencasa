@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head', {title: "Productos"}) %>
+
+<body>
+    
+    <%- include('../partials/header') %>
+
+        <main>  
+        <section class="edit">
+            <section class="name">
+                <h1><%= producto.name %></h1>
+            </section>
+    
+            <section class="detail">
+                <div class="img-product">
+                    <img src="/img/products/<%= producto.image %>" alt="producto" width="100%">
+                </div>
+                <div class="priceanddescription">
+                    <p class="titledescrpition">Descripción del Producto</p>
+                    <p class="data"><%= producto.description %></p>
+                    <br>
+                    <p class="data">Categoría: <%= producto.category %></p>
+                    <br>
+                    <p class="data">Código: <%= producto.code %></p>
+                    <br>
+                    <strong class="price">$ <%= producto.price %></strong>
+                </div>
+            </section>
+            <!-- <section class="buttons">
+                <a class="editar" href="/admin/products/edit/<%= producto.id %>">EDITAR</a>
+                
+                <form class="eliminar1" action="/admin/products/<%= producto.id %>?_method=DELETE" method="POST">
+                    <input type="hidden" value="<%= producto.id %>">
+                    <button class="eliminar" type="submit">ELIMINAR</button>
+            </section>         -->
+        </section>
+              
+        </main>  
+
+        <div class="idioma">
+            <p class="idioma1">Idioma  </p> 
+            <select class="idioma2" name="Idioma" id="">
+                <option value="value1">Español</option>
+                <option value="value1">Ingles</option>
+                <option value="value1">Portugues</option>
+            </select>
+        </div>
+
+        <%- include('../partials/footer') %>
+
+</body>
+</html>

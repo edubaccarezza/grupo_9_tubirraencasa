@@ -13,18 +13,26 @@ for (let i = 0; i < productos.length; i++) {
 }
 
 module.exports = {
+    //product.js
+
     root: function(req, res) {
         return res.render('products/index', { productos });   
-    },
+    }, //OK
     detail: function(req, res) {
         let producto = productos.find((producto) => {
             return producto.id == req.params.id;
         })
-        return res.send(producto);  
-    },
+        return res.render('products/detailUser', {producto});  
+    }, //OK
+    cart: (req,res) => {
+        return res.render('products/productCart');
+    },  // NO OK
+
+
+    //admin.js
     create: function(req,res) {
         return res.render('products/create')
-    },
+    }, //OK
     store: function(req,res,next) {
         // return console.log(req.files[0])
         let errors = validationResult(req);
@@ -41,15 +49,43 @@ module.exports = {
             productos.push(product);
             fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
         }
-        return res.redirect("/products/index");
-    },
+        return res.redirect("/products/");
+    }, //OK
     adminDetail: (req, res) => {
+        let producto = productos.find((producto) => {
+            return producto.id == req.params.id;
+        })
+        return res.render('products/detailAdmin', {producto});
+    }, //OK
+    edit: function (req, res) {
         let producto = productos.find((producto) => {
             return producto.id == req.params.id;
         })
         return res.render('products/edit', {producto});
     },
-    cart: function(req,res) {
-        return res.redirect('/products/productCart')
-    }  
+    // restore: function(req, res) {
+    //     let producto = productos.find((producto) => {
+    //         return producto.id == req.params.id;
+    //     })
+    //     // return res.send(producto);
+
+    //     //primer paso traer productos
+    //     //segundo paso definir variable product (req.body.id)
+    //     //filter a productos
+    //     let errors = validationResult(req);
+    //     if (errors.isEmpty()) {
+    //         let product = {
+    //             id: req.body.id,
+    //             code: req.body.code,
+    //             name: req.body.name,
+    //             category: req.body.category,
+    //             // image: req.files[0].filename,
+    //             price: req.body.price,
+    //             description: req.body.description
+    //         }
+    //         productos.push(product);
+    //         fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
+    //     }
+    //     return res.redirect("/products/");
+    // }
 } 
