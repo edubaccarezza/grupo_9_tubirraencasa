@@ -28,7 +28,7 @@ router.post('/products/create',upload.any('image'), productsController.store);
 router.get('/products/:id', productsController.adminDetail);
 router.delete('/products/:id', productsController.delete);
 router.get('/products/edit/:id', productsController.edit);
-// router.post('/products/edit/:id',upload.any('image'), productsController.restore);
+router.post('/products/edit/:id',upload.any('image'), productsController.restore);
 
 module.exports = router; 
 

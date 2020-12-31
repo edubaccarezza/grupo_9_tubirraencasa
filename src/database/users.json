@@ -1,1 +1,32 @@
-[{"id":1,"name":"Juani Noto","email":"juani.noto26@gmail.com","password":"$2b$12$xZMT7OiSufrKpF0CHihIwe/1BxNr2wybou0oX81.ohi8e3YRzYEfq","image":"juani.noto26@gmail.com.jpg"},{"id":2,"name":"Baccarezza Eduardo Raul","email":"edubaccarezza@gmail.com","password":"$2b$12$ozF3lRYsBGHQaT2Valdc/.oOjEoHmPVP0fAF6Qy/53BGCS0tldql6","image":"edubaccarezza@gmail.com.jpg"},{"id":3,"firstName":"Eduardo","lastName":"Baccarezza","email":"edubaccarezza@gmail.com","password":"$2b$12$4byJwcA.CGvGn8YS7Hex2uSLOKa5G9l0qwEhkjAARHlu3qX9zlonG","image":"edubaccarezza@gmail.com.jpg"},{"id":4,"firstName":"Eduardo","lastName":"Baccarezza","email":"erb_67@hotmail.com","password":"$2b$12$fKeakBqB/ZCr.BRpVjHPJuyKtvfrUBGnHroqwFCgEK5gbROfUUomy","image":"erb_67@hotmail.com.jpg"}]
+[
+    {
+        "id": 1,
+        "name": "Juani Noto",
+        "email": "juani.noto26@gmail.com",
+        "password": "$2b$12$xZMT7OiSufrKpF0CHihIwe/1BxNr2wybou0oX81.ohi8e3YRzYEfq",
+        "image": "juani.noto26@gmail.com.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Baccarezza Eduardo Raul",
+        "email": "edubaccarezza@gmail.com",
+        "password": "$2b$12$ozF3lRYsBGHQaT2Valdc/.oOjEoHmPVP0fAF6Qy/53BGCS0tldql6",
+        "image": "edubaccarezza@gmail.com.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Eduardo",
+        "lastName": "Baccarezza",
+        "email": "edubaccarezza@gmail.com",
+        "password": "$2b$12$4byJwcA.CGvGn8YS7Hex2uSLOKa5G9l0qwEhkjAARHlu3qX9zlonG",
+        "image": "edubaccarezza@gmail.com.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Eduardo",
+        "lastName": "Baccarezza",
+        "email": "erb_67@hotmail.com",
+        "password": "$2b$12$fKeakBqB/ZCr.BRpVjHPJuyKtvfrUBGnHroqwFCgEK5gbROfUUomy",
+        "image": "erb_67@hotmail.com.jpg"
+    }
+]

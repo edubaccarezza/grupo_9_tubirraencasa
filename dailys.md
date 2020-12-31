@@ -48,5 +48,6 @@ Revision SPRINT 5 y division de tareas
 1) Se arregla problema con vista carrito
 2) se mejora css de vistas detalle de producto para user/admin
 3) Se crea formulario de actualizacion de producto (Ruta por GET)
-4) PENDIENTE-->Se agrega funcion para actualizar producto (Ruta por POST)
+4) 31/12 --> Se agrega funcion para actualizar producto (Ruta por POST)
 5) 31/12 --> Se agrega pagina de delete
+6) 31/12 --> Se agrega funcionalidad delete. Se eliminan los productos de la base json

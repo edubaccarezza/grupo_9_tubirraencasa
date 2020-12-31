@@ -1,8 +1,7 @@
 [
     {
         "id": 1,
-        "code": "1",
-        "name": "heineken",
+        "name": "Heineken",
         "category": "Cerveza Rubia",
         "image": "heineken.jpg",
         "price": "169",
@@ -10,47 +9,42 @@
     },
     {
         "id": 2,
-        "code": "2",
-        "name": "brahma",
-        "category": "Cerveza Rubia",
-        "image": "brahma.jpg",
-        "price": "110",
+        "name": "Brahma",
+        "category": "Cerveza Rubia Barata",
+        "image": "Brahma.jpg",
+        "price": "80",
         "description": "En 1943 se lanzada la Brahma Lager, una cerveza con sabor fuerte, de fermentación lenta y que se sirve fría. Para 1973 Brahma incursiona en el ramo de bebidas no alcohólicas al unir fuerzas con el grupo Fratelli Vita, incluyendo en su gama de productos la gaseosa Limao entre otros productos."
     },
     {
         "id": 3,
-        "code": "3",
-        "name": "Quilmes",
-        "category": "Cerveza Rubia",
-        "image": "Quilmes.jpg",
-        "price": "120",
-        "description": "De sabor refrescante, con un sabor equilibrado entre aroma, suavidad y amargor. La cerveza preferida por los argentinos. Es ideal para consumirse en verano, bien fresca en tardes o noches de mucho calor. Sola o como acompañante ideal de la picada, asado dominguero y pizza."
-    },
-    {
-        "id": 4,
-        "code": "4",
         "name": "Pack Grolsch",
         "category": "Cerveza Rubia",
         "image": "Pack Grolsch.jpg",
-        "price": "1520",
-        "description": "Grolsch es una cerveza Premium lager con un toque no convencional: 2 lúpulos que le aportan sabor y aroma, traduciéndose en capas de frescura, naturalidad y un sabor fresco que despiertan los sentidos. Competencia de Heineken en Holanda. Rubia, suave, premium lager."
+        "price": "1622",
+        "description": "Breves detalles. La cervecería Grolsch fue fundada en 1615 en Groenlo. ... Su principal producto es la cerveza Grolsch Premium Pilsner, conocida internacionalmente como Grolsch Premium Lager, con una graduación alcohólica del 5.0%. Es su cerveza de bandera y abarca el 95% del total de ventas de la empresa."
+    },
+    {
+        "id": 4,
+        "name": "Quilmes",
+        "category": "Cerveza Rubia",
+        "image": "Quilmes.jpg",
+        "price": "133",
+        "description": "Quilmes „el sabor del encuentro“. De sabor refrescante, con un sabor equilibrado entre aroma, suavidad y amargor. La cerveza preferida por los argentinos. Es ideal para consumirse en verano, bien fresca en tardes o noches de mucho calor. Sola o como acompañante ideal de la picada, asado dominguero y pizza."
     },
     {
         "id": 5,
-        "code": "5",
         "name": "Schneider",
-        "category": "Cerveza Rubia",
+        "category": "Cerveza Rubia Barata",
         "image": "Schneider.jpg",
-        "price": "133",
-        "description": "SCHNEIDER ROJA Aroma a malta moderado, con aromáticos tostados y un sutil final a caramelo. Sabor asociado a la malta caramelo con un amargor del lúpulo moderado que proporciona un buen balance final. De color cobre rojizo intenso y brillante, con una espuma persistente. Buen cuerpo"
+        "price": "122",
+        "description": "SCHNEIDER ROJA Aroma a malta moderado, con aromáticos tostados y un sutil final a caramelo. Sabor asociado a la malta caramelo con un amargor del lúpulo moderado que proporciona un buen balance final. De color cobre rojizo intenso y brillante, con una espuma persistente. ... Aroma a maltas tostadas y suave caramelo."
     },
     {
-        "id": 6,
-        "code": "6",
-        "name": "stella",
+        "id": 7,
+        "name": "Nueva Stella Artois",
         "category": "Cerveza Rubia",
-        "image": "stella.jpg",
-        "price": "170",
-        "description": "Stella Artois hace parte de una rica herencia cervecera belga que data de 1366. Su legado de calidad y sofisticación se refleja en el cáliz icónico, especialmente diseñado para elevar todos los sentidos - con una forma única que realza el aroma y un tallo que mantiene la cerveza más fría por más tiempo."
+        "image": "Nueva Stella Artois.jpg",
+        "price": "155",
+        "description": "Lager de color dorado pálido, muy brillante y con una espuma consistente. Una cerveza muy equilibrada donde predominan moderadas notas a frutas blancas y de cereal que resaltan levemente sobre el aroma herbal del lúpulo Saaz."
     }
 ]
