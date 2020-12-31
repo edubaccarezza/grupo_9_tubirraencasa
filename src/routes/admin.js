@@ -26,7 +26,7 @@ var upload = multer({ storage: storage })
 router.get('/products/create', productsController.create);
 router.post('/products/create',upload.any('image'), productsController.store);
 router.get('/products/:id', productsController.adminDetail);
-router.delete('/products/:id', (req, res) => res.send('borraste un producto'));
+router.delete('/products/:id', productsController.delete);
 router.get('/products/edit/:id', productsController.edit);
 // router.post('/products/edit/:id',upload.any('image'), productsController.restore);
 

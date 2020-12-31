@@ -1372,3 +1372,46 @@ p.titledescrpition {
 .eliminar:hover {
     background-color: rgba(0, 0, 0, 0.34);
 }
+
+
+/* ================
+- Pagina DELETE - 
+================ */
+
+.hero2 {
+    width: 80%;
+    height: 60vh;
+    display: block;
+}
+
+.eliminaste {
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+}
+
+#delete {
+    width: 100%;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botonSeguiComprando {
+    display: flex;
+    justify-content: center;
+}
+
+.seguiComprando {
+    padding: 9px 18px;
+    border: none;
+    background-color: #06f;
+    color: white;
+    border-radius: 4px;
+    margin-top: 165px; 
+}
+
+.ref {
+    text-decoration: none;
+    color: white;
+}

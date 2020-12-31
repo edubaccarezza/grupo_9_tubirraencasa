@@ -87,5 +87,8 @@ module.exports = {
     //         fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
     //     }
     //     return res.redirect("/products/");
-    // }
+    // },
+    delete: function(req, res) {
+        res.render('products/delete')
+    }
 } 
