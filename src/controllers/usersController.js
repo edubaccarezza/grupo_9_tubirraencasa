@@ -19,7 +19,7 @@ module.exports = {
     }, 
     create: function(req,res){
         let errors = validationResult(req)
-        if(errors.isEmpty){
+        if(errors.isEmpty()){
             let nuevoUsuario = {
                 id:ultimoId + 1,
                 firstName:req.body.firstName,
@@ -30,11 +30,12 @@ module.exports = {
             }
     
             users.push(nuevoUsuario);
-            fs.writeFileSync(path.join(__dirname, '../database/users.json'),JSON.stringify(users));
-    
+            fs.writeFileSync(path.join(__dirname, '../database/users.json'),JSON.stringify(users, null, 4));
+            
+            // req.session.user = nuevoUsuario;
             return res.redirect('/');
-        }  else{
-            res.send(errors)
+        } else{
+            res.send(errors.mapped())
         }
     },
     login: function(req, res) {
