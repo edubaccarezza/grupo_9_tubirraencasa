@@ -40,10 +40,10 @@
         "description": "SCHNEIDER ROJA Aroma a malta moderado, con aromáticos tostados y un sutil final a caramelo. Sabor asociado a la malta caramelo con un amargor del lúpulo moderado que proporciona un buen balance final. De color cobre rojizo intenso y brillante, con una espuma persistente. ... Aroma a maltas tostadas y suave caramelo."
     },
     {
-        "id": 7,
-        "name": "Nueva Stella Artois",
+        "id": 8,
+        "name": "Nueva Stella Artois (Nueva)",
         "category": "Cerveza Rubia",
-        "image": "Nueva Stella Artois.jpg",
+        "image": "Nueva Stella Artois (Nueva).jpg",
         "price": "155",
         "description": "Lager de color dorado pálido, muy brillante y con una espuma consistente. Una cerveza muy equilibrada donde predominan moderadas notas a frutas blancas y de cereal que resaltan levemente sobre el aroma herbal del lúpulo Saaz."
     }

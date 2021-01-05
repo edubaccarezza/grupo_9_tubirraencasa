@@ -32,7 +32,7 @@ module.exports = {
             users.push(nuevoUsuario);
             fs.writeFileSync(path.join(__dirname, '../database/users.json'),JSON.stringify(users, null, 4));
             
-            // req.session.user = nuevoUsuario;
+            req.session.user = nuevoUsuario;
             return res.redirect('/');
         } else{
             res.send(errors.mapped())
@@ -43,14 +43,30 @@ module.exports = {
     },
     loginIn: function(req,res){
 
-        for(let i=0; i<users.length;i++){
-            if(req.body.email==users[i].email){
-               if(bcrypt.compareSync(req.body.password,users[i].password)){
-                   return res.redirect('/');
-               }
+        let errors = validationResult(req);
+        let { email, password, remember } = req.body;
+        if (errors.isEmpty()) {
+            let userLoginIn;
+
+            users.forEach(user => {
+                if (user.email === email && bcrypt.compareSync(password, user.password)) {
+                    userLoginIn = user;
+                }
+            });
+
+            if (userLoginIn == undefined) {
+                return res.send('Credenciales invalidas');
+            } 
+
+            req.session.user = userLoginIn;
+
+            if (remember != undefined) {
+                res.cookie('remember', userLoginIn.email, { maxAge: 60000 });
             }
+            return res.redirect('/');
+
+        } else {
+            return res.send(errors.mapped());
         }
-        
-        return res.redirect('/users/login');
     }
 }

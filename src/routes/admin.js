@@ -11,6 +11,7 @@ const path = require('path')
 // const { productCart } = require('../controllers/productsController');
 const multer = require('multer')
 const productsController = require('../controllers/productsController');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -23,8 +24,8 @@ var storage = multer.diskStorage({
    
 var upload = multer({ storage: storage })
 
-router.get('/products/create', productsController.create);
-router.post('/products/create',upload.any('image'), productsController.store);
+router.get('/products/create', adminMiddleware, productsController.create);
+router.post('/products/create',upload.any('image'), adminMiddleware, productsController.store);
 router.get('/products/:id', productsController.adminDetail);
 router.delete('/products/:id', productsController.delete);
 router.get('/products/edit/:id', productsController.edit);
