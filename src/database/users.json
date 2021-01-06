@@ -6,5 +6,13 @@
         "email": "edubaccarezza@gmail.com",
         "password": "$2b$12$sRYSM3mS/nMfvnTDuH5bhePbsOXqJbd0M9wPGwhSXNZbZm003Tii2",
         "image": "edubaccarezza@gmail.com.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Eduardo",
+        "lastName": "Baccarezzaaa",
+        "email": "erb_67@hotmail.com",
+        "password": "$2b$12$jCxLMEN/NXg5/ISP14kNsuswF6vqlS9yBYKbMfNy8/W6.X0sZG84u",
+        "image": "erb_67@hotmail.com.jpg"
     }
 ]

@@ -51,3 +51,16 @@ Revision SPRINT 5 y division de tareas
 4) 31/12 --> Se agrega funcion para actualizar producto (Ruta por POST)
 5) 31/12 --> Se agrega pagina de delete
 6) 31/12 --> Se agrega funcionalidad delete. Se eliminan los productos de la base json
+
+<h2>05/01/21</h2>
+<h1>NUEVO AÑO :D<h1>
+Se realiza revisión del sprint N°5 verificando puntos pendientes:
+
+Pendientes: (Con Responsable de adecuar)
+1) Logueado: Anda el session, faltaria algo que demuestre que estas logueado. (muestre
+los datos del usuario en algún lugar del sitio, como el header.)
+2) Logueado: En caso de error, corregir para que te salten el mensaje bajo el campo. (Actual te manda al json)
+3) Productos: Poner botones para llegar los detalles de productos (Admin y Guest)
+4) Ver cookies de ADMIN. No deja entrar logueado. 
+5) Pendiente boton checkbox.
+6) A revisar punto 8)

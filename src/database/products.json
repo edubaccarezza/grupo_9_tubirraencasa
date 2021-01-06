@@ -8,14 +8,6 @@
         "description": "Heineken® es una cerveza única, y desde 1873 hasta la fecha conserva la misma calidad, principios e ingredientes. A diferencia de cualquier otra cerveza en México, Heineken® se fermenta en el fondo de tanques horizontales, lo que la hace mas clara, pura y durable."
     },
     {
-        "id": 2,
-        "name": "Brahma",
-        "category": "Cerveza Rubia Barata",
-        "image": "Brahma.jpg",
-        "price": "80",
-        "description": "En 1943 se lanzada la Brahma Lager, una cerveza con sabor fuerte, de fermentación lenta y que se sirve fría. Para 1973 Brahma incursiona en el ramo de bebidas no alcohólicas al unir fuerzas con el grupo Fratelli Vita, incluyendo en su gama de productos la gaseosa Limao entre otros productos."
-    },
-    {
         "id": 3,
         "name": "Pack Grolsch",
         "category": "Cerveza Rubia",
@@ -30,21 +22,5 @@
         "image": "Quilmes.jpg",
         "price": "133",
         "description": "Quilmes „el sabor del encuentro“. De sabor refrescante, con un sabor equilibrado entre aroma, suavidad y amargor. La cerveza preferida por los argentinos. Es ideal para consumirse en verano, bien fresca en tardes o noches de mucho calor. Sola o como acompañante ideal de la picada, asado dominguero y pizza."
-    },
-    {
-        "id": 5,
-        "name": "Schneider",
-        "category": "Cerveza Rubia Barata",
-        "image": "Schneider.jpg",
-        "price": "122",
-        "description": "SCHNEIDER ROJA Aroma a malta moderado, con aromáticos tostados y un sutil final a caramelo. Sabor asociado a la malta caramelo con un amargor del lúpulo moderado que proporciona un buen balance final. De color cobre rojizo intenso y brillante, con una espuma persistente. ... Aroma a maltas tostadas y suave caramelo."
-    },
-    {
-        "id": 8,
-        "name": "Nueva Stella Artois (Nueva)",
-        "category": "Cerveza Rubia",
-        "image": "Nueva Stella Artois (Nueva).jpg",
-        "price": "155",
-        "description": "Lager de color dorado pálido, muy brillante y con una espuma consistente. Una cerveza muy equilibrada donde predominan moderadas notas a frutas blancas y de cereal que resaltan levemente sobre el aroma herbal del lúpulo Saaz."
     }
 ]
