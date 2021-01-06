@@ -47,3 +47,19 @@ Estudiar mas y reunirnos mas.
 ### 5. Dejar de hacer
 -   Esperar al dia previo de la entrega para analizar que falta, y con que no estamos llegando. 
 
+## Sprint 5
+
+### 1. Comenzar a hacer
+- Implementar mas reuniones en la semana, reunirnos y compartir pantalla, documentacion o lo que se necesite para avanzar en el proyecto. 
+
+### 2. Hacer más
+- Trabajar con mayor margen para solucionar posibles errores. 
+
+### 3. Continuar haciendo
+- Mantener las reuniones luego de la clase de DH.
+
+### 4. Hacer menos
+- Atrasar el trabajo y hablar a ultimo momento. 
+
+### 5. Dejar de hacer
+-   Sacarnos las dudas antes de entregar el sprint y no dearlas para último momento.
