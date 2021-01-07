@@ -20,22 +20,46 @@ module.exports = {
     create: function(req,res){
         let errors = validationResult(req)
         if(errors.isEmpty()){
-            let nuevoUsuario = {
-                id:ultimoId + 1,
-                firstName:req.body.firstName,
-                lastName:req.body.lastName,
-                email:req.body.email,
-                password:bcrypt.hashSync(req.body.password,12),
-                image:req.file.filename
+            if(req.body.password==req.body.repassword){
+                    let nuevoUsuario = {
+                        id:ultimoId + 1,
+                        firstName:req.body.firstName,
+                        lastName:req.body.lastName,
+                        email:req.body.email,
+                        password:bcrypt.hashSync(req.body.password,12),
+                        image:req.file.filename
+                    }
+
+                    users.push(nuevoUsuario);
+                    fs.writeFileSync(path.join(__dirname, '../database/users.json'),JSON.stringify(users, null, 4));
+            
+                    req.session.user = nuevoUsuario;
+                    return res.redirect('/');
+                
+            }else{
+                 return res.render('users/register',
+                    {
+                        old:req.body,
+                        passError:[
+                        {msg:'Las contraseñas no coinciden'}]
+                    })
             }
     
-            users.push(nuevoUsuario);
-            fs.writeFileSync(path.join(__dirname, '../database/users.json'),JSON.stringify(users, null, 4));
             
-            req.session.user = nuevoUsuario;
-            return res.redirect('/');
         } else{
-            res.send(errors.mapped())
+            if(req.body.password==req.body.repassword){
+                return res.render('users/register',{
+                    errors:errors.mapped(),
+                    old:req.body
+                })
+            }else{
+                return res.render('users/register',{
+                    errors:errors.mapped(),
+                    passError:[
+                        {msg:'Las contraseñas no coinciden'}],
+                    old:req.body
+                })
+            }
         }
     },
     login: function(req, res) {
@@ -49,13 +73,20 @@ module.exports = {
             let userLoginIn;
 
             users.forEach(user => {
-                if (user.email === email && bcrypt.compareSync(password, user.password)) {
-                    userLoginIn = user;
+                if (user.email == email){    
+                    if(bcrypt.compareSync(password, user.password)) {
+                        userLoginIn = user;
+                        
+                    }
                 }
             });
 
             if (userLoginIn == undefined) {
-                return res.send('Credenciales invalidas');
+                return res.render('users/login',
+            {noCoincidence:[
+                {msg:'El email o la contraseña son incorrectas'}]});
+                
+
             } 
 
             req.session.user = userLoginIn;
@@ -65,8 +96,12 @@ module.exports = {
             }
             return res.redirect('/');
 
-        } else {
-            return res.send(errors.mapped());
-        }
+        } else {           
+            return res.render('users/login',
+                {
+                    errors:errors.mapped(),
+                    old:req.body 
+                });
+            }
     }
 }

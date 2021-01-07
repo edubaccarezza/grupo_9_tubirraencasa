@@ -346,6 +346,11 @@ main .caja .formulario form input {
     border:1px solid grey;
 }
 
+main .caja .formulario form .text-danger {
+    color: red;
+    margin-bottom: 15px;
+}
+
 main .caja .formulario form button {
     background-color: rgba(0, 8, 247, 0.64);
     color: #fff;

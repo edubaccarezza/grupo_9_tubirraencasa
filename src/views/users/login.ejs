@@ -55,9 +55,22 @@
             <div class="formulario">
                 <h3>Ingresar con tu mail</h3>
                 <form action="" method="POST">
-                    <input type="email" placeholder="Email" name="email">
+                    <input type="email" placeholder="Email" name="email" value="<%= (locals.old && !errors.email) ? old.email :'' %>">
+                    <small class="text-danger">
+                        <%= (locals.errors&&errors.email) ? errors.email.msg : "" %>
+                    </small>
+
                     <input type="password" placeholder="Contraseña" name="password">
+                    <small class="text-danger">
+                        <%= (locals.errors&&errors.password) ? errors.password.msg : "" %>
+                        <%= (typeof noCoincidence != 'undefined') ? noCoincidence[0].msg : "" %>
+                    </small>
+
                     <a href="#">Olvidaste tu contraseña?</a>
+                    <div>    
+                        <input type="checkbox" name="recordame">
+                        <label for="recordame">Desea ser recordado en este dispositivo</label>
+                    </div>
                     <button type="submit">Ingresar</button>
                 </form>
             </div>

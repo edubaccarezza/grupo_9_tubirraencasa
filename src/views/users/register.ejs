@@ -54,11 +54,31 @@
                 <h3>Registrate con tu mail</h3>
                 <form action="" method="POST" enctype="multipart/form-data">
                     <!-- <input type="number" placeholder="Identificador" name="id"> -->
-                    <input type="text" placeholder="Nombre" name="firstName">
-                    <input type="text" placeholder="Apellido" name="lastName">
-                    <input type="email" placeholder="Email" name="email">
-                    <input type="password" placeholder="Contraseña" name="password">
+                    <input type="text" placeholder="Nombre" name="firstName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.firstName : (locals.old && !errors.firstName) ? old.firstName : '' %>">
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.firstName) ? errors.firstName.msg : "" %>
+                    </small>
+                    
+                    <input type="text" placeholder="Apellido" name="lastName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.lastName :(locals.old && !errors.lastName) ? old.lastName : '' %>">
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.lastName) ? errors.lastName.msg : "" %>
+                    </small>
+
+                    <input type="email" placeholder="Email" name="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : 
+                    (locals.old && !errors.email) ? old.email : '' %>" >
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.email) ? errors.email.msg : "" %>
+                    </small>
+
+                    <input type="password" placeholder="Contraseña" name="password" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.password : (locals.old && !errors.password) ? old.password : '' %>" >
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.password) ? errors.password.msg : "" %>
+                    </small>
+
                     <input type="password" placeholder="Confirmar Contraseña" name="repassword">
+                    <small class="text-danger">
+                        <%= (typeof passError != 'undefined') ? passError[0].msg : "" %>
+                    </small>
 
                     <!-- <input type="password" placeholder="Confirmar Contraseña" name="password"> -->
                     <!-- <input type="text" placeholder="Categoría" name="category">

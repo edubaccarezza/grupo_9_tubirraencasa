@@ -14,5 +14,13 @@
         "email": "erb_67@hotmail.com",
         "password": "$2b$12$jCxLMEN/NXg5/ISP14kNsuswF6vqlS9yBYKbMfNy8/W6.X0sZG84u",
         "image": "erb_67@hotmail.com.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Vanina",
+        "lastName": "Noto",
+        "email": "juani.noto26@gmail.com",
+        "password": "$2b$12$XDZ67jjaigFUy1XJmzuI0uzZpWRRogSSkG1uhl1K9AqbcU.p4FWVS",
+        "image": "juani.noto26@gmail.com.jpg"
     }
 ]

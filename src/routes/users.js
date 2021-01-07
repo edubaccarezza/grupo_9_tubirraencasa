@@ -7,7 +7,7 @@ const path = require ('path');
 const multer = require ('multer');
 const usersController = require('../controllers/usersController');
 const registerValidator = require('../validations/registerValidator')
-const loginValidator = require('../validations/loginValidatior');
+const loginValidator = require('../validations/loginValidator');
 // const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
