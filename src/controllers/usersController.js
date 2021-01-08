@@ -103,5 +103,10 @@ module.exports = {
                     old:req.body 
                 });
             }
+    },
+
+    logOut:function(req,res){
+        req.session.destroy();
+        res.redirect('/');
     }
 }

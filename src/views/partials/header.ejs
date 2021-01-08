@@ -9,9 +9,16 @@
             </form>
             <nav class="login">
                 <ul>
-                    <li><a href="/users/login">Login</a></li>
-                    <li><a href="/users/register">Registro</a></li>
-                    <li><a href="/products/cart">Carrito</a></li>
+                    <% if (typeof hayUnUsuario != 'undefined'){ %>
+                        <li>Bienvenido <%= hayUnUsuario.firstName %></li>
+                        <li><a href="/users/logOut">
+                            <i class="fas fa-times-circle"></i>
+                        </a></li>
+                    <% } else{%>
+                        <li><a href="/users/login">Login</a></li>
+                        <li><a href="/users/register">Registro</a></li>
+                    <%}%>
+                        <li><a href="/products/cart">Carrito</a></li>
                 </ul>
             </nav>
         </div>

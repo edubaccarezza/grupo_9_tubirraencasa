@@ -22,5 +22,13 @@
         "email": "juani.noto26@gmail.com",
         "password": "$2b$12$XDZ67jjaigFUy1XJmzuI0uzZpWRRogSSkG1uhl1K9AqbcU.p4FWVS",
         "image": "juani.noto26@gmail.com.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Juani",
+        "lastName": "Noto",
+        "email": "juani.noto26@gmail.com",
+        "password": "$2b$12$mCykY8llBx1XMbpKfpRW0eTS7aVfppJw.DU9xJ.iLZxDh/BQZYTu2",
+        "image": "juani.noto26@gmail.com.jpg"
     }
 ]

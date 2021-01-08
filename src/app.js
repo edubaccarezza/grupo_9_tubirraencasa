@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 const rememberMiddleware = require('./middlewares/rememberMiddleware');
+const sesionIniciadaMiddleware = require('./middlewares/sesionIniciada');
 
 const mainRouter = require('./routes/main');
 const usersRouter = require('./routes/users');
@@ -28,6 +29,7 @@ app.use(express.json())
 app.use(rememberMiddleware);
 app.use(cookieParser());
 app.use(session( { secret: 'laBirra' } ));
+app.use(sesionIniciadaMiddleware);
 
 //RUTAS
 app.use('/', mainRouter)
