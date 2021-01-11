@@ -30,5 +30,13 @@
         "email": "juani.noto26@gmail.com",
         "password": "$2b$12$mCykY8llBx1XMbpKfpRW0eTS7aVfppJw.DU9xJ.iLZxDh/BQZYTu2",
         "image": "juani.noto26@gmail.com.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "Edu",
+        "lastName": "Bacca",
+        "email": "admin@email.com",
+        "password": "$2b$12$U1UOgvvqeinCOwX1i.bTDOCvvDncg0NcbP2aW9lc8eiMJvzRoqP3m",
+        "image": "admin@email.com.jpg"
     }
 ]

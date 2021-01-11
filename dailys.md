@@ -64,3 +64,21 @@ los datos del usuario en algún lugar del sitio, como el header.)
 4) Ver cookies de ADMIN. No deja entrar logueado. 
 5) Pendiente boton checkbox.
 6) A revisar punto 8)
+
+<h2>11/01/21</h2>
+
+1) Se usará TRELLO, cada uno anota sus tarjetas
+2) Consultar a URI por botones del header(menu explorable)
+3) INDEX, productos clickleables. (EDU)
+4) Revisar porque no entra a las pantallas ADMIN cuando uno se registra (JUANI)
+5) (Remember)Consultar con el profe. 
+
+NUEVO SPRINT
+
+1) Diagrama de Base de Datos. (Diagrama de Base de Datos) (EDU)
+2) Script de estructura (Juani)
+3) (Opcional) Script de datos (Ver)
+4) Creación de carpeta Sequelize y archivos de modelos (ANDRE)
+5) ¡BREAD!  (Usuarios: Juani)(Productos: EDU)
+
+
