@@ -1,13 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Heineken",
-        "category": "Cerveza Rubia",
-        "image": "heineken.jpg",
-        "price": "169",
-        "description": "Heineken® es una cerveza única, y desde 1873 hasta la fecha conserva la misma calidad, principios e ingredientes. A diferencia de cualquier otra cerveza en México, Heineken® se fermenta en el fondo de tanques horizontales, lo que la hace mas clara, pura y durable."
-    },
-    {
         "id": 3,
         "name": "Pack Grolsch",
         "category": "Cerveza Rubia",

@@ -1,7 +1,7 @@
 <header>
     <div class="brand">
         <!--<img class="logo" src="" alt="Logo">-->
-        <a href="../"><i id="class1" class="fas fa-beer"></i></a>
+        <a href="/"><i id="class1" class="fas fa-beer"></i></a>
 
         <div class="busca">
             <form action="">
@@ -10,9 +10,11 @@
             <nav class="login">
                 <ul>
                     <% if (typeof hayUnUsuario != 'undefined'){ %>
-                        <li>Bienvenido <%= hayUnUsuario.firstName %></li>
+                        <li>
+                            <a href="/users/edit/<%= hayUnUsuario.id %>">Bienvenido <%= hayUnUsuario.firstName %> <i class="fas fa-edit editar"></i></a>
+                        </li>
                         <li><a href="/users/logOut">
-                            <i class="fas fa-times-circle"></i>
+                            <i class="fas fa-door-closed"></i>
                         </a></li>
                     <% } else{%>
                         <li><a href="/users/login">Login</a></li>

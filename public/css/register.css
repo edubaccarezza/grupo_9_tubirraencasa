@@ -154,6 +154,20 @@ header .brand form button[type="submit"] i.fa-search {
     font-size: 20px;
 }
 
+
+.login ul li a .editar{
+    display: none;
+}
+
+.login ul li a:hover{
+    display:contents;
+    color: black;
+}
+
+.login ul li a .editar:hover{
+    display: contents;
+}
+
 /* ================
 Header - Media
 ================ */
@@ -331,11 +345,22 @@ main .caja .formulario h3 {
     margin: 15px 0;
 }
 
+main .caja .formulario .editTitle{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
 main .caja .formulario form {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+}
+
+main .caja .formulario form .profileImg {
+    width:50%;
+    border-radius: 100%;
+    margin-bottom: 20px;
 }
 
 main .caja .formulario form input {
@@ -360,6 +385,10 @@ main .caja .formulario form button {
     font-size: 20px;
     border: none;
     margin-top: 15px;
+}
+
+main .caja .formulario form button.deleteButton {
+    background-color: red;
 }
 
 main .caja .formulario form button:hover {

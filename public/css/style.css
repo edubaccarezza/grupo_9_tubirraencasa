@@ -145,12 +145,26 @@ header .brand form button[type="submit"] i.fa-search {
     border-radius: 5px;
     text-align: center;
 }
+
 .login ul li a {
     text-decoration: none;
     color:#6d6875;
     text-align: right;
     vertical-align: middle;
     font-size: 20px;
+}
+
+.login ul li a .editar{
+    display: none;
+}
+
+.login ul li a:hover{
+    display:contents;
+    color: black;    
+}
+
+.login ul li a .editar:hover{
+    display: contents;
 }
 
 /* ================

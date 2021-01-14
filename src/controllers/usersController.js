@@ -108,5 +108,20 @@ module.exports = {
     logOut:function(req,res){
         req.session.destroy();
         res.redirect('/');
+    },
+
+    edit:function(req,res){
+        return res.render('users/edit.ejs');
+    },
+
+    post: function(req,res){
+        
+    },
+
+    delete: function(req,res){
+
+        //FALTA CODIGO QUE BORRE USUARIO
+        req.session.destroy();
+        res.redirect('/');
     }
 }
