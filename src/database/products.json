@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "id": 1,
         "name": "Heineken",
         "category": "Cerveza Rubia",
@@ -16,6 +17,8 @@
         "description": "Breves detalles. La cervecería Grolsch fue fundada en 1615 en Groenlo. ... Su principal producto es la cerveza Grolsch Premium Pilsner, conocida internacionalmente como Grolsch Premium Lager, con una graduación alcohólica del 5.0%. Es su cerveza de bandera y abarca el 95% del total de ventas de la empresa."
     },
     {
+=======
+>>>>>>> 4e62d0f9857a52206e0bf259dc11443973e911d4
         "id": 3,
         "name": "Pack Grolsch",
         "category": "Cerveza Rubia",

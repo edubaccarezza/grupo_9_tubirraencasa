@@ -5,7 +5,7 @@ function sesionIniciada(req,res,next){
     if(req.session.user){
         res.locals.hayUnUsuario = req.session.user;
     }
-    next()
+    next();
 }
 
 module.exports = sesionIniciada;

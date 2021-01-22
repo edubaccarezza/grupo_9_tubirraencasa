@@ -29,4 +29,9 @@ router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', loginValidator, usersController.loginIn);
 router.get('/logOut',usersController.logOut);
 
+router.get('/edit/:id',usersController.edit);
+router.post('/edit',registerValidator,usersController.post);
+
+router.delete('users/delete',usersController.delete);
+
 module.exports = router;

@@ -15,6 +15,7 @@ function rememberMiddleware (req, res, next) {
             if (users.email == req.cookies.remember){    
                 
                 userLoginIn = users;
+                break;
                     
             }
         }

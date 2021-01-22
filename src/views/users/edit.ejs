@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2491779775.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Register</title>
+</head>
+<body>
+   
+
+    <%- include('../partials/header') %>
+
+    <main>
+        <div class="caja">
+            <div class="formulario">
+                <h3 class="editTitle">Editar datos</h3>
+
+                <form action="" method="POST" enctype="multipart/form-data">
+
+                        <img src="/img/users/<%= hayUnUsuario.image %>" alt="" class="profileImg">
+                    <!-- <input type="number" placeholder="Identificador" name="id"> -->
+                    <input type="text" placeholder="Nombre" name="firstName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.firstName : (locals.old && !errors.firstName) ? old.firstName : hayUnUsuario.firstName %>">
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.firstName) ? errors.firstName.msg : "" %>
+                    </small>
+                    
+                    <input type="text" placeholder="Apellido" name="lastName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.lastName :(locals.old && !errors.lastName) ? old.lastName : hayUnUsuario.lastName %>">
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.lastName) ? errors.lastName.msg : "" %>
+                    </small>
+
+                    <input type="email" placeholder="Email" name="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : 
+                    (locals.old && !errors.email) ? old.email : hayUnUsuario.email %>" >
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.email) ? errors.email.msg : "" %>
+                    </small>
+
+                    <input type="password" placeholder="Nueva Contraseña" name="password" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.password : (locals.old && !errors.password) ? old.password : '' %>" >
+                    <small class="text-danger">
+                        <%= (locals.errors && errors.password) ? errors.password.msg : "" %>
+                    </small>
+
+                    <input type="password" placeholder="Confirmar Contraseña" name="repassword">
+                    <small class="text-danger">
+                        <%= (typeof passError != 'undefined') ? passError[0].msg : "" %>
+                    </small>
+
+                    <input type="file" name="image" value="<%=hayUnUsuario.image%>">
+                    <button type="submit">Guardar cambios</button>
+                </form>
+                <form action="">
+                    <button type="submit" class="deleteButton">Eliminar usuario</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <div class="idioma">
+        <p class="idioma1">Idioma  </p> 
+         <select class="idioma2" name="Idioma" id="">
+            <option value="value1">Español</option>
+            <option value="value1">Ingles</option>
+            <option value="value1">Portugues</option>
+        </select>
+    </div>
+    <footer>
+        <div class="newsletter">
+            <p class="zona41">NEWSLETTER</p>
+            <p class="zona42">Suscribete al newsletter CERVECERO</p>
+            <div class="busca2">
+                <form class="zona43" action="">
+                    <input type="email" placeholder="Suscribirse">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            </form>
+        </div>
+        <div class="caja2">
+            <ul class="caja21">
+                <li><a href="#">TÉRMINOS DE USO</a></li>
+                <li><a href="#">PÓLITICA DE PRIVACIDAD</a></li>
+                <li><a href="#">NOTIFICACIONES</a></li>
+                <li><a href="#">PREGUNTAS FRECUENTES</a></li>
+            </ul>
+        </div>
+        <div class="caja3">
+            <p class="contacto">CONTACTÁNOS</p>
+            <ul class="caja31">
+                <li><i class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+</html>
