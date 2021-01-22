@@ -8,6 +8,14 @@
         "description": "Heineken® es una cerveza única, y desde 1873 hasta la fecha conserva la misma calidad, principios e ingredientes. A diferencia de cualquier otra cerveza en México, Heineken® se fermenta en el fondo de tanques horizontales, lo que la hace mas clara, pura y durable."
     },
     {
+        "id": 2,
+        "name": "Pack Grolsch",
+        "category": "Cerveza Rubia",
+        "image": "Pack Grolsch.jpg",
+        "price": "1622",
+        "description": "Breves detalles. La cervecería Grolsch fue fundada en 1615 en Groenlo. ... Su principal producto es la cerveza Grolsch Premium Pilsner, conocida internacionalmente como Grolsch Premium Lager, con una graduación alcohólica del 5.0%. Es su cerveza de bandera y abarca el 95% del total de ventas de la empresa."
+    },
+    {
         "id": 3,
         "name": "Pack Grolsch",
         "category": "Cerveza Rubia",

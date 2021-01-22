@@ -13,8 +13,10 @@ for (let i = 0; i < productos.length; i++) {
 }
 
 module.exports = {
-    //product.js
+    //Index
 
+
+    //product.js
     root: function(req, res) {
         return res.render('products/index', { productos });   
     },

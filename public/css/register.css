@@ -63,10 +63,11 @@ header .barra {
     margin-top: 20px;
 }
 header .barra ul{
-    width: 100%;
+    width: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0;
+    margin-left: 15px;
 }
 header .barra ul li{
     width: 180px;

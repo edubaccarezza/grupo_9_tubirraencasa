@@ -19,66 +19,34 @@
             </figure>
         </div>
     <div class="container">
-        <section class="titulo">
+        <section class="titulo" id="loMasVendido">
             <h2>Lo Más Vendido</h2>
         </section>
         <section>
+            <% productos.forEach(producto => { %>
             <article>
-                <img src="images/products/heineken.jpg" alt="HEINEKEN">
-                <h2>Lata Heineken 473cc </h2>
-                <p>AR$ 73,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/brahma.jpg" alt="BRAHMA">
-                <h2>Lata Brahma 473cc </h2>
-                <p>AR$ 59,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/Quilmes.jpg" alt="QUILMES">
-                <h2>Lata Quilmes 473cc </h2>
-                <p>AR$ 55,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
-                <h2>Lata Grolsch 473cc x 24u.</h2>
-                <p>AR$ 1369,99</p>
-                <button>Más info</button>
-            </article>
+                <img src="images/products/<%= producto.image %>" alt="HEINEKEN">
+                <h2><%= producto.name %></h2>
+                <p>AR$ <%= producto.price %></p>
+                <a href="/products/<%= producto.id %>"><button>Más info</button></a>
+            </article> 
+            <% }) %>
         </section>
    
-        <section class="titulo">
+        <section class="titulo" id="loNuevo">
             <h2>Lo Nuevo</h2>
         </section>
         <section>
-            <article>
-                <img src="images/products/heineken.jpg" alt="HEINEKEN" whi>
-                <h2>Lata Heineken 473cc </h2>
-                <p>AR$ 73,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/brahma.jpg" alt="BRAHMA">
-                <h2>Lata Brahma 473cc</h2>
-                <p>AR$ 59,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/Quilmes.jpg" alt="QUILMES">
-                <h2>Lata Quilmes 473cc </h2>
-                <p>AR$ 55,99</p>
-                <button>Más info</button>
-            </article>
-            <article>
-                <img src="images/products/Pack Grolsch.jpg" alt="PACK GROLSCH">
-                <h2>Lata Grolsch 473cc x 24u.</h2>
-                <p>AR$ 1369,99</p>
-                <button>Más info</button>
-            </article>
-            </section>
-        </div>
+            <% productos.forEach(producto => { %>
+                <article>
+                    <img src="images/products/<%= producto.image %>" alt="HEINEKEN">
+                    <h2><%= producto.name %></h2>
+                    <p>AR$ <%= producto.price %></p>
+                    <a href="/products/<%= producto.id %>"><button>Más info</button></a>
+                </article> 
+                <% }) %>
+        </section>
+
 
         <div class="categoria"> 
             <section class="titulo">
@@ -95,6 +63,7 @@
                 </ul>
             </nav>
         </div>
+    </div>
     </main>
     <div class="idioma">
         <p class="idioma1">Idioma  </p> 
