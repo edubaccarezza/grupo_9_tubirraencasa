@@ -10,27 +10,35 @@
         <main>  
         <section class="edit">
             <section class="name">
-                <h1><%= producto.name %></h1>
+                <h1><%= unProducto.nombre %></h1>
             </section>
     
             <section class="detail">
-                <div class="img-product">
-                    <img src="/img/products/<%= producto.image %>" alt="producto" width="100%">
+                <div class="imagenesPequenias">
+                    <ul class="pequenias">
+                        <li><a href=""><img src="/img/products/heineken1.jpg"></a></li>
+                        <li><a href=""><img src="/img/products/stella1.jpg"></a></li>
+                        <li><a href=""><img src="/img/products/Schneider.jpg"></a></li>
+                        <li><a href=""><img src="/img/products/Quilmes.jpg"></a></li>
+                    </ul>
+                </div>
+                <div class="imagenesGrandes">
+                    <ul class="grande">
+                        <li><a href=""><img src="/img/products/heineken1.jpg"></a></li>
+                    </ul>
                 </div>
                 <div class="priceanddescription">
                     <p class="titledescrpition">Descripción del Producto</p>
-                    <p class="data"><%= producto.description %></p>
+                    <p class="data"><%= unProducto.descripcion %></p>
                     <br>
-                    <p class="data">Categoría: <%= producto.category %></p>
+                    <p class="data">Categoría: <%= unProducto.id_categoria %></p>
                     <br>
-                    <p class="data">Código: <%= producto.code %></p>
-                    <br>
-                    <strong class="price">$ <%= producto.price %></strong>
+                    <strong class="price">$ <%= unProducto.precio %></strong>
                 </div>
             </section>
             <section class="buttons">
-                <a class="editar" href="/users/register">REGISTRATE AQUÍ</a>
-              
+                <a class="editar" href="">AÑADIR AL CARRITO</a>
+             
             </section>        
         </section>
               

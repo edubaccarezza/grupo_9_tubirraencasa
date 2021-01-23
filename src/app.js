@@ -28,14 +28,14 @@ app.use(express.urlencoded({extended : false}))
 app.use(express.json())
 app.use(cookieParser());
 app.use(session( { secret: 'laBirra' } ));
-app.use(sesionIniciadaMiddleware);
-app.use(rememberMiddleware);
+// app.use(sesionIniciadaMiddleware);
+// app.use(rememberMiddleware);
 
 //RUTAS
 app.use('/', mainRouter)
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/admin', adminRouter);
+// app.use('/admin', adminRouter);
 
 //PUERTOS
 app.listen(process.env.PORT || 3000, function() {
