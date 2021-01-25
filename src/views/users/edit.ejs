@@ -17,9 +17,9 @@
             <div class="formulario">
                 <h3 class="editTitle">Editar datos</h3>
 
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="users/edit/<%=hayUnUsuario.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-                        <img src="/img/users/<%= hayUnUsuario.image %>" alt="" class="profileImg">
+                    <img src="/img/users/<%= hayUnUsuario.image %>" alt="" class="profileImg">
                     <!-- <input type="number" placeholder="Identificador" name="id"> -->
                     <input type="text" placeholder="Nombre" name="firstName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.firstName : (locals.old && !errors.firstName) ? old.firstName : hayUnUsuario.firstName %>">
                     <small class="text-danger">
@@ -50,7 +50,7 @@
                     <input type="file" name="image" value="<%=hayUnUsuario.image%>">
                     <button type="submit">Guardar cambios</button>
                 </form>
-                <form action="">
+                <form action="users/delete/<%=hayUnUsuario.id%>?_method=DELETE" method="POST">
                     <button type="submit" class="deleteButton">Eliminar usuario</button>
                 </form>
             </div>

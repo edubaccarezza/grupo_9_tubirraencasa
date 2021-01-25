@@ -30,8 +30,8 @@
 // router.get('/logOut',usersController.logOut);
 
 // router.get('/edit/:id',usersController.edit);
-// router.post('/edit',registerValidator,usersController.post);
+// router.put('/edit/:id',registerValidator,usersController.update);
 
-// router.delete('users/delete',usersController.delete);
+// router.delete('/delete/:id',usersController.delete);
 
 // module.exports = router;
