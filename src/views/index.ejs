@@ -25,7 +25,7 @@
         <section>
             <% for(let i = 0; i < productos.length ; i++) { %>
             <article>
-                <img src="images/products/heineken1.jpg" alt="">
+                <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
                 <h2><%= productos[i].nombre %></h2>
                 <p>AR$ <%= productos[i].precio %></p>
                 <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
@@ -39,7 +39,7 @@
         <section>
             <% for(let i = 0; i < productos.length ; i++) { %>
                 <article>
-                    <img src="images/products/heineken1.jpg" alt="">
+                    <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
                     <h2><%= productos[i].nombre %></h2>
                     <p>AR$ <%= productos[i].precio %></p>
                     <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>

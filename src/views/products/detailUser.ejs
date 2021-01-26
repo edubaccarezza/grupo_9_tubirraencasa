@@ -16,28 +16,29 @@
             <section class="detail">
                 <div class="imagenesPequenias">
                     <ul class="pequenias">
-                        <li><a href=""><img src="/img/products/heineken1.jpg"></a></li>
-                        <li><a href=""><img src="/img/products/stella1.jpg"></a></li>
-                        <li><a href=""><img src="/img/products/Schneider.jpg"></a></li>
-                        <li><a href=""><img src="/img/products/Quilmes.jpg"></a></li>
+                    <% for(let i = 0; i < unProducto.imagendeesteproducto.length ; i++) { %>
+
+                        <li><a href=""><img src="/images/products/<%= unProducto.imagendeesteproducto[i].imagenes %>" alt=""></a></li>
+                    
+                    <% } %>
                     </ul>
                 </div>
                 <div class="imagenesGrandes">
                     <ul class="grande">
-                        <li><a href=""><img src="/img/products/heineken1.jpg"></a></li>
+                        <li><a href=""><img src="/images/products/<%= unProducto.imagendeesteproducto[0].imagenes %>" alt=""></a></li>
                     </ul>
                 </div>
                 <div class="priceanddescription">
                     <p class="titledescrpition">Descripción del Producto</p>
                     <p class="data"><%= unProducto.descripcion %></p>
                     <br>
-                    <p class="data">Categoría: <%= unProducto.id_categoria %></p>
+                    <p class="data">Categoría: <%= unProducto.categoriaDeEsteProducto.nombre %></p>
                     <br>
                     <strong class="price">$ <%= unProducto.precio %></strong>
                 </div>
             </section>
             <section class="buttons">
-                <a class="editar" href="">AÑADIR AL CARRITO</a>
+                <a class="editar" href="/products/cart">AÑADIR AL CARRITO</a>
              
             </section>        
         </section>

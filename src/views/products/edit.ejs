@@ -10,17 +10,20 @@
     <main>
         <br>
         <section class="hero" style="justify-content: center;">
-            <h1>Actualiza Aquí tus Productos</h1>
+            <h1>Estas Actualizando el producto: <% elProducto.nombre %></h1>
         </section>
         <br>
         <section class="formact">
             <form action="" method="post" enctype="multipart/form-data">
-                <!-- <input id="code" name="code" type="number" placeholder="Código" value="<%= producto.code %>"> -->
-                <input id="name" name="name" type="text" placeholder="Nombre" value="<%= producto.name %>">
-                <input id="category" name="category" type="text" placeholder="Categoría" value="<%= producto.category %>">
-                <input id="image" name="image" type="file" placeholder="Imagen" value="<%= producto.image %>">
-                <input id="price" name="price" type="number" placeholder="Precio" value="<%= producto.price %>">
-                <input id="description" name="description" type="text" placeholder="Categoría" value="<%= producto.description %>">
+                <!-- <input id="code" name="code" type="number" placeholder="Código" value=""> -->
+                Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="<%= elProducto.nombre %>">
+                Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value="<%= elProducto.marca %>">
+                <!-- <input id="category" name="category" type="text" placeholder="Categoría" value=""> -->
+                Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="">
+                Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value="<%= elProducto.precio %>">
+                Stock: <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>">
+                Categoría: <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoria %>">
+                Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea>
                 <button type="submit">Actualizar</button>
             </form>
             <br>

@@ -5,13 +5,17 @@
 
 <body>
 
-    <%- include('../partials/header') %>
+    <%- include('../partials/header',  {busquedaPrevia: queryString}) %>
 
     <hr>
     <main>
 
         <section class="titulo">
-            <h2>PRODUCTOS</h2>
+            <% if(productos.length <= 0) { %>
+                <h1>No encontramos pelis para tu búsqueda :(</h1>
+            <% } else { %>
+                <h1>Este es el resultado de la búsqueda: <%= queryString %></h1>
+            <% } %>
         </section>
         <section>
 

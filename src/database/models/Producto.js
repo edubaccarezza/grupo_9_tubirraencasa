@@ -10,6 +10,14 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING,
             notNull: true
         },
+        // created_at: {
+        //     type: dataTypes.TIMESTAMPS,
+        //     notNull: false
+        // },
+        // updated_at: {
+        //     type: dataTypes.TIMESTAMPS,
+        //     notNull: false
+        // },
         marca: {
             type: dataTypes.STRING,
             notNull: true
@@ -28,15 +36,29 @@ module.exports = function(sequelize, dataTypes) {
         },
         id_categoria: {
             type: dataTypes.INTEGER,
-            notNull: true
+            notNull: true,
+            foreignKey: true
         }
     }
     let config = {
         tableName: 'productos',
-        timestamps: false,
+        timestamps: true,
         underscored: true
     }
 
-    const Pelicula = sequelize.define(alias, cols, config)
-    return Pelicula
+    const Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function( models ) {
+        Producto.belongsTo (models.Categoria, {
+            as: "categoriaDeEsteProducto",
+            foreignKey: "id_categoria"
+        }),
+        Producto.hasMany (models.Imagen, {
+            as: "imagendeesteproducto",
+            foreignKey: "id_productos"
+        })
+    }
+
+
+    return Producto
 }

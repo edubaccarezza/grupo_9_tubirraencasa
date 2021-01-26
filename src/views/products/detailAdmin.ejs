@@ -10,29 +10,42 @@
         <main>  
         <section class="edit">
             <section class="name">
-                <h1><%= producto.name %></h1>
+                <h1><%= unProducto.nombre %></h1>
             </section>
     
             <section class="detail">
-                <div class="img-product">
-                    <img src="/img/products/<%= producto.image %>" alt="producto" width="100%">
-                </div>
+                <div class="imagenesPequenias">
+                    <ul class="pequenias">
+                        <% for(let i = 0; i < unProducto.imagendeesteproducto.length ; i++) { %>
+    
+                            <li><a href=""><img src="/images/products/<%= unProducto.imagendeesteproducto[i].imagenes %>" alt=""></a></li>
+                        
+                        <% } %>
+                        </ul>
+                    </div>
+                    <div class="imagenesGrandes">
+                        <ul class="grande">
+                            <li><a href=""><img src="/images/products/<%= unProducto.imagendeesteproducto[0].imagenes %>" alt=""></a></li>
+                        </ul>
+                    </div>
                 <div class="priceanddescription">
                     <p class="titledescrpition">Descripción del Producto</p>
-                    <p class="data"><%= producto.description %></p>
+                    <p class="data"><%= unProducto.descripcion %></p>
                     <br>
-                    <p class="data">Categoría: <%= producto.category %></p>
+                    <p class="data">Categoría: <%= unProducto.id_categoria %></p>
                     <br>
-                    <p class="data">Código: <%= producto.code %></p>
+                    <strong class="price">$ <%= unProducto.precio %></strong>
                     <br>
-                    <strong class="price">$ <%= producto.price %></strong>
+                    <br>
+                    <br>
+                    <strong class="stock">Stock: <%= unProducto.stock %> Unidades</strong>
                 </div>
             </section>
             <section class="buttons">
-                <a class="editar" href="/admin/products/edit/<%= producto.id %>">EDITAR</a>
+                <a class="editar" href="/admin/products/edit/<%= unProducto.id %>">EDITAR</a>
                 
-                <form class="eliminar1" action="/admin/products/<%= producto.id %>?_method=DELETE" method="POST">
-                    <input type="hidden" value="<%= producto.id %>">
+                <form class="eliminar1" action="/admin/products/<%= unProducto.id %>?_method=DELETE" method="POST">
+                    <input type="hidden" value="<%= unProducto.id %>">
                     <button class="eliminar" type="submit">ELIMINAR</button>
             </section>
         </section>

@@ -35,7 +35,7 @@ app.use(session( { secret: 'laBirra' } ));
 app.use('/', mainRouter)
 // app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-// app.use('/admin', adminRouter);
+app.use('/admin', adminRouter);
 
 //PUERTOS
 app.listen(process.env.PORT || 3000, function() {

@@ -14,88 +14,136 @@ let db = require('../database/models')
 // }
 
 module.exports = {
-    //Index
-
     //product.js
-    // root: function(req, res) {
-    //     return res.render('products/index', { productos });   
-    // },
+    root: function(req, res) {       
+        db.Producto.findAll ({
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
+        })
+        .then (function(productos) {
+            res.render( 'products/index', {
+                productos: productos 
+            })
+        })
+    },
     detail: function(req, res) {
         // db.sequelize.query('SELECT * FROM productos WHERE id = ' + req.params.id)
-        db.Producto.findByPk(req.params.id)
+        db.Producto.findByPk(req.params.id, {
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
+        })
         .then (function(unProducto) {
+            // res.send(unProducto.imagendeesteproducto[0].imagenes)
             res.render('products/detailUser', {
                 unProducto: unProducto
             })
         })
-
-        // let producto = productos.find((producto) => {
-        //     return producto.id == req.params.id;
-        // })
-        // return res.render('products/detailUser', {producto});  
     }, 
     cart: (req,res) => {
         return res.render('products/productCart');
-    }, 
-
+    },
+    search: function(req,res) {
+        // req.query.search
+        // db.sequelize.query(`SELECT * FROM productos WHERE title LIKE '%${req.query.search}%'`)
+        db.Producto.findAll({
+            where: {
+                nombre: {
+                    [db.Sequelize.Op.like]: `%${req.query.search}%`
+                }
+            }
+        })
+        .then(function(resultado) {
+            res.render('products/search', {
+                queryString: req.query.search,
+                productos: resultado
+            })
+        })
+        .catch(function(e) {
+            res.send(e)
+        })
+    },
 
     //admin.js
-    // create: function(req,res) {
-    //     return res.render('products/create')
-    // }, 
-    // store: function(req,res,next) {
-    //     let errors = validationResult(req);
-    //     if (errors.isEmpty()) {
-    //         let product = {
-    //             id: ultimoId + 1,
-    //             // code: req.body.code,
-    //             name: req.body.name,
-    //             category: req.body.category,
-    //             image: req.files[0].filename,
-    //             price: req.body.price,
-    //             description: req.body.description
-    //         }
-    //         productos.push(product);
-    //         fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
-    //     }
-    //     return res.redirect("/products/");
-    // }, 
-    // adminDetail: (req, res) => {
-    //     let producto = productos.find((producto) => {
-    //         return producto.id == req.params.id;
-    //     })
-    //     return res.render('products/detailAdmin', {producto});
-    // },
-    // edit: function (req, res) {
-    //     let producto = productos.find((producto) => {
-    //         return producto.id == req.params.id;
-    //     })
-    //     return res.render('products/edit', {producto});
-    // },
-    // restore: function(req, res) {
-    //     productos = productos.filter( producto => producto.id != req.params.id )
-    //     fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
-
-    //     let errors = validationResult(req);
-    //     if (errors.isEmpty()) {
-    //         let product = {
-    //             id: ultimoId + 1,
-    //             // code: req.body.code,
-    //             name: req.body.name,
-    //             category: req.body.category,
-    //             image: req.files[0].filename,
-    //             price: req.body.price,
-    //             description: req.body.description
-    //         }
-    //         productos.push(product);
-    //         fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
-    //     }
-    //     return res.redirect("/products/");
-    // },
-    // delete: function(req, res) {
-    //     productos = productos.filter( producto => producto.id != req.params.id )
-    //     fs.writeFileSync(path.join(__dirname, '../database/products.json'), JSON.stringify(productos, null, 4))
-    //     return res.redirect("/products/");
-    //     // res.render('products/delete')
-    // }
+    all: function(req, res) {       
+        db.Producto.findAll ()
+        .then (function(productos) {
+            res.render( 'products/index', {
+                productos: productos 
+            })
+        })
+    },
+    adminDetail: (req, res) => {
+        db.Producto.findByPk(req.params.id, {
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
+        })
+        .then (function(unProducto) {
+            res.render('products/detailAdmin', {
+                unProducto: unProducto
+            })
+        })
+    },
+    create: function(req,res) {
+        return res.render('products/create')
+    }, 
+    store: function(req,res,next) {
+        // res.send(req.body)
+        db.Producto.create ({
+            nombre: req.body.nombre,
+            marca: req.body.marca,
+            imagen: req.files[0],
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            stock: req.body.stock,
+            id_categoria:req.body.id_categoria
+        }) 
+        .then (function(productoNuevo) {
+            res.redirect('/products/' + productoNuevo.id)
+        })
+    }, 
+    edit: function (req, res) {
+        db.Producto.findByPk(req.params.id)
+        .then(function(elProducto) {
+            res.render('products/edit', {
+                elProducto: elProducto
+            })
+        })
+    },
+    restore: function(req, res) {
+        db.Producto.update ({
+            nombre: req.body.nombre,
+            marca: req.body.marca,
+            descripcion: req.body.descripcion,
+            precio: req.body.precio,
+            stock: req.body.stock,
+            id_categoria: req.body.id_categoria 
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }) 
+        .then (function(productoEditado) {
+            if(productoEditado[0] == 1) {
+                res.redirect('/products/' + req.params.id)
+            } else {
+                res.send("No pudimos editar el producto")
+            }
+        })
+    },
+    delete: function(req, res) {
+        db.Producto.destroy ({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then (function() {
+            res.render('products/delete')
+        })
+    }
 } 
