@@ -16,14 +16,14 @@
         <section class="formact">
             <form action="" method="post" enctype="multipart/form-data">
                 <!-- <input id="code" name="code" type="number" placeholder="Código" value=""> -->
-                Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="<%= elProducto.nombre %>">
-                Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value="<%= elProducto.marca %>">
-                <!-- <input id="category" name="category" type="text" placeholder="Categoría" value=""> -->
-                Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="">
-                Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value="<%= elProducto.precio %>">
-                Stock: <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>">
-                Categoría: <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoria %>">
-                Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea>
+                <label id="label"> Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="<%= elProducto.nombre %>"></label>
+                <label id="label">Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value="<%= elProducto.marca %>"></label>
+                <label id="label">Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value=""></label>
+                <label id="label">Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value="<%= elProducto.precio %>"></label>
+                <label id="label">Stock: <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>"></label>
+                <label id="label">Categoría: 
+                <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoriaDeEsteProducto.nombre %>"></label>
+                <label id="label">Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea></label>
                 <button type="submit">Actualizar</button>
             </form>
             <br>

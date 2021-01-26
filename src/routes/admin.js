@@ -27,7 +27,7 @@ var upload = multer({ storage: storage })
 
 // CREAR
 router.get('/products/create', productsController.create); //adminMiddleware (AGREGAR)
-router.post('/products/create',upload.array('image', 5),  productsController.store); //adminMiddleware (AGREGAR)
+router.post('/products/create',upload.array('imagen',5),  productsController.store); //adminMiddleware (AGREGAR)
 
 // DELETE
 router.delete('/products/:id',  productsController.delete);

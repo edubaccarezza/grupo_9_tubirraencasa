@@ -14,18 +14,15 @@
         </section> 
         <br>
         <section class="formact">
-            <form action="" method="post" enctype="multipart/form-data">
-                <!-- <input id="code" name="code" type="number" placeholder="Código"> -->
-                Nombre: <input id="Nombre" name="nombre" type="text" placeholder="Nombre">
-                Marca: <input id="marca" name="marca" type="text" placeholder="Marca">
-                <!-- <input id="category" name="category" type="text" placeholder="Categoría"> -->
-                Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen">
-                Precio: <input id="precio" name="precio" type="number" placeholder="Precio">
-                Stock: <input id="stock" name="stock" type="number" placeholder="Stock" value="">
-                Categoría: <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="">
-                Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
-                <!-- <input id="description" name="description" type="text" placeholder="Descripción"> -->
-                <button type="submit">Cargar</button>
+            <form action="/admin/products/create" method="POST" enctype="multipart/form-data">
+                <label id="label">Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value=""></label>
+                <label id="label">Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value=""></label>
+                <label id="label">Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="" multiple></label>
+                <label id="label">Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value=""></label>
+                <label id="label">Stock:  <br><input id="stock" name="stock" type="number" placeholder="Stock" value=""></label>
+                <label id="label">Categoría: <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value=""></label>
+                <label id="label">Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea></label>
+                <button type="submit">Crear</button>
             </form>
             <br>
         </section>

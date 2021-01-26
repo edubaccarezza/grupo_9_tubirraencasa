@@ -11,20 +11,38 @@ let mainController = {
 
     index: function(req, res) {
         db.Producto.findAll ({
-            limit: 4,
             include: [
                 {association: "categoriaDeEsteProducto"},
                 {association: "imagendeesteproducto"}
-            ]
+            ],
+            limit: 4
         })
         .then (function(productos) {
+            res.render( 'index',  
+                {
+                    productos: productos 
+                })            
             // res.send(productos[1].imagendeesteproducto[1].imagenes)
-            res.render( 'index', {
-                productos: productos 
             })
-        })
     }
 }
 
 
 module.exports = mainController
+
+// db.Producto.findAll ({
+//     include: [
+//         {association: "categoriaDeEsteProducto"},
+//         {association: "imagendeesteproducto"}
+//     ],
+//     limit: 4,
+//     order: [["updated_at", "ASC"],]
+// })
+// .then (function(productoNuevo) {
+//     res.render( 'index', 
+//     {
+//         productos: productos
+//     },
+//     {
+//         productoNuevo: productoNuevo 
+//     })

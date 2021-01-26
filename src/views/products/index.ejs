@@ -20,7 +20,13 @@
                     <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
                     <h2><%= productos[i].nombre %></h2>
                     <p>AR$ <%= productos[i].precio %></p>
+                <% if(typeof hayUnUsuario == "undefined") { %>    
                     <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
+                <% } else if (hayUnUsuario.admin == 1){ %>
+                    <a href="/admin/products/<%= productos[i].id %>"><button>Más info</button></a>
+                <% } else { %>
+                    <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
+                <% } %>    
                 </article> 
             <% } %>
 

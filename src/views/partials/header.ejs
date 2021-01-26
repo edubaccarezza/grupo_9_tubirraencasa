@@ -5,7 +5,7 @@
 
         <div class="busca">
             <form action="/products/search">
-                <input type="text" value="<%= (typeof busquedaPrevia == 'undefined') ? '' : busquedaPrevia %>"><button type="submit"><i class="fas fa-search"></i></button>
+                <input id="search" name="search" type="text" value="<%=  (typeof busquedaPrevia == 'undefined') ? '' : busquedaPrevia %>"><button type="submit"><i class="fas fa-search"></i></button>
             </form>
             <nav class="login">
                 <ul>
@@ -29,7 +29,7 @@
             <ul>
                 <li><a href="#loMasVendido">Ofertas</a></li>
                 <li><a href="#loNuevo">Lo Nuevo</a></li>
-                <li><a href="../products">Productos</a>
+                <li><a href="/products">Productos</a>
                     <!-- <ul>
                         <li><a href="">Artesanales</a></li>
                             <ul>

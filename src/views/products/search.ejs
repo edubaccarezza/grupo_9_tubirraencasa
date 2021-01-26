@@ -11,20 +11,20 @@
     <main>
 
         <section class="titulo">
-            <% if(productos.length <= 0) { %>
-                <h1>No encontramos pelis para tu búsqueda :(</h1>
+            <% if(resultado.length <= 0) { %>
+                <h1 style="height: 300px;">Por el momento, no tenemos ese producto. Prueba refrescarte con otro de nuestros productos.</h1>
             <% } else { %>
                 <h1>Este es el resultado de la búsqueda: <%= queryString %></h1>
             <% } %>
         </section>
         <section>
 
-            <% for(let i = 0; i < productos.length ; i++) { %>
+            <% for(let i = 0; i < resultado.length ; i++) { %>
                 <article>
-                    <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
-                    <h2><%= productos[i].nombre %></h2>
-                    <p>AR$ <%= productos[i].precio %></p>
-                    <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
+                    <img src="/images/products/<%= resultado[i].imagendeesteproducto[0].imagenes %>" alt="">
+                    <h2><%= resultado[i].nombre %></h2>
+                    <p>AR$ <%= resultado[i].precio %></p>
+                    <a href="/products/<%= resultado[i].id %>"><button>Más info</button></a>
                 </article> 
             <% } %>
 

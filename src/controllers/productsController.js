@@ -3,15 +3,6 @@ const path = require('path');
 const { validationResult } = require('express-validator');
 let db = require('../database/models')
 
-// let productos = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf8');
-// productos = JSON.parse(productos)
-
-// let ultimoId = 0;
-// for (let i = 0; i < productos.length; i++) {
-//     if (ultimoId < productos[i].id) {
-//         ultimoId = productos[i].id
-//     }
-// }
 
 module.exports = {
     //product.js
@@ -24,7 +15,8 @@ module.exports = {
         })
         .then (function(productos) {
             res.render( 'products/index', {
-                productos: productos 
+                productos: productos,
+                title: "Tu Birra"
             })
         })
     },
@@ -50,6 +42,10 @@ module.exports = {
         // req.query.search
         // db.sequelize.query(`SELECT * FROM productos WHERE title LIKE '%${req.query.search}%'`)
         db.Producto.findAll({
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ],
             where: {
                 nombre: {
                     [db.Sequelize.Op.like]: `%${req.query.search}%`
@@ -57,9 +53,10 @@ module.exports = {
             }
         })
         .then(function(resultado) {
+            // res.send(resultado[0].imagendeesteproducto[0].imagenes)
             res.render('products/search', {
                 queryString: req.query.search,
-                productos: resultado
+                resultado: resultado,
             })
         })
         .catch(function(e) {
@@ -69,7 +66,12 @@ module.exports = {
 
     //admin.js
     all: function(req, res) {       
-        db.Producto.findAll ()
+        db.Producto.findAll ({
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
+        })
         .then (function(productos) {
             res.render( 'products/index', {
                 productos: productos 
@@ -93,23 +95,43 @@ module.exports = {
         return res.render('products/create')
     }, 
     store: function(req,res,next) {
-        // res.send(req.body)
-        db.Producto.create ({
-            nombre: req.body.nombre,
-            marca: req.body.marca,
-            imagen: req.files[0],
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            stock: req.body.stock,
-            id_categoria:req.body.id_categoria
-        }) 
-        .then (function(productoNuevo) {
+        // res.send(req.files)
+        db.Producto.create (
+            {
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ]
+            },
+            {
+                nombre: req.body.nombre,
+                marca: req.body.marca,
+                // imagen: req.files,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                stock: req.body.stock,
+                id_categoria:req.body.id_categoria
+            }) 
+        .then(function() {
+            db.Imagen.bulkCreate ({
+                id_productos: req.body.id_productos,
+                imagenes: req.files,
+            }) 
+        })         
+        .then(function(productoNuevo) {
             res.redirect('/products/' + productoNuevo.id)
         })
     }, 
     edit: function (req, res) {
-        db.Producto.findByPk(req.params.id)
+        db.Producto.findByPk(req.params.id, {
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
+        })
         .then(function(elProducto) {
+            // res.send(elProducto.categoriaDeEsteProducto[0].nombre)
+
             res.render('products/edit', {
                 elProducto: elProducto
             })
