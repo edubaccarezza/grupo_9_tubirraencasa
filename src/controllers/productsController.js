@@ -94,33 +94,60 @@ module.exports = {
     create: function(req,res) {
         return res.render('products/create')
     }, 
-    store: function(req,res,next) {
+    store: async (req,res,next)  => {
         // res.send(req.files)
-        db.Producto.create (
+        // let errors = validationResult(req)
+        // if ( req.files.length > 5 ) {
+        //     errors.errors.push('No puedes subir más de 5 imágenes')
+        // }
+        // if ( errors.isEmpty() ) {
+        let producto = await db.Producto.create(
+            {... req.body},
             {
                 include: [
                     {association: "categoriaDeEsteProducto"},
-                    {association: "imagendeesteproducto"}
+                    {association: "imagendeesteproducto"}                    
                 ]
-            },
-            {
-                nombre: req.body.nombre,
-                marca: req.body.marca,
-                // imagen: req.files,
-                descripcion: req.body.descripcion,
-                precio: req.body.precio,
-                stock: req.body.stock,
-                id_categoria:req.body.id_categoria
-            }) 
-        .then(function() {
-            db.Imagen.bulkCreate ({
-                id_productos: req.body.id_productos,
-                imagenes: req.files,
-            }) 
-        })         
-        .then(function(productoNuevo) {
-            res.redirect('/products/' + productoNuevo.id)
-        })
+            })
+        let data = []
+        let id = producto.id
+        for ( let imagen of req.files ) {
+            let newData = {
+                id_productos: id,
+                imagenes: imagen.filename
+            }
+            data.push(newData)
+        }        
+        let carga = await db.Imagen.bulkCreate(data)
+        res.redirect('/products/' + id)
+    // } else {
+    //     return res.send("No pudimos cargar el producto")
+    // }
+        // db.Producto.create (
+        //     {
+        //         include: [
+        //             {association: "categoriaDeEsteProducto"},
+        //             {association: "imagendeesteproducto"}
+        //         ]
+        //     },
+        //     {
+        //         nombre: req.body.nombre,
+        //         marca: req.body.marca,
+        //         // imagen: req.files,
+        //         descripcion: req.body.descripcion,
+        //         precio: req.body.precio,
+        //         stock: req.body.stock,
+        //         id_categoria:req.body.id_categoria
+        //     }) 
+        // .then(function() {
+        //     db.Imagen.bulkCreate ({
+        //         id_productos: req.body.id_productos,
+        //         imagenes: req.files,
+        //     }) 
+        // })         
+        // .then(function(productoNuevo) {
+        //     res.redirect('/products/' + productoNuevo.id)
+        // })
     }, 
     edit: function (req, res) {
         db.Producto.findByPk(req.params.id, {
@@ -158,7 +185,7 @@ module.exports = {
             }
         })
     },
-    delete: function(req, res) {
+    delete: function (req, res) {
         db.Producto.destroy ({
             where: {
                 id: req.params.id

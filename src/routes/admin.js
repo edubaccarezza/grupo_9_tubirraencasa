@@ -7,6 +7,7 @@
 const express = require('express');
 const router = express.Router()
 const path = require('path')
+const fs = require('fs')
 
 // const { productCart } = require('../controllers/productsController');
 const multer = require('multer')
@@ -18,23 +19,25 @@ var storage = multer.diskStorage({
       cb(null, path.join(__dirname, '../../public/images/products'))
     },
     filename: function (req, file, cb) {
-      cb(null, req.body.name + path.extname(file.originalname))
+      cb(null, file.originalname + Date.now() + path.extname(file.originalname))
     }
 })
    
 var upload = multer({ storage: storage })
 
+//Validators
+const productValidator = require('../validations/productValidator')
 
 // CREAR
 router.get('/products/create', productsController.create); //adminMiddleware (AGREGAR)
-router.post('/products/create',upload.array('imagen',5),  productsController.store); //adminMiddleware (AGREGAR)
+router.post('/products/create',upload.array('imagen',5), productValidator.create, productsController.store); //adminMiddleware (AGREGAR)
 
 // DELETE
 router.delete('/products/:id',  productsController.delete);
 
 // EDITAR
 router.get('/products/edit/:id', productsController.edit);
-router.post('/products/edit/:id',upload.any('image'),  productsController.restore);
+router.post('/products/edit/:id',upload.any('image'), productValidator.edit, productsController.restore);
 
 // DETALLE ADMIN
 router.get('/products',  productsController.all)

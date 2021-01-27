@@ -17,7 +17,7 @@
 
             <% for(let i = 0; i < productos.length ; i++) { %>
                 <article>
-                    <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
+                    <img src="/images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
                     <h2><%= productos[i].nombre %></h2>
                     <p>AR$ <%= productos[i].precio %></p>
                 <% if(typeof hayUnUsuario == "undefined") { %>    
