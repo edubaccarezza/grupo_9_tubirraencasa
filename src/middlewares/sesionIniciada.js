@@ -1,11 +1,11 @@
-// const session = require("express-session");
+const session = require("express-session");
 
-// function sesionIniciada(req,res,next){
+function sesionIniciada(req,res,next){
 
-//     if(req.session.user){
-//         res.locals.hayUnUsuario = req.session.user;
-//     }
-//     next();
-// }
+    if(req.session.user){
+        res.locals.hayUnUsuario = req.session.user;
+    }
+    next();
+}
 
-// module.exports = sesionIniciada;
+module.exports = sesionIniciada;

@@ -9,7 +9,8 @@ const db = require ('../database/models')
      }, 
 
      create: function(req,res){
-         let errors = validationResult(req)
+        
+        let errors = validationResult(req)
          if(errors.isEmpty()){
              if(req.body.password==req.body.repassword){
                 db.Usuarios.create({
@@ -21,14 +22,15 @@ const db = require ('../database/models')
                     admin: 1
                 })
                 .then(function(datos){
-                    console.log(datos); //-------------A MIRAR
-                    req.session.user = datos; // A CORREGIR ----------------------------------------
+                    // console.log(datos.dataValues); //-------------A MIRAR
+                    req.session.user = datos.dataValues; // A CORREGIR ----------------------------------------
+                    console.log(req.session.user)
                 })
                 .catch(function(error){
                     res.send(error);
                 })  
                 return res.redirect('/');         
-                
+             
                 
              }else{
                   return res.render('users/register',
