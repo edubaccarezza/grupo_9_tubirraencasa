@@ -66,41 +66,40 @@ const db = require ('../database/models')
 
      loginIn: function(req,res){
 
-         let errors = validationResult(req);
-         let { email, password, remember } = req.body;
-         if (errors.isEmpty()) {
-             let userLoginIn;
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+            db.Usuarios.findOne({
+                where:{
+                    email:req.body.email
+                }
+            })
+            .then(function(resultado){
+                if (bcrypt.compareSync(req.body.password,resultado.password)){
+                    req.session.user = resultado;
+                    if (remember != undefined) {
+                        res.cookie('remember', resultado.email, { maxAge: 60000 });
+                    }
+                }
+                else{
+                    return res.render('users/login',
+                    {noCoincidence:[
+                    {msg:'El email o la contraseña son incorrectas'}]});
+                }
+            })
+            .catch(function(error){
+                res.send(error);
+            })  
 
-             users.forEach(user => {
-                 if (user.email == email){    
-                     if(bcrypt.compareSync(password, user.password)) {
-                         userLoginIn = user;  
-                     }
-                 }
-             });
+            return res.redirect('/'); 
 
-             if (userLoginIn == undefined) {
-                 return res.render('users/login',
-                 {noCoincidence:[
-                 {msg:'El email o la contraseña son incorrectas'}]});
-                
+        } else {           
+            return res.render('users/login',
+                {
+                    errors:errors.mapped(),
+                    old:req.body 
+                });
+            }
 
-            } 
-
-             req.session.user = userLoginIn;
-
-             if (remember != undefined) {
-                 res.cookie('remember', userLoginIn.email, { maxAge: 60000 });
-             }
-             return res.redirect('/');
-
-         } else {           
-             return res.render('users/login',
-                 {
-                     errors:errors.mapped(),
-                     old:req.body 
-                 });
-             }
      },
 
      logOut:function(req,res){
@@ -120,11 +119,10 @@ const db = require ('../database/models')
         let errors = validationResult(req)
         if(errors.isEmpty()){
                 db.Usuarios.update({
-                firstName:req.body.firstName,
-                lastName:req.body.lastName,
+                nombre:req.body.firstName,
+                apellido:req.body.lastName,
                 email:req.body.email,
-                password:bcrypt.hashSync(req.body.password,12),
-                admin:1
+                password:bcrypt.hashSync(req.body.password,12)
             },{
                 where:{
                     id:req.params.id
@@ -132,7 +130,7 @@ const db = require ('../database/models')
             })
             .then(function(datos){
                 console.log(datos); //-------------A MIRAR
-                req.session.user = datos; // A CORREGIR ----------------------------------------
+                req.session.user = datos.dataValues; // A CORREGIR ----------------------------------------
             })
             .catch(function(error){
                 res.send(error);
