@@ -22,9 +22,9 @@ const db = require ('../database/models')
                     admin: 1
                 })
                 .then(function(datos){
-                    // console.log(datos.dataValues); //-------------A MIRAR
-                    req.session.user = datos.dataValues; // A CORREGIR ----------------------------------------
+                    req.session.user = datos; 
                     console.log(req.session.user)
+                    //return res.send(req.session.user);
                 })
                 .catch(function(error){
                     res.send(error);
@@ -129,8 +129,8 @@ const db = require ('../database/models')
                 }
             })
             .then(function(datos){
-                console.log(datos); //-------------A MIRAR
-                req.session.user = datos.dataValues; // A CORREGIR ----------------------------------------
+                console.log(datos); 
+                req.session.user = datos; 
             })
             .catch(function(error){
                 res.send(error);
