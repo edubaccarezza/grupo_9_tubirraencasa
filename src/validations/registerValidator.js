@@ -1,4 +1,5 @@
-const { check} = require ('express-validator');
+const {check , body} = require ('express-validator');
+const path = require ('path');
 
 module.exports = [
     check ('firstName')
@@ -19,6 +20,23 @@ module.exports = [
     check ('password')
         .notEmpty ()
         .withMessage ('Este campo es obligatorio').bail()
-        .isLength ({min:6, max:15})
-        .withMessage ('La contraseña debe tener como mínimo 6 caracteres y como máximo 15'),
+        .isLength ({min:8})
+        .withMessage ('La contraseña debe tener como mínimo 6 caracteres').bail()
+        .isStrongPassword ({ minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1})
+        .withMessage ('La contraseña debe tener como mínimo 1 mayúscula, 1 minúscula, 1 numero, 1 caracter especial'),
+    body('repassword').custom((value, { req }) => {
+        if (value !== req.body.password) {
+            throw new Error('Password confirmation does not match password');
+        }
+        
+        return true;
+    }),
+    body('image').custom((value) => {
+        if (path.extname(value)=='JPG' || path.extname(value)=='JPEG'|| path.extname(value)=='PNG'|| path.extname(value)=='GIF') {
+            throw new Error('Password confirmation does not match password');
+        }
+
+        return true;
+    }),
+
 ]

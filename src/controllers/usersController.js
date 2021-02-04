@@ -22,7 +22,7 @@ const db = require ('../database/models')
                     admin: 1
                 })
                 .then(function(datos){
-                    req.session.user = datos; 
+                    req.session.user = datos.dataValues; 
                     console.log(req.session.user)
                     //return res.send(req.session.user);
                 })
