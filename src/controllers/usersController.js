@@ -22,14 +22,15 @@ const db = require ('../database/models')
                     admin: 1
                 })
                 .then(function(datos){
-                    req.session.user = datos.dataValues; 
-                    console.log(req.session.user)
-                    //return res.send(req.session.user);
+                    console.log(datos);
+                    req.session.user=datos.dataValues;
+                    console.log(req.session)
+                    res.redirect('/');
+
                 })
                 .catch(function(error){
                     res.send(error);
-                })  
-                return res.redirect('/');         
+                })          
              
                 
              }else{
