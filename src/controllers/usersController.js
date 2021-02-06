@@ -76,10 +76,11 @@ const db = require ('../database/models')
             })
             .then(function(resultado){
                 if (bcrypt.compareSync(req.body.password,resultado.password)){
-                    req.session.user = resultado;
-                    if (remember != undefined) {
-                        res.cookie('remember', resultado.email, { maxAge: 60000 });
+                    req.session.user = resultado.dataValues;
+                    if (req.body.remember != undefined) {
+                        res.cookie('remember', resultado.dataValues.email, { maxAge: 60000 });
                     }
+                    return res.redirect('/');
                 }
                 else{
                     return res.render('users/login',
@@ -89,9 +90,7 @@ const db = require ('../database/models')
             })
             .catch(function(error){
                 res.send(error);
-            })  
-
-            return res.redirect('/'); 
+            })   
 
         } else {           
             return res.render('users/login',
