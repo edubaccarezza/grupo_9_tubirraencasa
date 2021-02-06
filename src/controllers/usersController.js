@@ -128,16 +128,16 @@ const db = require ('../database/models')
                     id:req.params.id
                 }
             })
-            .then(function(datos){
-                console.log(datos); 
-                req.session.user = datos; 
+            .then(function(updatedUser){
+                req.session.user = updatedUser; 
+                console.log(updatedUser);
+                return res.redirect('/'); 
             })
             .catch(function(error){
                 res.send(error);
             })  
-            return res.redirect('/');   
-
-        } else { return res.render('users/register',{
+  
+        } else { return res.render('users/edit',{
             errors:errors.mapped(),
             old:req.body
             })
