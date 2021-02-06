@@ -15,13 +15,47 @@
         <br>
         <section class="formact">
             <form action="/admin/products/create" method="POST" enctype="multipart/form-data">
-                <label id="label">Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value=""></label>
-                <label id="label">Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value=""></label>
-                <label id="label">Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="" multiple></label>
-                <label id="label">Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value=""></label>
-                <label id="label">Stock:  <br><input id="stock" name="stock" type="number" placeholder="Stock" value=""></label>
-                <label id="label">Categoría: <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value=""></label>
-                <label id="label">Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea></label>
+                
+                <div id="none">
+                    <label id="label"><p class="none">Nombre: </p></label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="">
+                    <small class="small">
+                        <%= (locals.errors && errors.nombre) ? errors.nombre.msg : "" %> 
+                    </small>
+                </div>
+                <div id="none">
+                    <label id="label"><p class="none">Marca: </p></label>
+                    <input id="marca" name="marca" type="text" placeholder="Marca" value="">
+                    <small class="small">
+                        <%= (locals.errors && errors.marca) ? errors.marca.msg : "" %> 
+                    </small>
+                </div>
+                <div id="none">
+                    <label id="label"><p class="none">Imagen: </p></label>
+                    <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="" multiple>
+                    <small class="small">
+                        <%= (locals.errors && errors.imagen) ? errors.imagen.msg : "" %> 
+                    </small>
+                </div>
+                <div id="none">
+                    <label id="label"><p class="none">Precio: </p></label>
+                    <input id="precio" name="precio" type="number" placeholder="Precio" value="">
+                </div> 
+                <div id="none">
+                    <label id="label"><p class="none">Stock:  </p></label>
+                    <input id="stock" name="stock" type="number" placeholder="Stock" value="">
+                </div>
+                <div id="none">
+                    <label id="label"><p class="none">Categoría: </p></label>
+                    <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="">
+                </div>
+                <div id="none">
+                    <label id="label"><p class="none">Descripción del Producto: </p></label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
+                    <small class="small">
+                        <%= (locals.errors && errors.descripcion) ? errors.descripcion.msg : "" %> 
+                    </small>
+                </div>
                 <button type="submit">Crear</button>
             </form>
             <br>

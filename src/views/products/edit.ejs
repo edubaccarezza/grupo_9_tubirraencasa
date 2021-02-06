@@ -15,15 +15,44 @@
         <br>
         <section class="formact">
             <form action="" method="post" enctype="multipart/form-data">
-                <!-- <input id="code" name="code" type="number" placeholder="Código" value=""> -->
-                <label id="label"> Nombre: <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="<%= elProducto.nombre %>"></label>
-                <label id="label">Marca: <input id="marca" name="marca" type="text" placeholder="Marca" value="<%= elProducto.marca %>"></label>
-                <label id="label">Imagen: <input id="imagen" name="imagen" type="file" placeholder="Imagen" value=""></label>
-                <label id="label">Precio: <input id="precio" name="precio" type="number" placeholder="Precio" value="<%= elProducto.precio %>"></label>
-                <label id="label">Stock:  <br><input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>"></label>
-                <label id="label">Categoría: 
-                <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoriaDeEsteProducto.nombre %>"></label>
-                <label id="label">Descripción del Producto: <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea></label>
+                <div id="none">
+                    <label id="label">Nombre: </label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="<%= elProducto.nombre %>">
+                    <small class="small">
+                        <%= (locals.errors && errors.nombre) ? errors.nombre.msg : "" %> 
+                    </small>
+                </div>
+                <div id="none">
+                    <label id="label">Marca: </label>
+                    <input id="marca" name="marca" type="text" placeholder="Marca" value="<%= elProducto.marca %>">
+                    <small></small>
+                </div>
+                <!-- <div id="none">
+                    <label id="label">Imagen: </label>
+                    <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="">
+                    <small class="small">
+                        <%= (locals.errors && errors.imagen) ? errors.imagen.msg : "" %> 
+                    </small>
+                </div> -->
+                <div id="none">
+                    <label id="label">Precio: </label>
+                    <input id="precio" name="precio" type="number" placeholder="Precio" value="<%= elProducto.precio %>">
+                </div>
+                <div id="none">
+                    <label id="label">Stock: </label>
+                    <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>">
+                </div>
+                <div id="none">
+                    <label id="label">Categoría: </label>
+                    <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoriaDeEsteProducto.nombre %>">
+                </div>
+                <div id="none">
+                    <label id="label">Descripción del Producto: </label>
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea>
+                    <small class="small">
+                        <%= (locals.errors && errors.descripcion) ? errors.descripcion.msg : "" %> 
+                    </small>
+                </div>
                 <button type="submit">Actualizar</button>
             </form>
             <br>

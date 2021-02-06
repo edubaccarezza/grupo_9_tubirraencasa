@@ -119,8 +119,14 @@ module.exports = {
             data.push(newData)
         }        
         let carga = await db.Imagen.bulkCreate(data)
-    }
         res.redirect('/products/' + id)
+    } else {
+        // res.send (errors.mapped())
+        return res.render('products/create', {
+            errors: errors.mapped()
+        })
+    }
+
     }, 
     edit: function (req, res) {
         db.Producto.findByPk(req.params.id, {
@@ -138,25 +144,44 @@ module.exports = {
         })
     },
     restore: function(req, res) {
-        db.Producto.update ({
-            nombre: req.body.nombre,
-            marca: req.body.marca,
-            descripcion: req.body.descripcion,
-            precio: req.body.precio,
-            stock: req.body.stock,
-            id_categoria: req.body.id_categoria 
-        }, {
-            where: {
-                id: req.params.id
-            }
-        }) 
-        .then (function(productoEditado) {
-            if(productoEditado[0] == 1) {
-                res.redirect('/products/' + req.params.id)
-            } else {
-                res.send("No pudimos editar el producto")
-            }
-        })
+        let errors = validationResult(req)
+        if ( errors.isEmpty() ) {
+            db.Producto.update ({
+                nombre: req.body.nombre,
+                marca: req.body.marca,
+                descripcion: req.body.descripcion,
+                precio: req.body.precio,
+                stock: req.body.stock,
+                id_categoria: req.body.id_categoria 
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            }) 
+            .then (function(productoEditado) {
+                if(productoEditado[0] == 1) {
+                    res.redirect('/products/' + req.params.id)
+                } else {
+                    res.send("No pudimos editar el producto")
+                }
+            })
+        } else {
+            // res.send (errors.mapped())
+            db.Producto.findByPk(req.params.id, {
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ]
+            })
+            .then(function(elProducto) {
+                // res.send(elProducto.categoriaDeEsteProducto[0].nombre)
+    
+                res.render('products/edit', {
+                    elProducto: elProducto,
+                    errors: errors.mapped()
+                })
+            })
+        }
     },
     delete: function (req, res) {
         db.Producto.destroy ({

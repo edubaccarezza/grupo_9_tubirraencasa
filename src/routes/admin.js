@@ -23,7 +23,17 @@ var storage = multer.diskStorage({
     }
 })
    
-var upload = multer({ storage: storage })
+var upload = multer({ 
+  storage: storage,
+  fileFilter: (req, files, cb) => {
+      if (files.mimetype !== "image/jpg" && files.mimetype !== "image/jpeg" && files.mimetype !== "image/png" && files.mimetype !== "image/gif") {
+      req.files.error = "type";
+      return cb(null, false, new Error('Está mal el mimeType'));
+    } else {
+      return cb(null, true);
+    
+  }}
+});
 
 //Validators
 const productValidator = require('../validations/productValidator')
