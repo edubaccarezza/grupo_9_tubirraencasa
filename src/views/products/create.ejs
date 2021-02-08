@@ -13,46 +13,48 @@
             <h1>Carga Aquí tus Productos</h1>
         </section> 
         <br>
-        <section class="formact">
-            <form action="/admin/products/create" method="POST" enctype="multipart/form-data">
-                
+        <section id="formCreate" class="formact">
+            <form id="#form" action="/admin/products/create" method="POST" enctype="multipart/form-data">  
                 <div id="none">
                     <label id="label"><p class="none">Nombre: </p></label>
                     <input id="nombre" name="nombre" type="text" placeholder="Nombre" value="">
-                    <small class="small">
+                    <small class="small" id="errorNombre">
                         <%= (locals.errors && errors.nombre) ? errors.nombre.msg : "" %> 
                     </small>
                 </div>
                 <div id="none">
                     <label id="label"><p class="none">Marca: </p></label>
                     <input id="marca" name="marca" type="text" placeholder="Marca" value="">
-                    <small class="small">
+                    <small class="small" id="errorMarca">
                         <%= (locals.errors && errors.marca) ? errors.marca.msg : "" %> 
                     </small>
                 </div>
                 <div id="none">
                     <label id="label"><p class="none">Imagen: </p></label>
                     <input id="imagen" name="imagen" type="file" placeholder="Imagen" value="" multiple>
-                    <small class="small">
+                    <small class="small" id="errorImagen">
                         <%= (locals.errors && errors.imagen) ? errors.imagen.msg : "" %> 
                     </small>
                 </div>
                 <div id="none">
                     <label id="label"><p class="none">Precio: </p></label>
                     <input id="precio" name="precio" type="number" placeholder="Precio" value="">
+                    <small class="small" id="errorPrecio"></small>
                 </div> 
                 <div id="none">
                     <label id="label"><p class="none">Stock:  </p></label>
                     <input id="stock" name="stock" type="number" placeholder="Stock" value="">
+                    <small class="small" id="errorStock"></small>
                 </div>
                 <div id="none">
                     <label id="label"><p class="none">Categoría: </p></label>
                     <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="">
+                    <small class="small" id="errorCategoria"></small>
                 </div>
                 <div id="none">
                     <label id="label"><p class="none">Descripción del Producto: </p></label>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
-                    <small class="small">
+                    <small class="small" id="errorDescripcion">
                         <%= (locals.errors && errors.descripcion) ? errors.descripcion.msg : "" %> 
                     </small>
                 </div>
@@ -71,6 +73,6 @@
     </div>
 
     <%- include('../partials/footer') %>
-
+    <script src="/js/createValidator.js"></script>
 </body>
 </html>
