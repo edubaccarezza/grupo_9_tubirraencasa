@@ -16,33 +16,33 @@
             <div class="formulario">
                 <h3 class="editTitle">Editar datos</h3>
 
-                <form action="/users/edit/<%=hayUnUsuario.id%>?_method=PUT" method="POST">
+                <form action="/users/edit/<%=hayUnUsuario.id%>?_method=PUT" method="POST" id="form-register">
 
                     <img src="/img/users/<%= hayUnUsuario.imagen %>" alt="" class="profileImg">
                     <!-- <input type="number" placeholder="Identificador" name="id"> -->
-                    <input type="text" placeholder="Nombre" name="firstName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.firstName : (locals.old && !errors.firstName) ? old.firstName : hayUnUsuario.nombre %>">
-                    <small class="text-danger">
+                    <input type="text" placeholder="Nombre" name="firstName" id="firstName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.firstName : (locals.old && !errors.firstName) ? old.firstName : hayUnUsuario.nombre %>">
+                    <small class="text-danger" id="small-firstName" >
                         <%= (locals.errors && errors.firstName) ? errors.firstName.msg : "" %>
                     </small>
                     
-                    <input type="text" placeholder="Apellido" name="lastName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.lastName :(locals.old && !errors.lastName) ? old.lastName : hayUnUsuario.apellido %>">
-                    <small class="text-danger">
+                    <input type="text" placeholder="Apellido" name="lastName" id="lastName" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.lastName :(locals.old && !errors.lastName) ? old.lastName : hayUnUsuario.apellido %>">
+                    <small class="text-danger" id="small-lastName">
                         <%= (locals.errors && errors.lastName) ? errors.lastName.msg : "" %>
                     </small>
 
-                    <input type="email" placeholder="Email" name="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : 
+                    <input type="email" placeholder="Email" name="email" id="email" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.email : 
                     (locals.old && !errors.email) ? old.email : hayUnUsuario.email %>" >
-                    <small class="text-danger">
+                    <small class="text-danger" id="small-email">
                         <%= (locals.errors && errors.email) ? errors.email.msg : "" %>
                     </small>
 
-                    <input type="password" placeholder="Nueva Contraseña" name="password" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.password : (locals.old && !errors.password) ? old.password : '' %>" >
-                    <small class="text-danger">
+                    <input type="password" placeholder="Nueva Contraseña" name="password" id="password" value="<%=(locals.old && (typeof errors == 'undefined')) ? old.password : (locals.old && !errors.password) ? old.password : '' %>" >
+                    <small class="text-danger" id="small-password">
                         <%= (locals.errors && errors.password) ? errors.password.msg : "" %>
                     </small>
 
-                    <input type="password" placeholder="Confirmar Contraseña" name="repassword">
-                    <small class="text-danger">
+                    <input type="password" placeholder="Confirmar Contraseña" name="repassword" id="repassword" >
+                    <small class="text-danger" id="small-repassword">
                         <%= (typeof passError != 'undefined') ? passError[0].msg : "" %>
                     </small>
 
@@ -91,5 +91,7 @@
         </div>
     </footer>
     
+    <script src="/js/editValidation.js"></script>
+
 </body>
 </html>

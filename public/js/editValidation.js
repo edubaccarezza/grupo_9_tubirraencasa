@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    console.log('HOLAAAAAAAAA');
+
     //FORMULARIO
     let form = document.querySelector('#form-register')
 
