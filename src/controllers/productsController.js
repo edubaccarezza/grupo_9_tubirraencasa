@@ -92,7 +92,12 @@ module.exports = {
         })
     },
     create: function(req,res) {
-        return res.render('products/create')
+        db.Categoria.findAll()
+        .then(function(categorias){
+            return res.render('products/create', {
+                categorias: categorias
+            })
+        })
     }, 
     store: async (req,res,next)  => {
         // res.send(req.files)
@@ -129,17 +134,21 @@ module.exports = {
 
     }, 
     edit: function (req, res) {
-        db.Producto.findByPk(req.params.id, {
-            include: [
-                {association: "categoriaDeEsteProducto"},
-                {association: "imagendeesteproducto"}
-            ]
+        db.Categoria.findAll()
+        .then(function(categorias) {
+            db.Producto.findByPk(req.params.id, {
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ]
+            })
         })
         .then(function(elProducto) {
             // res.send(elProducto.categoriaDeEsteProducto[0].nombre)
 
             res.render('products/edit', {
-                elProducto: elProducto
+                elProducto: elProducto,
+                categorias: categorias
             })
         })
     },

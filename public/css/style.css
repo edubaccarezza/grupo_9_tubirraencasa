@@ -1154,6 +1154,14 @@ main .formact form button:hover {
     background-color: rgba(0, 8, 247, 0.40);
 }
 
+select#categorias {
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 7px;
+    border:1px solid grey;
+
+}
+
 /* ================
 - Main - Pagina de Productos
 ================ */
