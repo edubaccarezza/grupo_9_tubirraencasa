@@ -63,3 +63,37 @@ Estudiar mas y reunirnos mas.
 
 ### 5. Dejar de hacer
 -   Sacarnos las dudas antes de entregar el sprint y no dearlas para último momento.
+
+## Sprint 6
+
+### 1. Comenzar a hacer
+- Asignar tareas y fechas limites
+
+### 2. Hacer más
+- Comunicar en que necesitamos ayuda
+
+### 3. Continuar haciendo
+- Mantener las reuniones luego de la clase de DH.
+
+### 4. Hacer menos
+- Esperar al dia antes de la entrega para comunicar algo. 
+
+### 5. Dejar de hacer
+-   No preguntar o pedir ayuda
+
+## Sprint 7
+
+### 1. Comenzar a hacer
+- Usar de forma mas efectiva trello
+
+### 2. Hacer más
+- Seguir utilizando whatsapp como medio de comunicacion rapido
+
+### 3. Continuar haciendo
+- Dividiendo los puntos
+
+### 4. Hacer menos
+- No hablar a tiempo. 
+
+### 5. Dejar de hacer
+-   Trabajar desorganizado
