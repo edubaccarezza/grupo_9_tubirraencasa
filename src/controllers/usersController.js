@@ -130,7 +130,7 @@ const db = require ('../database/models')
             })
             .then(function(updatedUser){
                 req.session.user = updatedUser; 
-                console.log(updatedUser);
+                console.log('HOLAAA ' + updatedUser);
                 return res.redirect('/'); 
             })
             .catch(function(error){

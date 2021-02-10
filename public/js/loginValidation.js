@@ -1,5 +1,5 @@
 window.addEventListener("load",function(){
-    let formulario = document.querySelector("form.login"); 
+    let formulario = document.querySelector("#formulario"); 
     formulario.addEventListener("submit",function(event){ 
         event.preventDefault();
         let errors = {};
@@ -7,7 +7,7 @@ window.addEventListener("load",function(){
         let errorMail = document.querySelector('#errorEmail')
         let regex= new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 
-        if(email.value  == ""){
+        if(email.value.length  == 0){
             errors.email = "El campo email debe estar completo"
             errorMail.innerText = errors.email
         
@@ -18,7 +18,7 @@ window.addEventListener("load",function(){
         let password = document.querySelector("#password");
         let errorPassword = document.querySelector('#errorPassword')
 
-        if(password.value == ""){
+        if(password.value.length == 0){
             
             errors.password = "El campo de contraseña debe estar completo"
             errorPassword.innerText = errors.password 

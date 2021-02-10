@@ -54,14 +54,14 @@
             </div>
             <div class="formulario">
                 <h3>Ingresar con tu mail</h3>
-                <form action="" method="POST">
-                    <input type="email" placeholder="Email" name="email" value="<%= (locals.old && !errors.email) ? old.email :'' %>">
-                    <small class="text-danger">
+                <form action="" method="POST" id="formulario">
+                    <input type="email" placeholder="Email" name="email" id="email" value="<%= (locals.old && !errors.email) ? old.email :'' %>">
+                    <small class="text-danger" id="errorEmail" >
                         <%= (locals.errors&&errors.email) ? errors.email.msg : "" %>
                     </small>
 
-                    <input type="password" placeholder="Contraseña" name="password">
-                    <small class="text-danger">
+                    <input type="password" placeholder="Contraseña" name="password" id="password" >
+                    <small class="text-danger" id="errorPassword">
                         <%= (locals.errors&&errors.password) ? errors.password.msg : "" %>
                         <%= (typeof noCoincidence != 'undefined') ? noCoincidence[0].msg : "" %>
                     </small>
