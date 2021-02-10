@@ -92,15 +92,9 @@ module.exports = {
         })
     },
     create: function(req,res) {
-        db.Categoria.findAll()
-        .then(function(categorias){
-            return res.render('products/create', {
-                categorias: categorias
-            })
-        })
-    }, 
+        return res.render('products/create')
+    },
     store: async (req,res,next)  => {
-        // res.send(req.files)
         let errors = validationResult(req)
         // if ( req.files.length > 5 ) {
         //     errors.errors.push('No puedes subir más de 5 imágenes')
@@ -134,21 +128,17 @@ module.exports = {
 
     }, 
     edit: function (req, res) {
-        db.Categoria.findAll()
-        .then(function(categorias) {
-            db.Producto.findByPk(req.params.id, {
-                include: [
-                    {association: "categoriaDeEsteProducto"},
-                    {association: "imagendeesteproducto"}
-                ]
-            })
+        db.Producto.findByPk(req.params.id, {
+            include: [
+                {association: "categoriaDeEsteProducto"},
+                {association: "imagendeesteproducto"}
+            ]
         })
         .then(function(elProducto) {
             // res.send(elProducto.categoriaDeEsteProducto[0].nombre)
 
             res.render('products/edit', {
                 elProducto: elProducto,
-                categorias: categorias
             })
         })
     },

@@ -1,3 +1,5 @@
+//ESTE ARCHIVO TIENE PROBLEMAS CON EL SUBMIT, NO ENVIA EL FORMULARIO. LO DEJO PARA SEGUIR PROBANDO.
+
 let qs = function(element) {
     return document.querySelector(element)
 }
@@ -93,11 +95,10 @@ window.addEventListener("load", function() {
     
         console.log(errors)
     
-        if(Object.keys(errors).length == 0) {
+        if(Object.keys(errors).length !== 0) {
             form.submit
         }       
 
     })    
 
 })
-

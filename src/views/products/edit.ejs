@@ -51,16 +51,14 @@
                     <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoriaDeEsteProducto.nombre %>">
                     <small class="small" id="errorCategoria"></small>
                 </div>
-                <div id="none">
+                <!-- <div id="none">
                     <label id="label"><p class="none">Categoría: </p></label>
                     <select name="categorias" id="categorias">
                         <option value="" hidden>Selecciona la categoria...</option>
-                        <% for( let i = 0; i < categorias.length; i++ ) { %>
-                            <option value="<%= categorias[i].id %> "><%= categorias[i].nombre %> </option>
-                        <% } %>
+
                     </select>
                     <small class="small" id="errorCategoria"></small>
-                </div> 
+                </div>  -->
                 <div id="none">
                     <label id="label">Descripción del Producto: </label>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea>
@@ -83,7 +81,7 @@
     </div>
 
     <%- include('../partials/footer') %>
-    <script src="/js/productValidation.js"></script>
+    <script src="/js/productEditValidation.js"></script>
 
 </body>
 </html>
