@@ -95,37 +95,38 @@ module.exports = {
         return res.render('products/create')
     },
     store: async (req,res,next)  => {
+        
         let errors = validationResult(req)
         // if ( req.files.length > 5 ) {
         //     errors.errors.push('No puedes subir más de 5 imágenes')
         // }
         if ( errors.isEmpty() ) {
-        let producto = await db.Producto.create(
-            {... req.body},
-            {
-                include: [
-                    {association: "categoriaDeEsteProducto"},
-                    {association: "imagendeesteproducto"}                    
-                ]
-            })
-        let data = []
-        let id = producto.id
-        for ( let imagen of req.files ) {
-            let newData = {
-                id_productos: id,
-                imagenes: imagen.filename
-            }
-            data.push(newData)
+            let producto = await db.Producto.create(
+                {... req.body},
+                {
+                    include: [
+                        {association: "categoriaDeEsteProducto"},
+                        {association: "imagendeesteproducto"}                    
+                    ]
+                })
+            
+            let data = []
+            let id = producto.id
+            for ( let imagen of req.files ) {
+                let newData = {
+                    id_productos: id,
+                    imagenes: imagen.filename
+                }
+                data.push(newData)
         }        
-        let carga = await db.Imagen.bulkCreate(data)
-        res.redirect('/products/' + id)
-    } else {
-        // res.send (errors.mapped())
-        return res.render('products/create', {
-            errors: errors.mapped()
-        })
-    }
-
+            let carga = await db.Imagen.bulkCreate(data)
+            res.redirect('/products/' + id)
+        } else {
+            // res.send (errors.mapped())
+            return res.render('products/create', {
+                errors: errors.mapped()
+            })
+        }
     }, 
     edit: function (req, res) {
         db.Producto.findByPk(req.params.id, {
@@ -135,8 +136,7 @@ module.exports = {
             ]
         })
         .then(function(elProducto) {
-            // res.send(elProducto.categoriaDeEsteProducto[0].nombre)
-
+            // res.send(categoriaDeEsteProducto)
             res.render('products/edit', {
                 elProducto: elProducto,
             })
@@ -159,6 +159,8 @@ module.exports = {
             }) 
             .then (function(productoEditado) {
                 if(productoEditado[0] == 1) {
+                    // res.send(productoEditado)
+
                     res.redirect('/products/' + req.params.id)
                 } else {
                     res.send("No pudimos editar el producto")
@@ -193,3 +195,6 @@ module.exports = {
         })
     }
 } 
+
+
+

@@ -13,6 +13,9 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 
+//APIs
+const apiProductsRouter = require('./routes/api/products')
+
 //EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -36,6 +39,10 @@ app.use('/', mainRouter)
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/admin', adminRouter);
+
+//RUTAS APIs
+app.use('/api', apiProductsRouter)
+
 
 //PUERTOS
 app.listen(process.env.PORT || 3000, function() {
