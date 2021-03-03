@@ -13,7 +13,7 @@ window.onload = function() {
     let imagen = qs("#imagen");
     let precio = qs("#precio");
     let stock = qs("#stock");
-    let categoria = qs("#categoria");
+    let categoria = qs("#categorias");
     let descripcion = qs("#descripcion");
         
     //Errors    

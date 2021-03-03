@@ -14,7 +14,7 @@ const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 
 //APIs
-const apiProductsRouter = require('./routes/api/products')
+const api = require('./routes/api/api')
 
 //EJS
 app.set('view engine', 'ejs');
@@ -41,7 +41,7 @@ app.use('/products', productsRouter);
 app.use('/admin', adminRouter);
 
 //RUTAS APIs
-app.use('/api', apiProductsRouter)
+app.use('/api', api)
 
 
 //PUERTOS

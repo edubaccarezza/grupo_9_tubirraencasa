@@ -92,10 +92,14 @@ module.exports = {
         })
     },
     create: function(req,res) {
-        return res.render('products/create')
+        db.Categoria.findAll()
+        .then(function(lasCategorias){
+            console.log(lasCategorias[3].id)
+            // res.send(lasCategorias[1].nombre)
+            return res.render('products/create', {lasCategorias})
+        })
     },
     store: async (req,res,next)  => {
-        
         let errors = validationResult(req)
         // if ( req.files.length > 5 ) {
         //     errors.errors.push('No puedes subir más de 5 imágenes')
@@ -129,16 +133,20 @@ module.exports = {
         }
     }, 
     edit: function (req, res) {
-        db.Producto.findByPk(req.params.id, {
-            include: [
-                {association: "categoriaDeEsteProducto"},
-                {association: "imagendeesteproducto"}
-            ]
-        })
-        .then(function(elProducto) {
-            // res.send(categoriaDeEsteProducto)
-            res.render('products/edit', {
-                elProducto: elProducto,
+        db.Categoria.findAll()
+        .then(function(lasCategorias) {
+            db.Producto.findByPk(req.params.id, {
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ]
+            })
+            .then(function(elProducto) {
+                // res.send(categoriaDeEsteProducto)
+                res.render('products/edit', {
+                    elProducto: elProducto,
+                    lasCategorias:lasCategorias
+                })
             })
         })
     },
@@ -158,13 +166,12 @@ module.exports = {
                 }
             }) 
             .then (function(productoEditado) {
-                if(productoEditado[0] == 1) {
-                    // res.send(productoEditado)
-
+                // if(productoEditado[0] == 1) {
+                //     // res.send(productoEditado)
                     res.redirect('/products/' + req.params.id)
-                } else {
-                    res.send("No pudimos editar el producto")
-                }
+                // } else {
+                //     res.send("No pudimos editar el producto")
+                // }
             })
         } else {
             // res.send (errors.mapped())

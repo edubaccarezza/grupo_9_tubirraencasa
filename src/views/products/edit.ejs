@@ -46,18 +46,21 @@
                     <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>">
                     <small class="small" id="errorStock"></small>
                 </div>
-                <div id="none">
+                <!-- <div id="none">
                     <label id="label">Categoría: </label>
                     <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="<%= elProducto.categoriaDeEsteProducto.nombre %>">
                     <small class="small" id="errorCategoria"></small>
-                </div>
-                <!-- <div id="none">
+                </div> -->
+                <div id="none">
                     <label id="label"><p class="none">Categoría: </p></label>
                     <select name="categorias" id="categorias">
-                            <option value="   " hidden>Selecciona la categoria...</option>
+                        <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="<%= elProducto.categoriaDeEsteProducto.id %> " hidden><%= elProducto.categoriaDeEsteProducto.nombre %></option>
+                        <% for( let i = 0; i < lasCategorias.length; i++ ) { %>
+                            <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="<%= lasCategorias[i].id %>"><%= lasCategorias[i].nombre %></option>
+                        <% } %>   
                     </select>
                     <small class="small" id="errorCategoria"></small>
-                </div>  -->
+                </div> 
                 <div id="none">
                     <label id="label">Descripción del Producto: </label>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"><%= elProducto.descripcion %></textarea>

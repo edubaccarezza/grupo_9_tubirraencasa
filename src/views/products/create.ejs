@@ -46,19 +46,21 @@
                     <input id="stock" name="stock" type="number" placeholder="Stock" value="">
                     <small class="small" id="errorStock"></small>
                 </div>
-                <div id="none">
+                <!-- <div id="none">
                     <label id="label">Categoría: </label>
                     <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="">
                     <small class="small" id="errorCategoria"></small>
-                </div>
-                <!-- <div id="none">
+                </div> -->
+                <div id="none">
                     <label id="label"><p class="none">Categoría: </p></label>
                     <select name="categorias" id="categorias">
-                            <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="" hidden>Selecciona la categoria...</option>
-                    
+                        <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="" hidden>Selecciona la categoria...</option>
+                        <% for( let i = 0; i < lasCategorias.length; i++ ) { %>
+                            <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="<%= lasCategorias[i].id %>"><%= lasCategorias[i].nombre %></option>
+                        <% } %>   
                     </select>
                     <small class="small" id="errorCategoria"></small>
-                </div>   -->
+                </div>  
                 <div id="none">
                     <label id="label"><p class="none">Descripción del Producto: </p></label>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Descripción"></textarea>
