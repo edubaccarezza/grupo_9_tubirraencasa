@@ -44,7 +44,7 @@ const db = require ('../database/models')
     
             
          } else{
-
+            console.log(errors);
              if(req.body.password==req.body.repassword){
                  return res.render('users/register',{
                      errors:errors.mapped(),

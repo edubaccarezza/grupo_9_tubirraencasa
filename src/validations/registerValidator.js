@@ -24,9 +24,9 @@ module.exports = [
         .withMessage ('La contraseña debe tener como mínimo 8 caracteres'),//.bail()
         /*.isStrongPassword ({ minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1})
         .withMessage ('La contraseña debe tener como mínimo 1 mayúscula, 1 minúscula, 1 numero, 1 caracter especial'),*/
-    /*body('repassword').custom((value, { req }) => {
+    body('repassword').custom((value, { req }) => {
         if (value !== req.body.password) {
-            throw new Error('Password confirmation does not match password');
+            throw new Error('Las contraseñas no coinciden');
         }else{
             return true;
         }
