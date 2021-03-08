@@ -24,7 +24,7 @@ module.exports = {
                         count: productos.length,
                         countByCategory: productosPorCategoria,
                         productos: productos,
-                        link:"/api/products",
+                        link: "/api/products",
                     })
                 } else {
                     return res.json()
