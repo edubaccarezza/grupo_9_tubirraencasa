@@ -55,5 +55,46 @@ module.exports = {
         .catch(function(error){
             return res.json(error)
         })
+    },
+    usersAll: function(req,res){
+        db.Usuarios.findAll()
+        .then(function(todosLosUsuarios){
+            let usuarios = [];
+            for (let i = 0; i < todosLosUsuarios.length; i++) {
+                usuarios.push({
+                    id:todosLosUsuarios[i].id,
+                    nombre:todosLosUsuarios[i].nombre,
+                    apellido:todosLosUsuarios[i].apellido,
+                    email:todosLosUsuarios[i].email,
+                    link:'api/users/'+todosLosUsuarios[i].id,
+                });
+                
+            }
+            return res.status(200).json({
+                count: todosLosUsuarios.length,
+                usuarios: usuarios,
+                link:"/api/users"
+            })
+
+        })
+    },
+    userDetail: function(req,res){
+        db.Usuarios.findOne({
+            where:{
+                id: req.params.id
+            }
+        })
+        .then(function(usuario){
+            return res.status(200).json(
+                {
+                   id: usuario.id,
+                   nombre: usuario.nombre,
+                   apellido: usuario.apellido,
+                   email:usuario.email,
+                   detail:usuario.imagen
+                }            
+            )
+        })
     }
+
 }
