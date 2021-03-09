@@ -92,12 +92,16 @@ module.exports = {
         })
     },
     create: function(req,res) {
-        db.Categoria.findAll()
-        .then(function(lasCategorias){
-            console.log(lasCategorias[3].id)
-            // res.send(lasCategorias[1].nombre)
-            return res.render('products/create', {lasCategorias})
-        })
+        if(req.session.user != undefined && req.session.user.admin == 1) {    
+            db.Categoria.findAll()
+            .then(function(lasCategorias){
+                console.log(lasCategorias[3].id)
+                // res.send(lasCategorias[1].nombre)
+                return res.render('products/create', {lasCategorias})
+            })
+        } else {
+            return res.redirect('/')
+        }    
     },
     store: async (req,res,next)  => {
         let errors = validationResult(req)
@@ -134,21 +138,21 @@ module.exports = {
     }, 
     edit: function (req, res) {
         db.Categoria.findAll()
-        .then(function(lasCategorias) {
-            db.Producto.findByPk(req.params.id, {
-                include: [
-                    {association: "categoriaDeEsteProducto"},
-                    {association: "imagendeesteproducto"}
-                ]
-            })
-            .then(function(elProducto) {
-                // res.send(categoriaDeEsteProducto)
-                res.render('products/edit', {
-                    elProducto: elProducto,
-                    lasCategorias:lasCategorias
+            .then(function(lasCategorias) {
+                db.Producto.findByPk(req.params.id, {
+                    include: [
+                        {association: "categoriaDeEsteProducto"},
+                        {association: "imagendeesteproducto"}
+                    ]
+                })
+                .then(function(elProducto) {
+                    // res.send(categoriaDeEsteProducto)
+                    res.render('products/edit', {
+                        elProducto: elProducto,
+                        lasCategorias:lasCategorias
+                    })
                 })
             })
-        })
     },
     restore: function(req, res) {
         let errors = validationResult(req)

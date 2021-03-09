@@ -6,7 +6,7 @@ class Carrito {
         e.preventDefault();
         if(e.target.classList.contains('buttons')) {
             const producto = e.target.parentElement.parentElement;
-            this.leerDatos.Producto(producto    )
+            this.leerDatos.Producto(producto)
         }
     }
 

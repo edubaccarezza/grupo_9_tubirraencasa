@@ -46,7 +46,7 @@ router.post('/products/create',upload.array('imagen',5), productValidator.create
 router.delete('/products/:id',  productsController.delete);
 
 // EDITAR
-router.get('/products/edit/:id', productsController.edit);
+router.get('/products/edit/:id', adminMiddleware,productsController.edit);
 router.post('/products/edit/:id',upload.any('image'), productValidator.edit, productsController.restore);
 
 // DETALLE ADMIN
