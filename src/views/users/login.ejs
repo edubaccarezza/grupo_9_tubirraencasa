@@ -1,60 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/2491779775.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/register.css">
-    <title>Login</title>
-</head>
+
+<%- include('../partials/head', {title: "Login"}) %>
+
 <body>
 
-    <header>
-        <div class="brand">
-            <!--<img class="logo" src="" alt="Logo">-->
-            <a href="/"><i id="class1" class="fas fa-beer"></i></a>
-    
-            <div class="busca">
-                <form action="">
-                    <input type="text" placeholder="Encuentra lo que buscas aqui..."><button type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                <nav class="login">
-                    <ul>
-                        <li><a href="/users/login">Login</a></li>
-                        <li><a href="/users/register">Registro</a></li>
-                        <li><a href="/products/cart">Carrito</a></li>
-                    </ul>
-                </nav>    
-            </div>
-            <nav class="barra">
-                <button class="burguer"><i id="class2" class="fas fa-bars"></i></button>
-                <ul>
-                    <li><a href="../index.ejs">Ofertas</a></li>
-                    <li><a href="../index.ejs">Lo Nuevo</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <%- include('../partials/header') %>
+
 
     <main>
-        <div class="caja">
-            <div class="boton">
+        <div class="cajass">
+            <div class="botonnn">
                 <a href="#" class="ingresar">Ingresar</a><a href="/users/register" class="crear">Crear Cuenta</a>
             </div>
-            <div class="redes">
+            <div class="redesss">
                 <h3>Entrar mediante redes sociales</h3>
-                <div class="botones-redes">
-                    <a href="#" class="mail"><i class="fab fa-google"></i></a>
-                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                <div class="botones-redesss">
+                    <a href="#" class="mailll"><i class="fab fa-google"></i></a>
+                    <a href="#" class="facebookkk"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="instagrammm"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="twitterrr"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            <div class="formulario">
+            <div class="formulariooo">
                 <h3>Ingresar con tu mail</h3>
-                <form action="" method="POST" id="formulario">
+                <form action="" method="POST" id="formulariooo">
                     <input type="email" placeholder="Email" name="email" id="email" value="<%= (locals.old && !errors.email) ? old.email :'' %>">
                     <small class="text-danger" id="errorEmail" >
                         <%= (locals.errors&&errors.email) ? errors.email.msg : "" %>

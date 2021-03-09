@@ -250,7 +250,7 @@ Header - Media
 /*-------------------------MAIN------------------------*/
 /*---------------------------------------------------*/
 
-main .caja {
+main .cajass {
     width: 450px;
     display: inline-block;
     text-align: center;
@@ -262,11 +262,11 @@ main .caja {
 
 /*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
 
-main .caja .boton{
+main .cajass .botonnn{
     width: 100%;
 }
 
-main .caja .boton a {
+main .cajass .botonnn a {
     width: 49.5%;
     display: inline-block;
     padding: 20px;
@@ -276,7 +276,7 @@ main .caja .boton a {
     color: black;
 }
 
-main .caja .boton .crear{
+main .cajass .botonnn .crearrr{
     border-bottom: 5px solid rgb(44, 44, 44);
     opacity: 0.5;
     border-top-left-radius: 10px;
@@ -284,31 +284,31 @@ main .caja .boton .crear{
     background-color: gray;
 }
 
-main .caja .boton .crear:hover{
+main .cajass .botonnn .crearrr:hover{
     opacity: 1;
     border-bottom: 5px solid red;
     background-color: #fff;
 }
 
-main .caja .boton .ingresar{
+main .cajass .botonnn .ingresarrr{
     border-bottom: 5px solid red;
 }
 
 /*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
 
-main .caja .redes {
+main .cajass .redesss {
     margin-top: 15px;
     border-bottom: 3px solid grey;
 }
 
-main .caja .redes .botones-redes{
+main .cajass .redesss .botones-redesss{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin: 15px 0;
 }
 
-main .caja .redes .botones-redes a{
+main .cajass .redesss .botones-redesss a{
     border-radius: 50%;
     color: white;
     padding: 20px;
@@ -318,53 +318,53 @@ main .caja .redes .botones-redes a{
 
 }
 
-main .caja .redes .botones-redes .mail{
+main .cajass .redesss .botones-redesss .mailll{
     background-color:#DB4437 ;
 }
 
-main .caja .redes .botones-redes .facebook{
+main .cajass .redesss .botones-redesss .facebookkk{
     background-color:#4267B2 ;
 }
 
-main .caja .redes .botones-redes .instagram{
+main .cajass .redesss .botones-redesss .instagrammm{
     background-color:#3f729b ;
 }
 
-main .caja .redes .botones-redes .twitter{
+main .cajass .redesss .botones-redesss .twitterrr{
     background-color:#1DA1F2 ;
 }
 
-main .caja .redes .botones-redes a:hover{
+main .cajass .redesss .botones-redesss a:hover{
     opacity: 0.5;
 }
 
-main .caja .formulario {
+main .cajass .formulariooo {
     margin: 15px 0;
 }
 
-main .caja .formulario h3 {
+main .cajass .formularioss h3 {
     margin: 15px 0;
 }
 
-main .caja .formulario .editTitle{
+main .cajass .formularioss .editTitleee{
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-main .caja .formulario form {
+main .cajass .formulariooo form {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
 }
 
-main .caja .formulario form .profileImg {
+main .cajass .formulariooo form .profileImg {
     width:50%;
     border-radius: 100%;
     margin-bottom: 20px;
 }
 
-main .caja .formulario form input {
+main .cajass .formulariooo form input {
     width:90%;
     margin-bottom: 10px;
     padding: 15px 7px;
@@ -372,12 +372,12 @@ main .caja .formulario form input {
     border:1px solid grey;
 }
 
-main .caja .formulario form .text-danger {
+main .cajass .formulariooo form .text-danger {
     color: red;
     margin-bottom: 15px;
 }
 
-main .caja .formulario form button {
+main .cajass .formulariooo form button {
     background-color: rgba(0, 8, 247, 0.64);
     color: #fff;
     padding: 10px;
@@ -388,24 +388,24 @@ main .caja .formulario form button {
     margin-top: 15px;
 }
 
-main .caja .formulario form button.deleteButton {
+main .cajass .formulariooo form button.deleteButton {
     background-color: red;
 }
 
-main .caja .formulario form button:hover {
+main .cajass .formulariooo form button:hover {
     background-color: rgba(0, 8, 247, 0.40);
 }
 
-main .caja p {
+main .cajass p {
     font-size: 16px;
     padding-bottom: 15px; 
 }
 
-main .caja p a{
+main .cajass p a{
     text-decoration: none;
 }
 
-main .caja .formulario .categoria {
+main .cajass .formulariooo .categoria {
     width: 90%;
     height: 48px;
     margin-bottom: 10px;
@@ -414,13 +414,13 @@ main .caja .formulario .categoria {
     border: 1px solid grey;
     display: flex;
 }
-main .caja .formulario .categoria p {
+main .cajass .formulariooo .categoria p {
     font-size: 13px;
     font-family: PT Sans;
     color: #555;
     margin-right: 10px;
 }
-main .caja .formulario .categoria select {
+main .cajass .formulariooo .categoria select {
     font-size: 13px;
     font-family: PT Sans;
     color: #555;
@@ -643,7 +643,7 @@ footer - Media
 
 @media (max-width: 870px){
 
-    main .caja {
+    main .cajass {
         width: 450px;
     }
 
@@ -651,7 +651,7 @@ footer - Media
 
 @media (max-width: 450px){
     
-    main .caja {
+    main .cajass {
         width: 90%;
     }
 

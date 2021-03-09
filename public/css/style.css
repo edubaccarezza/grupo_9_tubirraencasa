@@ -14,6 +14,8 @@
 }
 
 body {
+    background-color: #f2f2f2;
+    text-align: center;
     font-family: ubuntu;
     font-weight: 400;
     /*background-color: #e9c46a;*/
@@ -1474,4 +1476,196 @@ p.titledescrpition {
 textarea#descripcion {
     width: 100%;
     border-radius: 5px;
+}
+
+
+/* LOGIN & REGISTER */
+
+
+/*---------------------------------------------------*/
+/*-------------------------MAIN------------------------*/
+/*---------------------------------------------------*/
+
+main .cajass {
+    width: 450px;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 100px;
+    margin-bottom:50px;
+    border-radius: 10px;
+}
+
+/*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
+
+main .cajass .botonnn{
+    width: 100%;
+}
+
+main .cajass .botonnn a {
+    width: 49.5%;
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+
+main .cajass .botonnn .crearrr{
+    border-bottom: 5px solid rgb(44, 44, 44);
+    opacity: 0.5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: gray;
+}
+
+main .cajass .botonnn .crearrr:hover{
+    opacity: 1;
+    border-bottom: 5px solid red;
+    background-color: #fff;
+}
+
+main .cajass .botonnn .ingresarrr{
+    border-bottom: 5px solid red;
+}
+
+/*-------------------------BOTON INGRESAR/REGISTRAR------------------------*/
+
+main .cajass .redesss {
+    margin-top: 15px;
+    border-bottom: 3px solid grey;
+}
+
+main .cajass .redesss .botones-redesss{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+main .cajass .redesss .botones-redesss a{
+    border-radius: 50%;
+    color: white;
+    padding: 20px;
+    font-size: 40px;
+    margin:10px 5px;
+    width: 85px;
+
+}
+
+main .cajass .redesss .botones-redesss .mailll{
+    background-color:#DB4437 ;
+}
+
+main .cajass .redesss .botones-redesss .facebookkk{
+    background-color:#4267B2 ;
+}
+
+main .cajass .redesss .botones-redesss .instagrammm{
+    background-color:#3f729b ;
+}
+
+main .cajass .redesss .botones-redesss .twitterrr{
+    background-color:#1DA1F2 ;
+}
+
+main .cajass .redesss .botones-redesss a:hover{
+    opacity: 0.5;
+}
+
+main .cajass .formulariooo {
+    margin: 15px 0;
+}
+
+main .cajass .formularioss h3 {
+    margin: 15px 0;
+}
+
+main .cajass .formularioss .editTitleee{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+main .cajass .formulariooo form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+}
+
+main .cajass .formulariooo form .profileImg {
+    width:50%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+main .cajass .formulariooo form input {
+    width:90%;
+    margin-bottom: 10px;
+    padding: 15px 7px;
+    border-radius: 5px;
+    border:1px solid grey;
+}
+
+main .cajass .formulariooo form .text-danger {
+    color: red;
+    margin-bottom: 15px;
+}
+
+main .cajass .formulariooo form button {
+    background-color: rgba(0, 8, 247, 0.64);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    width: 90%;
+    font-size: 20px;
+    border: none;
+    margin-top: 15px;
+}
+
+main .cajass .formulariooo form button.deleteButton {
+    background-color: red;
+}
+
+main .cajass .formulariooo form button:hover {
+    background-color: rgba(0, 8, 247, 0.40);
+}
+
+main .cajass p {
+    font-size: 16px;
+    padding-bottom: 15px; 
+}
+
+main .cajass p a{
+    text-decoration: none;
+}
+
+main .cajass .formulariooo .categoria {
+    width: 90%;
+    height: 48px;
+    margin-bottom: 10px;
+    padding: 15px 7px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    display: flex;
+}
+main .cajass .formulariooo .categoria p {
+    font-size: 13px;
+    font-family: PT Sans;
+    color: #555;
+    margin-right: 10px;
+}
+main .cajass .formulariooo .categoria select {
+    font-size: 13px;
+    font-family: PT Sans;
+    color: #555;
+    margin-left: 10px;
+    height: 23px;
+    width: 60%;
+}
+
+.recordame #cbox{
+    display: flex;
+    width: 90%;
 }
