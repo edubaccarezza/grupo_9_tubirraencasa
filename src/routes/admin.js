@@ -39,7 +39,7 @@ var upload = multer({
 const productValidator = require('../validations/productValidator')
 
 // CREAR
-router.get('/products/create', productsController.create); //adminMiddleware (AGREGAR)
+router.get('/products/create', adminMiddleware , productsController.create); //adminMiddleware (AGREGAR)
 router.post('/products/create',upload.array('imagen',5), productValidator.create, productsController.store); //adminMiddleware (AGREGAR)
 
 // DELETE
