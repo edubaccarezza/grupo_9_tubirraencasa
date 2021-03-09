@@ -61,7 +61,7 @@ window.addEventListener("load",function(){
         }
 
         if(flag == false){
-            form.submit();
+            formulario.submit();
         }
 
     });
