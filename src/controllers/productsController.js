@@ -163,7 +163,7 @@ module.exports = {
                 descripcion: req.body.descripcion,
                 precio: req.body.precio,
                 stock: req.body.stock,
-                id_categoria: req.body.id_categoria 
+                id_categoria: req.body.categorias
             }, {
                 where: {
                     id: req.params.id
@@ -172,7 +172,7 @@ module.exports = {
             .then (function(productoEditado) {
                 // if(productoEditado[0] == 1) {
                 //     // res.send(productoEditado)
-                    res.redirect('/products/' + req.params.id)
+                    res.redirect('/admin/products/' + req.params.id)
                 // } else {
                 //     res.send("No pudimos editar el producto")
                 // }
