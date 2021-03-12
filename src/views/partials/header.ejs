@@ -29,7 +29,10 @@
             <ul>
                 <li><a href="#loMasVendido">Ofertas</a></li>
                 <li><a href="#loNuevo">Lo Nuevo</a></li>
-                <li><a href="/products">Productos</a>
+                <li><a href="/products">Productos</a></li>
+                <% if (typeof hayUnUsuario != 'undefined'){ %> 
+                <li><a href="/admin/products/create">Crear Productos</a>
+                <% } %>     
                     <!-- <ul>
                         <li><a href="">Artesanales</a></li>
                             <ul>
@@ -43,7 +46,7 @@
                         <li><a href="">Recomendadas</a></li>
                     </ul> -->
                 </li>
-                <li><a href="#">Ayuda</a></li>
+                <!-- <li><a href="#">Ayuda</a></li> -->
             </ul>
         </nav>
     </div>

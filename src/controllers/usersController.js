@@ -118,7 +118,7 @@ const db = require ('../database/models')
      update: function(req,res){
         let errors = validationResult(req)
         if(errors.isEmpty()){
-                db.Usuarios.update({
+            db.Usuarios.update({
                 nombre:req.body.firstName,
                 apellido:req.body.lastName,
                 email:req.body.email,
@@ -129,8 +129,13 @@ const db = require ('../database/models')
                 }
             })
             .then(function(updatedUser){
-                req.session.user = updatedUser; 
-                console.log('HOLAAA ' + updatedUser);
+                // if(updatedUser) {
+                //     db.Usuarios.findByPk(
+
+                //     )
+                // }
+                // req.session.user = updatedUser; 
+                return res.send(updatedUser);
                 return res.redirect('/'); 
             })
             .catch(function(error){

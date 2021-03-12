@@ -13,6 +13,10 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const adminRouter = require('./routes/admin');
 
+//CORS
+const cors = require('cors')
+app.use(cors())
+
 //APIs
 const api = require('./routes/api/api')
 
@@ -46,7 +50,7 @@ app.use('/api', api)
 
 //PUERTOS
 app.listen(process.env.PORT || 3001, function() {
-    console.log("El servidor está corriendo en el puerto 3000");
+    console.log("El servidor está corriendo en el puerto 3001");
     console.log("-------------------");
-    console.log("http://localhost:3000");
+    console.log("http://localhost:3001");
 })

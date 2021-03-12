@@ -31,6 +31,6 @@ router.get('/logOut',usersController.logOut);
 router.get('/edit/:id',usersController.edit);
 router.put('/edit/:id',registerValidator,usersController.update);
 
-router.delete('/delete/:id',usersController.delete);
+router.delete('/delete/:id',usersController.delete); 
 
 module.exports = router;
