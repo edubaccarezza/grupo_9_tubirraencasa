@@ -46,11 +46,6 @@
                     <input id="stock" name="stock" type="number" placeholder="Stock" value="<%= elProducto.stock %>">
                     <small class="small" id="errorStock"></small>
                 </div>
-                <!-- <div id="none">
-                    <label id="label">Categoría: </label>
-                    <input id="id_categoria" name="id_categoria" type="text" placeholder="Categoría" value="
-                    <small class="small" id="errorCategoria"></small>
-                </div> -->
                 <div id="none">
                     <label id="label"><p class="none">Categoría: </p></label>
                     <select name="categorias" id="categorias">
@@ -60,6 +55,11 @@
                         <% } %>   
                     </select>
                     <small class="small" id="errorCategoria"></small>
+                </div> 
+                <div id="none">
+                    <label id="label"><p class="none">Rating:  </p></label>
+                    <input id="rating" name="stock" type="number" placeholder="Rating" value="<%= elProducto.rating %>">
+                    <small class="small" id="errorRating"></small>
                 </div> 
                 <div id="none">
                     <label id="label">Descripción del Producto: </label>

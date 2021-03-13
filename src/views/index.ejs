@@ -24,12 +24,28 @@
         </section>
         <section>
             <% for(let i = 0; i < productos.length ; i++) { %>
-            <article>
-                <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
-                <h2><%= productos[i].nombre %></h2>
-                <p>AR$ <%= productos[i].precio %></p>
-                <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
-            </article> 
+            <div class="card estilo-c">
+                <div class="img-container">
+                    <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
+                    <span class="promo11">15% de descuento</span>
+                </div>
+                <div class="info-container">
+                    <h3><%= productos[i].nombre %></h2>
+                    <strong>AR$ <%= productos[i].precio %></strong>
+                    <% if(productos[i].rating <= 20) { %>
+                        <span class="stock">★☆☆☆☆</span>   
+                    <% } else if(productos[i].rating <= 40) { %>
+                        <span class="stock">★★☆☆☆</span> 
+                    <% } else if(productos[i].rating <= 60) { %>
+                        <span class="stock">★★★☆☆</span> 
+                    <% } else if(productos[i].rating <= 80) { %>
+                        <span class="stock">★★★★☆</span> 
+                    <% } else { %>
+                        <span class="stock">★★★★★</span> 
+                    <% } %>                      
+                    <a  href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                </div>
+            </div> 
             <% } %>
         </section>
    
@@ -38,12 +54,28 @@
         </section>
         <section>
             <% for(let i = 0; i < productos.length ; i++) { %>
-                <article>
-                    <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
-                    <h2><%= productos[i].nombre %></h2>
-                    <p>AR$ <%= productos[i].precio %></p>
-                    <a href="/products/<%= productos[i].id %>"><button>Más info</button></a>
-                </article> 
+                <div class="card estilo-c">
+                    <div class="img-container">
+                        <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
+                        <span class="promo11">15% de descuento</span>
+                    </div>
+                    <div class="info-container">
+                        <h3><%= productos[i].nombre %></h2>
+                        <strong>AR$ <%= productos[i].precio %></strong>
+                        <% if(productos[i].rating <= 20) { %>
+                            <span class="stock">★☆☆☆☆</span>   
+                        <% } else if(productos[i].rating <= 40) { %>
+                            <span class="stock">★★☆☆☆</span> 
+                        <% } else if(productos[i].rating <= 60) { %>
+                            <span class="stock">★★★☆☆</span> 
+                        <% } else if(productos[i].rating <= 80) { %>
+                            <span class="stock">★★★★☆</span> 
+                        <% } else { %>
+                            <span class="stock">★★★★★</span> 
+                        <% } %>  
+                        <a  href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                    </div>
+                </div> 
             <% } %>
         </section>
 

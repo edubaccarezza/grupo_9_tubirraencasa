@@ -95,7 +95,7 @@ module.exports = {
         if(req.session.user != undefined && req.session.user.admin == 1) {    
             db.Categoria.findAll()
             .then(function(lasCategorias){
-                console.log(lasCategorias[3].id)
+                // console.log(lasCategorias[3].id)
                 // res.send(lasCategorias[1].nombre)
                 return res.render('products/create', {lasCategorias})
             })
@@ -163,6 +163,7 @@ module.exports = {
                 descripcion: req.body.descripcion,
                 precio: req.body.precio,
                 stock: req.body.stock,
+                rating: req.body.rating,
                 id_categoria: req.body.categorias
             }, {
                 where: {

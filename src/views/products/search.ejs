@@ -20,12 +20,17 @@
         <section>
 
             <% for(let i = 0; i < resultado.length ; i++) { %>
-                <article>
-                    <img src="/images/products/<%= resultado[i].imagendeesteproducto[0].imagenes %>" alt="">
-                    <h2><%= resultado[i].nombre %></h2>
-                    <p>AR$ <%= resultado[i].precio %></p>
-                    <a href="/products/<%= resultado[i].id %>"><button>Más info</button></a>
-                </article> 
+                <div class="card estilo-c">
+                    <div class="img-container">
+                        <img src="/images/products/<%= resultado[i].imagendeesteproducto[0].imagenes %>" alt="">
+                    </div>
+                    <div class="info-container">
+                        <h3><%= resultado[i].nombre %></h2>
+                        <strong>AR$ <%= resultado[i].precio %></strong>
+                        <span class="rating">★★★★☆</span>
+                        <a  href="/products/<%= resultado[i].id %>"><button class="add-cart">Más info</button></a>
+                    </div>
+                </div> 
             <% } %>
 
         </section>

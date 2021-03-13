@@ -15,10 +15,10 @@
 
 body {
     background-color: #f2f2f2;
+    background-color: white;
     text-align: center;
     font-family: ubuntu;
     font-weight: 400;
-    /*background-color: #e9c46a;*/
 }
 
 /* ================
@@ -335,7 +335,8 @@ section {
     width: 80%;
     margin-left: 10%;
 }
-section article {
+
+/* section article {
     width: 23%;
     padding: 10px;
     margin-bottom: 40px;
@@ -351,14 +352,24 @@ section article:hover {
         0 6px 6px rgba(0,0,0,0.23);
 }
 
-.container section article img {
+.imgimg {
     width: 100%;
 }
 
-section article h2 {
-    height: 90px;
+.container section article img {
+    width: 100%;
+    vertical-align: middle;
+
 }
-section article p {}
+
+section article h2 {
+    width: 100%;
+    height: 110px;
+    margin-bottom: 3%;
+}
+section article p {
+    font-size: 25px;
+}
 
 section article button {
     padding: 9px 18px;
@@ -367,7 +378,75 @@ section article button {
     color: white;
     border-radius: 4px;
     margin-top: 15px;
-}
+} */
+
+
+/* =================
+Prueba distinto estilo imagenes
+===================*/
+/*Estilo C*/
+.estilo-c{
+    font-family: sans-serif;
+    width: 23%;
+    margin: 15px 0 15px 0;
+  }
+  .estilo-c .img-container{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    border-radius: 15px;
+  }
+  .estilo-c .img-container img{
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    right:0%;
+    transition: all 0.5s;
+  }
+  .estilo-c:hover .img-container img{
+    transform: scale(1.2);
+  }
+  .estilo-c .img-container .promo{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 20px;
+    background: yellow;
+    padding: 15px;
+    color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .estilo-c .info-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .estilo-c .info-container h3{
+    margin: 0;
+    height: 70px;
+
+  }
+ 
+  .estilo-c .info-container strong,
+  .estilo-c .info-container span{
+    padding: 5px 15px;
+    width: 100%;
+  }
+  .estilo-c .add-cart{
+    padding: 9px 18px;
+    border: none;
+    background-color: #06f;
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  .estilo-c .add-cart:hover{
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+  }
 
 /* ================
 - Main - Categorias
@@ -453,7 +532,7 @@ Main - Media
     section {
         justify-content: space-around;
     }
-    section article {
+    section div.estilo-c{
         width: 80%;
     }
     .categoria {
@@ -482,7 +561,7 @@ Main - Media
     section {
         justify-content: space-around;
     }
-    section article {
+    section div.estilo-c{
         width: 45%;
     }
 
@@ -1393,23 +1472,27 @@ p.titledescrpition {
     width: 40%;
 }
 
-.editar {
+.antesDeEditar {
     background-color: rgba(0, 8, 247, 0.64);
     color: #fff;
     padding: 10px;
     border-radius: 20px;
-    width: 40%;
     font-size: 20px;
     border: none;
     margin-top: 15px;
     text-decoration: none;
     text-align: center;
 }
-.editar:hover{
+
+.editar {
+    text-decoration: none;
+    color: #fff;
+}
+.antesDeEditar:hover{
     background-color: rgba(0, 8, 247, 0.34);
 }
 .eliminar1 {
-    width: 40%;
+    width: 100%;
 }
 .eliminar {
     background-color: rgba(0, 0, 0, 1);
@@ -1668,4 +1751,9 @@ main .cajass .formulariooo .categoria select {
 .recordame #cbox{
     display: flex;
     width: 90%;
+}
+
+main.users {
+    background-color: #f2f2f2;
+
 }

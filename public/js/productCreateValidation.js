@@ -14,6 +14,7 @@ window.onload = function() {
     let precio = qs("#precio");
     let stock = qs("#stock");
     let categoria = qs("#categorias");
+    let rating = qs('#rating')
     let descripcion = qs("#descripcion");
         
     //Errors    
@@ -23,6 +24,7 @@ window.onload = function() {
     let errorPrecio = qs('#errorPrecio')
     let errorStock = qs('#errorStock')
     let errorCategoria = qs('#errorCategoria')
+    let errorRating = qs('#errorRating')
     let errorDescripcion = qs('#errorDescripcion')
        
     let errors = {
@@ -95,6 +97,24 @@ window.onload = function() {
         } else {
             errorStock.innerText = ""
             errors.stock = false
+        } 
+    })
+
+    //Validacion Rating
+    rating.addEventListener('blur', function(){
+        if(rating.value.length == 0){
+            errors.rating = true,
+            errorRating.innerText = "Debes poner un valor entre 1 y 100"
+            console.log(errors)
+        } else if (rating.value <= 0) {
+            errors.rating = "El rating debe ser un valor mayor a 0"
+            errorRating.innerText = errors.rating
+        } else if (rating.value > 100) {
+            errors.rating = "El rating debe ser un valor como máximo 100"
+            errorRating.innerText = errors.rating
+        } else {
+            errorRating.innerText = ""
+            errors.rating = false
         } 
     })
 

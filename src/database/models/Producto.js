@@ -34,6 +34,10 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.INTEGER,
             notNull: true
         },
+        rating: {
+            type: dataTypes.FLOAT,
+            notNull: true
+        },
         id_categoria: {
             type: dataTypes.INTEGER,
             notNull: true,

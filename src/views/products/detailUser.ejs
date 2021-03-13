@@ -37,11 +37,30 @@
                     <p class="data">Categoría: <%= unProducto.categoriaDeEsteProducto.nombre %></p>
                     <br>
                     <strong class="price">$ <%= unProducto.precio %></strong>
+                    <br>
+                    <br>
+                    <% if(unProducto.rating <= 20) { %>
+                        <strong class="stock">★☆☆☆☆</strong>   
+                    <% } else if(unProducto.rating <= 40) { %>
+                        <strong class="stock">★★☆☆☆</strong> 
+                    <% } else if(unProducto.rating <= 60) { %>
+                        <strong class="stock">★★★☆☆</strong> 
+                    <% } else if(unProducto.rating <= 80) { %>
+                        <strong class="stock">★★★★☆</strong> 
+                    <% } else { %>
+                        <strong class="stock">★★★★★</strong> 
+                    <% } %>   
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="antesDeEditar">
+                        <a class="editar" href="/products/cart">AÑADIR AL CARRITO</a>             
+                    </div>
                 </div>
             </section>
-            <section class="buttons">
-                <a class="editar" href="/products/cart">AÑADIR AL CARRITO</a>             
-            </section>        
+       
         </section>
               
         </main>  

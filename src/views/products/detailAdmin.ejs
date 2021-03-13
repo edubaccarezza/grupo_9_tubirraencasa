@@ -39,15 +39,35 @@
                     <br>
                     <br>
                     <strong class="stock">Stock: <%= unProducto.stock %> Unidades</strong>
+                    <br>
+                    <br>
+                    <% if(unProducto.rating <= 20) { %>
+                        <strong class="stock">★☆☆☆☆</strong>   
+                    <% } else if(unProducto.rating <= 40) { %>
+                        <strong class="stock">★★☆☆☆</strong> 
+                    <% } else if(unProducto.rating <= 60) { %>
+                        <strong class="stock">★★★☆☆</strong> 
+                    <% } else if(unProducto.rating <= 80) { %>
+                        <strong class="stock">★★★★☆</strong> 
+                    <% } else { %>
+                        <strong class="stock">★★★★★</strong> 
+                    <% } %>                  
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="antesDeEditar">
+                        <a class="editar" href="/admin/products/edit/<%= unProducto.id %>">EDITAR</a>  
+                    </div>
+                
+                    <form class="eliminar1" action="/admin/products/<%= unProducto.id %>?_method=DELETE" method="POST">
+                        <input type="hidden" value="<%= unProducto.id %>">
+                        <button class="eliminar" type="submit">ELIMINAR</button>
+                    </form>
                 </div>
             </section>
-            <section class="buttons">
-                <a class="editar" href="/admin/products/edit/<%= unProducto.id %>">EDITAR</a>
-                
-                <form class="eliminar1" action="/admin/products/<%= unProducto.id %>?_method=DELETE" method="POST">
-                    <input type="hidden" value="<%= unProducto.id %>">
-                    <button class="eliminar" type="submit">ELIMINAR</button>
-            </section>
+
         </section>
               
         </main>  
