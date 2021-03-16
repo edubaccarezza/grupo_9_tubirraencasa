@@ -129,14 +129,17 @@ const db = require ('../database/models')
                 }
             })
             .then(function(updatedUser){
-                // if(updatedUser) {
-                //     db.Usuarios.findByPk(
-
-                //     )
-                // }
-                // req.session.user = updatedUser; 
-                return res.send(updatedUser);
-                return res.redirect('/'); 
+                if(updatedUser) {
+                    db.Usuarios.findByPk(req.params.id)
+                    .then(function(usuarioEditado) {
+                        req.session.user = usuarioEditado; 
+                        // return res.send(updatedUser);
+                        return res.redirect('/'); 
+                    })
+                    .catch(function(error){
+                        res.send(error);
+                    })  
+                }
             })
             .catch(function(error){
                 res.send(error);

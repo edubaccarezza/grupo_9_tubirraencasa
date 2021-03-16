@@ -51,7 +51,7 @@
                     <label id="label"><p class="none">Categoría: </p></label>
                     <select name="categorias" id="categorias">
                         <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="" hidden>Selecciona la categoria...</option>
-                        <% for( let i = 0; i < lasCategorias.length; i++ ) { %>
+                        <% for( let i = 0; i < lasCategorias.length; i++ ) { %> 
                             <option id="categoriasOption" style="color: rgb(179, 174, 174)" value="<%= lasCategorias[i].id %>"><%= lasCategorias[i].nombre %></option>
                         <% } %>   
                     </select>
@@ -59,7 +59,7 @@
                 </div> 
                 <div id="none">
                     <label id="label"><p class="none">Rating:  </p></label>
-                    <input id="rating" name="stock" type="number" placeholder="Rating" value="">
+                    <input id="rating" name="rating" type="number" placeholder="Rating" value="">
                     <small class="small" id="errorRating"></small>
                 </div> 
                 <div id="none">

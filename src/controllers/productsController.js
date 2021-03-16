@@ -95,9 +95,9 @@ module.exports = {
         if(req.session.user != undefined && req.session.user.admin == 1) {    
             db.Categoria.findAll()
             .then(function(lasCategorias){
-                // console.log(lasCategorias[3].id)
-                // res.send(lasCategorias[1].nombre)
-                return res.render('products/create', {lasCategorias})
+                // console.log(lasCategorias[1])
+                // return res.send(lasCategorias[1])
+                return res.render('products/create', {lasCategorias: lasCategorias})
             })
         } else {
             return res.redirect('/')
@@ -110,7 +110,14 @@ module.exports = {
         // }
         if ( errors.isEmpty() ) {
             let producto = await db.Producto.create(
-                {... req.body},
+                {                
+                    nombre: req.body.nombre,
+                    marca: req.body.marca,
+                    descripcion: req.body.descripcion,
+                    precio: req.body.precio,
+                    stock: req.body.stock,
+                    rating: req.body.rating,
+                    id_categoria: req.body.categorias},
                 {
                     include: [
                         {association: "categoriaDeEsteProducto"},
@@ -128,7 +135,7 @@ module.exports = {
                 data.push(newData)
         }        
             let carga = await db.Imagen.bulkCreate(data)
-            res.redirect('/products/' + id)
+            res.redirect('/admin/products/' + id)
         } else {
             // res.send (errors.mapped())
             return res.render('products/create', {

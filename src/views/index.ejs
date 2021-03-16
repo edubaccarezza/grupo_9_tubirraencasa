@@ -43,7 +43,13 @@
                     <% } else { %>
                         <span class="stock">★★★★★</span> 
                     <% } %>                      
-                    <a  href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                    <% if(typeof hayUnUsuario == "undefined") { %>    
+                        <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                    <% } else if (hayUnUsuario.admin == 1){ %>
+                        <a href="/admin/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                    <% } else { %>
+                        <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                    <% } %> 
                 </div>
             </div> 
             <% } %>
@@ -73,7 +79,13 @@
                         <% } else { %>
                             <span class="stock">★★★★★</span> 
                         <% } %>  
-                        <a  href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                        <% if(typeof hayUnUsuario == "undefined") { %>    
+                            <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                        <% } else if (hayUnUsuario.admin == 1){ %>
+                            <a href="/admin/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                        <% } else { %>
+                            <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                        <% } %> 
                     </div>
                 </div> 
             <% } %>
