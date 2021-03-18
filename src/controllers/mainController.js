@@ -10,20 +10,24 @@ let db = require("../database/models")
 let mainController = {
 
     index: function(req, res) {
-        db.Producto.findAll ({
-            include: [
-                {association: "categoriaDeEsteProducto"},
-                {association: "imagendeesteproducto"}
-            ],
-            limit: 4
-        })
-        .then (function(productos) {
-            res.render( 'index',  
-                {
-                    productos: productos 
-                })            
-            // res.send(productos[1].imagendeesteproducto[1].imagenes)
+        db.Categoria.findAll ()
+        .then(function(lasCategorias){
+            db.Producto.findAll ({
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ],
+                limit: 4
             })
+            .then (function(productos) {
+                res.render( 'index',  
+                    {
+                        productos: productos,
+                        lasCategorias: lasCategorias 
+                    })            
+                // res.send(productos[1].imagendeesteproducto[1].imagenes)
+            })
+        })
     }
 }
 

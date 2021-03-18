@@ -15,9 +15,13 @@ module.exports = {
                 ]
             })
             .then(function(productos) {
-                productosPorCategoria = {}
+                productosPorCategoria = []
                 for (let i = 0; i < categorias.length; i++){
-                    productosPorCategoria[categorias[i].nombre] = categorias[i].productosDeEstaCategoria.length
+                    productosPorCategoria.push({
+                        categoria: categorias[i].nombre,
+                        cantidad: categorias[i].productosDeEstaCategoria.length
+                    })
+                    // productosPorCategoria[categorias[i].nombre] = categorias[i].productosDeEstaCategoria.length
                 }
                 if(productos.length != 0) {
                     return res.status(200).json({
@@ -46,7 +50,7 @@ module.exports = {
             if(unProducto != null) {
                 return res.status(200).json({
                     unProducto: unProducto,
-                    link:`/api/products/${unProducto.id}`
+                    link:`/api/products/`
                 })
             } else {
                 return res.json("No existe este producto")

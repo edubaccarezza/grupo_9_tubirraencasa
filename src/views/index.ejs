@@ -98,12 +98,9 @@
             </section>
             <nav class="categorias">
                 <ul>
-                    <li><button class="categorias1">Categoría 1</button></li>
-                    <li><button class="categorias1">Categoría 2</button></li>
-                    <li><button class="categorias1">Categoría 3</button></li>
-                    <li><button class="categorias1">Categoría 4</button></li>
-                    <li><button class="categorias1">Categoría 5</button></li>
-                    <li><button class="categorias1">Categoría 6</button></li>
+                    <% for( let i = 0; i < lasCategorias.length; i++ ) { %>
+                        <li><button class="categorias1" style="width: 150px;"><%= lasCategorias[i].nombre %> </button></li>
+                    <% } %>
                 </ul>
             </nav>
         </div>
