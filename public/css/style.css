@@ -90,10 +90,10 @@ header .barra ul li a{
     vertical-align: middle;
     transition: all 0.5s;
     float: left;
-
 }
+
 header .barra ul li a:hover{
-    font-size: 25px; 
+    font-size: 24px; 
 }
 
 
