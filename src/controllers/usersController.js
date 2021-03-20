@@ -162,4 +162,4 @@ const db = require ('../database/models')
          req.session.destroy();
          res.redirect('/');
      }
- }
+ } 

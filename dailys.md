@@ -81,4 +81,3 @@ NUEVO SPRINT
 4) Creación de carpeta Sequelize y archivos de modelos (ANDRE)
 5) ¡BREAD!  (Usuarios: Juani)(Productos: EDU)
 
-
