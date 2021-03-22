@@ -37,7 +37,7 @@ module.exports = {
     }, 
     cart: (req,res) => {
         return res.render('products/productCart');
-    },
+    }, 
     search: function(req,res) {
         // req.query.search
         // db.sequelize.query(`SELECT * FROM productos WHERE title LIKE '%${req.query.search}%'`)
@@ -212,7 +212,34 @@ module.exports = {
         .then (function() {
             res.render('products/delete')
         })
-    }
+    },
+
+    // Boton categorias
+    categorias: function(req,res) {
+        db.Categoria.findAll()
+        .then(function(lasCategorias) {       
+            db.Producto.findAll({
+                include: [
+                    {association: "categoriaDeEsteProducto"},
+                    {association: "imagendeesteproducto"}
+                ],
+                where: {
+                    id_categoria: req.params.id
+                }
+            })
+            .then(function(resultado) {
+                // return res.send(lasCategorias[0].nombre)
+                res.render('products/categorias', {
+                    queryString: req.params.id,
+                    resultado: resultado,
+                    lasCategorias: lasCategorias
+                })
+            })
+            .catch(function(e) {
+                res.send(e)
+            }) 
+        })
+    },
 } 
 
 

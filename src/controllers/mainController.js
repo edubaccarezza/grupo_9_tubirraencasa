@@ -20,12 +20,25 @@ let mainController = {
                 limit: 4
             })
             .then (function(productos) {
-                res.render( 'index',  
-                    {
-                        productos: productos,
-                        lasCategorias: lasCategorias 
-                    })            
-                // res.send(productos[1].imagendeesteproducto[1].imagenes)
+                db.Producto.findAll ({
+                    include: [
+                        {association: "categoriaDeEsteProducto"},
+                        {association: "imagendeesteproducto"}
+                    ],
+                    limit: 4,
+                    order: [
+                        ['id', "DESC"]
+                    ]
+                })
+                .then (function(productosDos) {
+                    res.render( 'index',  
+                        {
+                            productos: productos,
+                            productosDos: productosDos,
+                            lasCategorias: lasCategorias 
+                        })            
+                    // res.send(productos[1].imagendeesteproducto[1].imagenes)
+                })
             })
         })
     }

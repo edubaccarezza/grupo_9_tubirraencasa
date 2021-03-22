@@ -12,9 +12,9 @@
 
         <section class="titulo">
             <% if(resultado.length <= 0) { %>
-                <h1 style="height: 300px;">Por el momento, no tenemos ese producto. Prueba refrescarte con otro de nuestros productos.</h1>
+                <h1 style="height: 300px;">Por el momento, no tenemos ese productos en esta categoía.</h1>
             <% } else { %>
-                <h1>Este es el resultado de la búsqueda: <%= queryString %></h1>
+                <h1>Este es el resultado de la búsqueda: </h1>
             <% } %>
         </section>
         <section>
@@ -46,7 +46,7 @@
                             <a href="/products/<%= resultado[i].id %>"><button class="add-cart">Más info</button></a>
                         <% } %> 
                     </div>
-                </div> 
+                </div>
             <% } %>
 
         </section>

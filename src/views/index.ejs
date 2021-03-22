@@ -27,7 +27,6 @@
             <div class="card estilo-c">
                 <div class="img-container">
                     <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
-                    <span class="promo11">15% de descuento</span>
                 </div>
                 <div class="info-container">
                     <h3><%= productos[i].nombre %></h2>
@@ -59,32 +58,31 @@
             <h2>Lo Nuevo</h2>
         </section>
         <section>
-            <% for(let i = 0; i < productos.length ; i++) { %>
+            <% for(let i = 0; i < productosDos.length ; i++) { %>
                 <div class="card estilo-c">
                     <div class="img-container">
-                        <img src="images/products/<%= productos[i].imagendeesteproducto[0].imagenes %>" alt="">
-                        <span class="promo11">15% de descuento</span>
+                        <img src="images/products/<%= productosDos[i].imagendeesteproducto[0].imagenes %>" alt="">
                     </div>
                     <div class="info-container">
-                        <h3><%= productos[i].nombre %></h2>
-                        <strong>AR$ <%= productos[i].precio %></strong>
-                        <% if(productos[i].rating <= 20) { %>
+                        <h3><%= productosDos[i].nombre %></h2>
+                        <strong>AR$ <%= productosDos[i].precio %></strong>
+                        <% if(productosDos[i].rating <= 20) { %>
                             <span class="stock">★☆☆☆☆</span>   
-                        <% } else if(productos[i].rating <= 40) { %>
+                        <% } else if(productosDos[i].rating <= 40) { %>
                             <span class="stock">★★☆☆☆</span> 
-                        <% } else if(productos[i].rating <= 60) { %>
+                        <% } else if(productosDos[i].rating <= 60) { %>
                             <span class="stock">★★★☆☆</span> 
-                        <% } else if(productos[i].rating <= 80) { %>
+                        <% } else if(productosDos[i].rating <= 80) { %>
                             <span class="stock">★★★★☆</span> 
                         <% } else { %>
                             <span class="stock">★★★★★</span> 
                         <% } %>  
                         <% if(typeof hayUnUsuario == "undefined") { %>    
-                            <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                            <a href="/products/<%= productosDos[i].id %>"><button class="add-cart">Más info</button></a>
                         <% } else if (hayUnUsuario.admin == 1){ %>
-                            <a href="/admin/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                            <a href="/admin/products/<%= productosDos[i].id %>"><button class="add-cart">Más info</button></a>
                         <% } else { %>
-                            <a href="/products/<%= productos[i].id %>"><button class="add-cart">Más info</button></a>
+                            <a href="/products/<%= productosDos[i].id %>"><button class="add-cart">Más info</button></a>
                         <% } %> 
                     </div>
                 </div> 
@@ -99,7 +97,7 @@
             <nav class="categorias">
                 <ul>
                     <% for( let i = 0; i < lasCategorias.length; i++ ) { %>
-                        <li><button class="categorias1" style="width: 150px;"><%= lasCategorias[i].nombre %> </button></li>
+                        <li><a href="/products/categorias/<%= lasCategorias[i].id %>"><button class="categorias1" style="width: 120px;"> <%= lasCategorias[i].nombre %> </button></a></li>
                     <% } %>
                 </ul>
             </nav>
